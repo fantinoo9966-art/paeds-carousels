@@ -1,0 +1,26 @@
+name: Test Instagram connection
+
+# Safe check: reads your account name only, posts nothing.
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Check token
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          python - <<'EOF'
+          import sys
+          sys.path.insert(0, "agent")
+          from publish import call
+          me = call("GET", "me", fields="user_id,username,account_type")
+          print(f"Connected to @{me['username']} ({me.get('account_type')}), id {me['user_id']}")
+          EOF

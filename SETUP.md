@@ -26,18 +26,15 @@ Note: on the free tier, Google may use what you send to Gemini to improve its pr
    Name: `GEMINI_API_KEY`, Value: the key.
 
 ### 3. Instagram posting access (Meta)
-Your Instagram is already Professional and linked to a Facebook Page, so:
-1. Go to developers.facebook.com → **My Apps → Create App** → choose **Other → Business** type.
-2. Add the product **Instagram** and choose **API setup with Facebook login**.
-3. Open **Tools → Graph API Explorer**:
-   - Select your app, click **Get User Access Token**, and tick these permissions:
-     `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`, `business_management`
-   - Generate the token and log in.
-   - Run the query `me/accounts?fields=name,instagram_business_account`. The number inside `instagram_business_account → id` is your **IG_USER_ID**.
-4. **Get a token that doesn't expire** (recommended):
-   business.facebook.com → **Settings → Users → System users → Add** (Admin) → **Assign assets**: your Page and Instagram account (full control) → **Generate new token** for your app with the same permissions above. Copy it.
-   *(Shortcut: a token from Graph API Explorer works too, but it expires within hours to 60 days.)*
-5. Add two more GitHub secrets: `IG_USER_ID` and `IG_ACCESS_TOKEN`.
+This uses **Instagram Login**, so no Facebook Page is needed. Your Facebook account is only used to sign in to the developer site.
+1. developers.facebook.com → **My Apps → Create App**. For the use case, choose **Manage messaging & content on Instagram**; if it asks for an app type, choose **Business**.
+2. In the app's left menu: **Instagram → API setup with Instagram business login**.
+3. Under **Generate access tokens**, click **Add account** and log in with **paediatrick_or_treats**. If it asks you to accept a tester invite, do that in Instagram: **Settings → Website permissions → Apps and websites → Tester invites → Accept**.
+4. Click **Generate token** next to paediatrick_or_treats, allow the permissions, and copy the token.
+5. Add a GitHub secret named `IG_ACCESS_TOKEN` with the token as its value. Your Instagram ID is looked up automatically.
+6. Check it: **Actions → Test Instagram connection → Run workflow**. A green tick means it's connected (this posts nothing).
+
+⏰ **The token lasts 60 days.** Set a phone reminder for every 50 days to generate a new one (step 4) and update the secret.
 
 ### 4. Test it
 GitHub repo → **Actions → Create carousel → Run workflow** (you can type a topic or leave it blank).
@@ -65,6 +62,6 @@ After about 3 minutes, a new **Pull request** appears. Open it on your phone.
 |---|---|
 | "Create carousel" fails at *Write slides* | Check the `GEMINI_API_KEY` secret. If the log says every model failed, Google may have renamed its free models: update `GEMINI_MODELS` in `agent/config.py` from aistudio.google.com/docs/pricing |
 | PR isn't created | Step 1.4 (Actions permissions) isn't set |
-| Publish fails with `OAuthException` / code 190 | The Instagram token expired. Generate a new one (step 3.4) and update the secret |
+| Publish fails with `OAuthException` / code 190 | The Instagram token expired (it lasts 60 days). Generate a new one (step 3.4) and update the `IG_ACCESS_TOKEN` secret |
 | Publish fails with "media could not be fetched" | The repo isn't public |
 | Instagram says "rate limit" | Instagram allows 50 API posts per 24 h; you won't hit this normally |

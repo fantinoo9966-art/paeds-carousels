@@ -1,6 +1,8 @@
-"""Publish posts/<slug> as an Instagram carousel via the official Instagram Graph API.
+"""Publish posts/<slug> as an Instagram carousel via the official "Instagram API with Instagram Login".
+No Facebook Page is needed; the token comes straight from the Instagram account.
 
-Needs env vars: IG_USER_ID, IG_ACCESS_TOKEN, GITHUB_REPOSITORY (owner/repo), and optionally IMAGE_BRANCH (default main).
+Needs env vars: IG_ACCESS_TOKEN, GITHUB_REPOSITORY (owner/repo). Optional: IG_USER_ID (looked up if missing),
+IMAGE_BRANCH (default main).
 Images are served from the public GitHub repo (raw.githubusercontent.com), which Instagram downloads.
 Usage: python agent/publish.py posts/<slug>
 """
@@ -15,7 +17,7 @@ import requests
 sys.path.insert(0, str(Path(__file__).parent))
 import config  # noqa: E402
 
-API = f"https://graph.facebook.com/{config.GRAPH_VERSION}"
+API = f"https://graph.instagram.com/{config.GRAPH_VERSION}"
 
 
 def call(method: str, path: str, **params) -> dict:
@@ -31,8 +33,8 @@ def call(method: str, path: str, **params) -> dict:
 def wait_ready(container_id: str, timeout: int = 300) -> None:
     deadline = time.time() + timeout
     while time.time() < deadline:
-        status = call("GET", container_id, fields="status_code,status").get("status_code")
-        if status == "FINISHED":
+        status = call("GET", container_id, fields="status_code").get("status_code")
+        if status in ("FINISHED", "PUBLISHED"):
             return
         if status in ("ERROR", "EXPIRED"):
             raise RuntimeError(f"Container {container_id} failed: {status}")
@@ -45,7 +47,9 @@ def publish(post_dir: Path) -> dict:
         print("Already published, skipping.")
         return json.loads((post_dir / "published.json").read_text())
 
-    ig_user = os.environ["IG_USER_ID"]
+    me = call("GET", "me", fields="user_id,username")
+    ig_user = os.environ.get("IG_USER_ID") or me["user_id"]
+    print(f"Posting as @{me.get('username')}")
     repo = os.environ["GITHUB_REPOSITORY"]
     branch = os.environ.get("IMAGE_BRANCH", "main")
     images = sorted(post_dir.glob("slide*.jpg"))[: config.MAX_SLIDES]
