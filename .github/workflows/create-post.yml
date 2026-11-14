@@ -48,6 +48,6 @@ jobs:
           git checkout -b "$BRANCH"
           git add "posts/$SLUG"
           git commit -m "New carousel: $SLUG"
-          git push origin "$BRANCH"
+          git push --force origin "$BRANCH"
           python agent/pr_body.py "posts/$SLUG" "$BRANCH" > pr.md
           gh pr create --title "📸 Review: $SLUG" --body-file pr.md --base main --head "$BRANCH"
