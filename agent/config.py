@@ -24,5 +24,8 @@ MAX_SLIDES = 10  # Instagram allows at most 10 images per carousel
 # Pastel accent colours, one per slide (cycled).
 ACCENTS = ["#F7A8C4", "#8FD3C7", "#9CC7F2", "#C7B5F0", "#FFC59E", "#F6D77E"]
 
-# Instagram API version (graph.instagram.com)
+# Instagram API version
 GRAPH_VERSION = "v27.0"
+
+# Instagram account ID of @paediatrick_or_treats (shown in the Meta app dashboard; not a secret)
+IG_USER_ID = "17841456619533432"

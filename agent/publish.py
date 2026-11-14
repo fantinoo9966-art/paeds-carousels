@@ -17,17 +17,43 @@ import requests
 sys.path.insert(0, str(Path(__file__).parent))
 import config  # noqa: E402
 
-API = f"https://graph.instagram.com/{config.GRAPH_VERSION}"
+# Instagram-login tokens work on graph.instagram.com; system-user / Facebook tokens on graph.facebook.com.
+HOSTS = [f"https://graph.instagram.com/{config.GRAPH_VERSION}", f"https://graph.facebook.com/{config.GRAPH_VERSION}"]
+API = None
 
 
-def call(method: str, path: str, **params) -> dict:
-    params["access_token"] = os.environ["IG_ACCESS_TOKEN"]
-    r = requests.request(method, f"{API}/{path}", data=params if method == "POST" else None,
+def _raw(base: str, method: str, path: str, params: dict) -> dict:
+    params = {**params, "access_token": os.environ["IG_ACCESS_TOKEN"].strip()}
+    r = requests.request(method, f"{base}/{path}", data=params if method == "POST" else None,
                          params=params if method == "GET" else None, timeout=60)
     body = r.json()
     if r.status_code >= 400 or "error" in body:
         raise RuntimeError(f"Instagram API error on {path}: {body.get('error', body)}")
     return body
+
+
+def ig_user_id() -> str:
+    return os.environ.get("IG_USER_ID") or config.IG_USER_ID
+
+
+def connect() -> dict:
+    """Find which API host accepts the token; return the account info."""
+    global API
+    errors = []
+    for base in HOSTS:
+        try:
+            info = _raw(base, "GET", ig_user_id(), {"fields": "username"})
+            API = base
+            return info
+        except Exception as e:
+            errors.append(f"{base}: {e}")
+    raise RuntimeError("Token not accepted:\n" + "\n".join(errors))
+
+
+def call(method: str, path: str, **params) -> dict:
+    if API is None:
+        connect()
+    return _raw(API, method, path, params)
 
 
 def wait_ready(container_id: str, timeout: int = 300) -> None:
@@ -47,9 +73,9 @@ def publish(post_dir: Path) -> dict:
         print("Already published, skipping.")
         return json.loads((post_dir / "published.json").read_text())
 
-    me = call("GET", "me", fields="user_id,username")
-    ig_user = os.environ.get("IG_USER_ID") or me["user_id"]
-    print(f"Posting as @{me.get('username')}")
+    me = connect()
+    ig_user = ig_user_id()
+    print(f"Posting as @{me.get('username')} via {API}")
     repo = os.environ["GITHUB_REPOSITORY"]
     branch = os.environ.get("IMAGE_BRANCH", "main")
     images = sorted(post_dir.glob("slide*.jpg"))[: config.MAX_SLIDES]
