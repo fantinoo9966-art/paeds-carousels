@@ -27,10 +27,15 @@ def split2(text: str) -> list[str]:
     return parts + [""] * (2 - len(parts))
 
 
-def build_context(slide: dict, index: int, total: int) -> dict:
+LEVEL_TAGS = {"morning": "MBBS · NEET-PG high-yield", "evening": "Paeds PG · Clinical"}
+
+
+def build_context(slide: dict, index: int, total: int, theme: dict, slot: str = "") -> dict:
+    accents = theme["accents"]
     ctx = {
-        "slide": slide, "index": index, "total": total,
-        "accent": config.ACCENTS[(index - 1) % len(config.ACCENTS)],
+        "slide": slide, "index": index, "total": total, "t": theme,
+        "accent": accents[(index - 1) % len(accents)],
+        "level_tag": LEVEL_TAGS.get(slot, ""),
         "brand": config.BRAND_NAME, "handle": config.HANDLE,
         "points": [rich(p) for p in slide.get("points", [])],
     }
@@ -49,6 +54,8 @@ def build_context(slide: dict, index: int, total: int) -> dict:
 def render(post_dir: Path) -> list[Path]:
     data = json.loads((post_dir / "slides.json").read_text(encoding="utf-8"))
     slides = data["slides"][: config.MAX_SLIDES]
+    theme = config.THEMES.get(data.get("theme", "pastel"), config.THEMES["pastel"])
+    slot = data.get("slot", "")
     template = Environment(loader=FileSystemLoader(HERE), autoescape=True).get_template("template.html")
 
     for old in post_dir.glob("slide*.jpg"):
@@ -59,7 +66,7 @@ def render(post_dir: Path) -> list[Path]:
         browser = p.chromium.launch()
         page = browser.new_page(viewport={"width": 1080, "height": 1350}, device_scale_factor=1)
         for i, slide in enumerate(slides, start=1):
-            page.set_content(template.render(**build_context(slide, i, len(slides))), wait_until="networkidle")
+            page.set_content(template.render(**build_context(slide, i, len(slides), theme, slot)), wait_until="networkidle")
             page.wait_for_function("window.fitDone === true", timeout=20000)
             path = post_dir / f"slide{i:02d}.jpg"
             page.screenshot(path=str(path), type="jpeg", quality=92)

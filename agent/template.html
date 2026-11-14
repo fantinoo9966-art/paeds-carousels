@@ -2,57 +2,68 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family={{ t.head }}&family={{ t.body }}&display=block" rel="stylesheet">
 <style>
-  :root { --accent: {{ accent }}; --ink: #2B2440; --muted: #6B6380; --paper: #FFF8F1; }
+  :root {
+    --accent: {{ accent }}; --ink: {{ t.ink }}; --muted: {{ t.muted }}; --paper: {{ t.paper }}; --card: {{ t.card }};
+    --border: {{ t.border }}; --hl-bg: {{ t.hl_bg }}; --hl-ink: {{ t.hl_ink }}; --on-accent: {{ t.on_accent }};
+    --strong-ink: {{ accent if t.strong_ink == 'accent' else t.strong_ink }};
+    --mark: {{ 'transparent' if t.mark == 'none' else 'color-mix(in srgb, ' ~ accent ~ ' 70%, white)' }};
+    --radius: {{ t.radius }}px; --shadow: {{ t.shadow }}px;
+    --head: '{{ t.head_family }}', sans-serif; --body: '{{ t.body_family }}', sans-serif;
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { width: 1080px; height: 1350px; overflow: hidden; }
-  body { background: var(--paper); font-family: 'Nunito', sans-serif; color: var(--ink); position: relative; }
+  body { background: var(--paper); font-family: var(--body); color: var(--ink); position: relative; }
   .blob { position: absolute; border-radius: 50%; background: var(--accent); opacity: .28; }
   .b1 { width: 520px; height: 520px; top: -200px; right: -180px; }
   .b2 { width: 360px; height: 360px; bottom: -140px; left: -120px; opacity: .2; }
-  .dots { position: absolute; inset: 0; background-image: radial-gradient(#2B244014 2px, transparent 2px); background-size: 34px 34px; }
-  .frame { position: absolute; inset: 56px 64px 56px 64px; display: flex; flex-direction: column; }
-  .top { display: flex; justify-content: space-between; align-items: center; font-family: 'Fredoka'; font-weight: 600; font-size: 28px; color: var(--muted); }
-  .pill { background: #fff; border: 3px solid var(--ink); border-radius: 999px; padding: 6px 20px; color: var(--ink); }
+  .pattern { position: absolute; inset: 0; }
+  .pattern.dots { background-image: radial-gradient(color-mix(in srgb, var(--ink) 9%, transparent) 2px, transparent 2px); background-size: 34px 34px; }
+  .pattern.grid { background-image: linear-gradient(color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px); background-size: 54px 54px; }
+  .pattern.lines { background-image: linear-gradient(transparent 52px, #9DB8E6 52px, #9DB8E6 54px); background-size: 100% 54px; opacity: .45; }
+  .pattern.lines::before { content: ""; position: absolute; top: 0; bottom: 0; left: 96px; width: 3px; background: #F29CA8; }
+  .frame { position: absolute; inset: 56px 64px; display: flex; flex-direction: column; }
+  .top { display: flex; justify-content: space-between; align-items: center; font-family: var(--head); font-weight: 600; font-size: 28px; color: var(--muted); }
+  .pill { background: var(--card); border: 3px solid var(--border); border-radius: 999px; padding: 6px 20px; color: var(--ink); }
   .content { flex: 1; display: flex; flex-direction: column; justify-content: center; min-height: 0; padding: 30px 0; }
-  .card { background: #fff; border: 4px solid var(--ink); border-radius: 36px; box-shadow: 12px 12px 0 var(--accent); padding: 52px 56px; }
+  .card { background: var(--card); border: 4px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow) var(--shadow) 0 var(--accent); padding: 52px 56px; }
   .emoji { font-size: 84px; line-height: 1; margin-bottom: 18px; }
-  h1 { font-family: 'Fredoka'; font-weight: 700; font-size: 68px; line-height: 1.08; letter-spacing: -0.5px; }
-  h1 .u { background: linear-gradient(transparent 62%, var(--accent) 62%); }
+  h1 { font-family: var(--head); font-weight: {{ t.head_weight }}; font-size: {{ (68 * t.get('head_scale', 1)) | round }}px; line-height: 1.08; letter-spacing: -0.5px; }
+  h1 .u { background: linear-gradient(transparent {{ 88 if t.mark == 'none' else 62 }}%, var(--accent) {{ 88 if t.mark == 'none' else 62 }}%); }
   .sub { font-size: 34px; color: var(--muted); font-weight: 700; margin-top: 18px; line-height: 1.3; }
   ul { list-style: none; margin-top: 30px; }
-  li { font-size: 36px; line-height: 1.32; padding: 14px 0 14px 58px; position: relative; border-bottom: 2px dashed #2B244022; }
+  li { font-size: 36px; line-height: 1.32; padding: 14px 0 14px 58px; position: relative; border-bottom: 2px dashed color-mix(in srgb, var(--ink) 15%, transparent); }
   li:last-child { border-bottom: 0; }
-  li::before { content: ""; position: absolute; left: 6px; top: 26px; width: 26px; height: 26px; border-radius: 8px; background: var(--accent); border: 3px solid var(--ink); }
-  strong { font-weight: 800; background: linear-gradient(transparent 60%, color-mix(in srgb, var(--accent) 70%, white) 60%); }
+  li::before { content: ""; position: absolute; left: 6px; top: 26px; width: 26px; height: 26px; border-radius: 8px; background: var(--accent); border: 3px solid var(--border); }
+  strong { font-weight: 800; color: var(--strong-ink); background: linear-gradient(transparent 60%, var(--mark) 60%); }
   table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 28px; font-size: 32px; }
-  th { font-family: 'Fredoka'; font-weight: 600; font-size: 34px; background: var(--accent); padding: 14px 18px; text-align: left; border: 3px solid var(--ink); }
+  th { font-family: var(--head); font-weight: {{ t.head_weight }}; font-size: 34px; background: var(--accent); color: var(--on-accent); padding: 14px 18px; text-align: left; border: 3px solid var(--border); }
   th:first-child { border-radius: 18px 0 0 0; border-right: 0; } th:last-child { border-radius: 0 18px 0 0; }
-  td { padding: 14px 18px; border: 3px solid var(--ink); border-top: 0; vertical-align: top; line-height: 1.28; }
+  td { padding: 14px 18px; border: 3px solid var(--border); border-top: 0; vertical-align: top; line-height: 1.28; }
   td:first-child { border-right: 0; }
   tr:last-child td:first-child { border-radius: 0 0 0 18px; } tr:last-child td:last-child { border-radius: 0 0 18px 0; }
   .mn li { padding-left: 96px; min-height: 92px; display: flex; align-items: center; }
-  .mn .letter { top: 10px !important; }
   .mn li::before { display: none; }
-  .mn .letter { position: absolute; left: 0; top: 8px; width: 72px; height: 72px; border-radius: 20px; background: var(--accent); border: 3px solid var(--ink); font-family: 'Fredoka'; font-weight: 700; font-size: 48px; display: flex; align-items: center; justify-content: center; }
-  .hl { margin-top: 30px; background: var(--ink); color: #fff; border-radius: 24px; padding: 22px 28px; font-size: 32px; font-weight: 800; line-height: 1.3; }
-  .hl b { color: var(--accent); font-family: 'Fredoka'; }
-  .cover h1 { font-size: 88px; }
+  .mn .letter { position: absolute; left: 0; top: 10px; width: 72px; height: 72px; border-radius: 20px; background: var(--accent); color: var(--on-accent); border: 3px solid var(--border); font-family: var(--head); font-weight: {{ t.head_weight }}; font-size: 48px; display: flex; align-items: center; justify-content: center; }
+  .hl { margin-top: 30px; background: var(--hl-bg); color: var(--hl-ink); border-radius: calc(var(--radius) * .66); padding: 22px 28px; font-size: 32px; font-weight: 800; line-height: 1.3; }
+  .cover h1 { font-size: {{ (88 * t.get('head_scale', 1)) | round }}px; }
   .cover .card { padding: 64px 60px; }
-  .swipe { margin-top: 40px; font-family: 'Fredoka'; font-weight: 600; font-size: 38px; display: inline-flex; align-items: center; gap: 14px; background: var(--accent); border: 4px solid var(--ink); border-radius: 999px; padding: 12px 30px; align-self: flex-start; }
-  .bottom { display: flex; justify-content: space-between; align-items: center; font-family: 'Fredoka'; font-size: 26px; color: var(--muted); font-weight: 600; }
+  .swipe { margin-top: 40px; font-family: var(--head); font-weight: 600; font-size: 38px; display: inline-flex; align-items: center; gap: 14px; background: var(--accent); color: var(--on-accent); border: 4px solid var(--border); border-radius: 999px; padding: 12px 30px; align-self: flex-start; }
+  .bottom { display: flex; justify-content: space-between; align-items: center; font-family: var(--head); font-size: 26px; color: var(--muted); font-weight: 600; }
   .dotsnav { display: flex; gap: 10px; }
-  .dotsnav span { width: 14px; height: 14px; border-radius: 50%; background: #2B244030; }
+  .dotsnav span { width: 14px; height: 14px; border-radius: 50%; background: color-mix(in srgb, var(--ink) 20%, transparent); }
   .dotsnav span.on { background: var(--ink); width: 38px; border-radius: 8px; }
+  .tag { font-family: var(--body); font-weight: 800; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 </style>
 </head>
 <body class="{{ slide.kind }}">
-  <div class="dots"></div><div class="blob b1"></div><div class="blob b2"></div>
+  <div class="pattern {{ t.pattern }}"></div><div class="blob b1"></div><div class="blob b2"></div>
   <div class="frame">
     <div class="top"><span>🩺 {{ brand }}</span><span class="pill">{{ index }}/{{ total }}</span></div>
     <div class="content" id="content">
       <div class="card" id="card">
+        {% if slide.kind == 'cover' and level_tag %}<div class="tag">{{ level_tag }}</div>{% endif %}
         {% if slide.emoji %}<div class="emoji">{{ slide.emoji }}</div>{% endif %}
         <h1>{% if slide.kind == 'cover' %}<span class="u">{{ slide.title }}</span>{% else %}{{ slide.title }}{% endif %}</h1>
         {% if slide.subtitle and slide.kind != 'compare' %}<div class="sub">{{ slide.subtitle }}</div>{% endif %}
@@ -68,7 +79,7 @@
           <ul>{% for p in points %}<li>{{ p | safe }}</li>{% endfor %}</ul>
         {% endif %}
 
-        {% if slide.highlight %}<div class="hl"><b>★ </b>{{ slide.highlight }}</div>{% endif %}
+        {% if slide.highlight %}<div class="hl">★ {{ slide.highlight }}</div>{% endif %}
       </div>
       {% if slide.kind == 'cover' %}<div class="swipe">Swipe to learn ➜</div>{% endif %}
     </div>
@@ -85,7 +96,7 @@
     const content = document.getElementById('content');
     const card = document.getElementById('card');
     let scale = 1;
-    const nodes = card.querySelectorAll('h1, .sub, li, td, th, .hl, .emoji');
+    const nodes = card.querySelectorAll('h1, .sub, li, td, th, .hl, .emoji, .tag');
     const base = [...nodes].map(n => parseFloat(getComputedStyle(n).fontSize));
     while (card.scrollHeight + 40 > content.clientHeight && scale > 0.5) {
       scale -= 0.04;

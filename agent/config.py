@@ -21,8 +21,74 @@ GEMINI_MODELS = [
 MIN_SLIDES = 6
 MAX_SLIDES = 10  # Instagram allows at most 10 images per carousel
 
-# Pastel accent colours, one per slide (cycled).
+# Pastel accent colours, one per slide (cycled). Used by the "pastel" theme.
 ACCENTS = ["#F7A8C4", "#8FD3C7", "#9CC7F2", "#C7B5F0", "#FFC59E", "#F6D77E"]
+
+# Design themes. Each post gets the next theme in this order, so the grid looks varied.
+# paper=background, card=box, ink=text, on_accent=text on coloured chips, mark=highlighter behind bold words.
+THEMES = {
+    "pastel": dict(
+        paper="#FFF8F1", card="#FFFFFF", ink="#2B2440", muted="#6B6380", border="#2B2440",
+        hl_bg="#2B2440", hl_ink="#FFFFFF", on_accent="#2B2440", strong_ink="#2B2440", mark="mix",
+        head="Fredoka:wght@500;600;700", head_family="Fredoka", head_weight=700,
+        body="Nunito:wght@500;700;800", body_family="Nunito", pattern="dots", radius=36, shadow=12,
+        accents=ACCENTS),
+    "midnight": dict(
+        paper="#12132A", card="#1D1F45", ink="#F5F3FF", muted="#A9A6CF", border="#3A3D7A",
+        hl_bg="#7CF2D0", hl_ink="#12132A", on_accent="#12132A", strong_ink="accent", mark="none",
+        head="Poppins:wght@600;700;800", head_family="Poppins", head_weight=800,
+        body="Inter:wght@400;500;700;800", body_family="Inter", pattern="grid", radius=28, shadow=0,
+        accents=["#7CF2D0", "#FF8FB8", "#8FB8FF", "#FFD27A", "#C9A2FF"]),
+    "notebook": dict(
+        paper="#FDFBF3", card="#FFFDF7", ink="#1F2A44", muted="#5D6680", border="#1F2A44",
+        hl_bg="#FFE45C", hl_ink="#1F2A44", on_accent="#1F2A44", strong_ink="#1F2A44", mark="mix",
+        head="Caveat:wght@600;700", head_family="Caveat", head_weight=700,
+        body="Nunito:wght@500;700;800", body_family="Nunito", pattern="lines", radius=10, shadow=8, head_scale=1.3,
+        accents=["#FFE45C", "#9BF0B5", "#FFB3D1", "#A8D8FF"]),
+    "mint": dict(
+        paper="#E9F6F1", card="#FFFFFF", ink="#103B2E", muted="#4D7266", border="#103B2E",
+        hl_bg="#103B2E", hl_ink="#E9F6F1", on_accent="#103B2E", strong_ink="#0E7A5A", mark="none",
+        head="DM+Serif+Display", head_family="DM Serif Display", head_weight=400,
+        body="DM+Sans:wght@400;500;700;800", body_family="DM Sans", pattern="none", radius=24, shadow=0,
+        accents=["#9FE3C9", "#C8EBDD", "#7FD1B9", "#BFE8D6"]),
+    "sunset": dict(
+        paper="#FFF0E5", card="#FFFFFF", ink="#3B1E2A", muted="#7A5563", border="#3B1E2A",
+        hl_bg="#E8566C", hl_ink="#FFFFFF", on_accent="#3B1E2A", strong_ink="#C2364E", mark="none",
+        head="Baloo+2:wght@600;700;800", head_family="Baloo 2", head_weight=800,
+        body="Nunito:wght@500;700;800", body_family="Nunito", pattern="dots", radius=40, shadow=10,
+        accents=["#FFB38A", "#FF8FA3", "#FFD08A", "#F7A1C4"]),
+    "lavender": dict(
+        paper="#F4F1FF", card="#FFFFFF", ink="#1E1A3C", muted="#625C8A", border="#D9D2FF",
+        hl_bg="#5B4BDB", hl_ink="#FFFFFF", on_accent="#1E1A3C", strong_ink="#5B4BDB", mark="none",
+        head="Outfit:wght@600;700;800", head_family="Outfit", head_weight=800,
+        body="Outfit:wght@400;500;700", body_family="Outfit", pattern="none", radius=32, shadow=0,
+        accents=["#CFC6FF", "#B9E6FF", "#FFD6EC", "#D7F5C8"]),
+}
+THEME_ORDER = ["pastel", "midnight", "notebook", "mint", "sunset", "lavender"]
+
+# Daily slots: who each post is for and which formats it rotates through.
+SLOTS = {
+    "morning": dict(
+        audience="MBBS students, interns and NEET-PG / INI-CET aspirants",
+        level="high-yield exam revision: crisp facts, numbers, one-liners and PYQ-style points",
+        formats=[
+            "High-yield summary of the topic",
+            "Mnemonic-led revision (one strong mnemonic slide plus supporting facts)",
+            "Compare & contrast (two or three look-alike conditions in tables)",
+            "Red flags and must-not-miss signs",
+            "Rapid-fire exam one-liners (PYQ style)",
+        ]),
+    "evening": dict(
+        audience="paediatric postgraduates (MD/DNB residents)",
+        level="PG level: clinical approach, recent IAP/AAP/WHO guideline points, drug doses, practical ward and viva tips",
+        formats=[
+            "Case-based: short case on slide 2, then approach, investigations, management",
+            "Clinical quiz: 'Guess the diagnosis' with clues, answer and explanation on later slides",
+            "Management protocol / algorithm step by step (with doses)",
+            "Viva questions with crisp model answers",
+            "Drug focus: indications, paediatric dose, side effects, monitoring",
+        ]),
+}
 
 # Instagram API version
 GRAPH_VERSION = "v27.0"

@@ -53,10 +53,18 @@ SCHEMA = {
     "additionalProperties": False,
 }
 
-SYSTEM = f"""You write Instagram carousels for {config.HANDLE} ("{config.BRAND_NAME}"), run by a paediatrics PG resident in India.
-Audience: {config.AUDIENCE}
+def build_system(slot: str, fmt: str) -> str:
+    s = config.SLOTS[slot]
+    return f"""You write Instagram carousels for {config.HANDLE} ("{config.BRAND_NAME}"), run by a paediatrics PG resident in India.
+Audience for this post: {s['audience']}.
+Depth: {s['level']}.
+Format for this post: {fmt}. Shape the slides around this format.
 
 Goal: carousels people SAVE and SHARE with batchmates. Clinically accurate, high-yield, visually scannable.
+""" + RULES
+
+
+RULES = f"""
 
 Accuracy rules (most important):
 - Follow current standard sources: Nelson Textbook of Pediatrics, IAP guidelines, WHO, AAP. Use Indian context where relevant (IAP schedules, drug availability).
@@ -134,7 +142,21 @@ def clean(data: dict) -> dict:
     return data
 
 
-def ask_gemini(request: str) -> dict:
+FACT_CHECK = """You are a strict professor of paediatrics checking a draft Instagram carousel before it is posted publicly
+under a doctor's name, with NO human review. Check every fact, age cut-off, dose, unit, frequency and number against
+Nelson Textbook of Pediatrics and current IAP / WHO / AAP guidance.
+- Correct anything wrong. If something is doubtful or varies between sources and cannot be stated safely, remove it or
+  qualify it ("per IAP"). Never invent references.
+- Remove made-up mnemonics that are confusing; keep good ones.
+- Keep the same JSON structure, style, slide count range and length limits.
+- Replace doctor_check with a short list of what you changed (or "No changes needed").
+Return the full corrected carousel JSON.
+
+Draft:
+"""
+
+
+def ask_gemini(request: str, system: str) -> dict:
     client = genai.Client()  # reads GEMINI_API_KEY
     prompt = (
         f"{request}\n\nReply with ONLY a JSON object matching this JSON schema:\n"
@@ -148,7 +170,7 @@ def ask_gemini(request: str) -> dict:
                     model=model,
                     contents=prompt,
                     config=types.GenerateContentConfig(
-                        system_instruction=SYSTEM,
+                        system_instruction=system,
                         response_mime_type="application/json",
                         temperature=0.6,
                     ),
@@ -165,18 +187,37 @@ def ask_gemini(request: str) -> dict:
 
 
 def main() -> None:
+    slot = os.environ.get("SLOT", "").strip() or "morning"
+    if slot not in config.SLOTS:
+        slot = "morning"
+    count = len([p for p in POSTS.glob("*/slides.json")])
+    formats = config.SLOTS[slot]["formats"]
+    fmt = formats[(count // 2) % len(formats)]
+    theme = config.THEME_ORDER[count % len(config.THEME_ORDER)]
+    system = build_system(slot, fmt)
+
     forced = " ".join(sys.argv[1:]).strip() or os.environ.get("TOPIC", "").strip()
-    topic = forced or next_topic()
+    topic = forced or (next_topic() if slot == "morning" else None)
     if topic:
         request = f"Write the carousel on this topic: {topic}"
     else:
-        done = ", ".join(sorted(used_topics())) or "none"
+        done = "; ".join(sorted(used_topics())) or "none"
         request = (
-            "Pick a new high-yield paediatrics topic for exam aspirants that has NOT been covered yet, "
+            f"Pick a new paediatrics topic that suits this audience and format and has NOT been covered yet, "
             f"and write the carousel. Already covered: {done}"
         )
+    print(f"Slot: {slot} | format: {fmt} | theme: {theme} | topic: {topic or 'model picks'}", file=sys.stderr)
 
-    data = ask_gemini(request)
+    data = ask_gemini(request, system)
+    # Second pass: strict fact-check, since posts go out without human review.
+    try:
+        checked = ask_gemini(FACT_CHECK + json.dumps(data, ensure_ascii=False), system)
+        if len(checked["slides"]) >= 3:
+            data = checked
+            print("Fact-check pass applied", file=sys.stderr)
+    except SystemExit:
+        print("Fact-check pass failed; using first draft", file=sys.stderr)
+    data.update({"slot": slot, "format": fmt, "theme": theme})
 
     slides = data["slides"][: config.MAX_SLIDES]
     if len(slides) < 2:

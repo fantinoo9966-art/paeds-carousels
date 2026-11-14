@@ -1,0 +1,82 @@
+name: Auto post (twice daily)
+
+# Fully automatic: writes, fact-checks, designs and posts with no approval step.
+# To pause posting: Actions -> "Auto post (twice daily)" -> ... -> Disable workflow.
+on:
+  schedule:
+    - cron: "30 2 * * *"   # 08:00 IST  - morning post (MBBS / NEET-PG)
+    - cron: "0 14 * * *"   # 19:30 IST  - evening post (Paeds PG)
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "morning (MBBS) or evening (PG)"
+        required: true
+        default: "morning"
+        type: choice
+        options: [morning, evening]
+      topic:
+        description: "Topic (optional)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency: auto-post
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+
+      - name: Choose slot
+        id: slot
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "30 2 * * *" ]; then
+            echo "slot=morning" >> "$GITHUB_OUTPUT"
+          else
+            echo "slot=evening" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Write and fact-check slides with Gemini
+        id: gen
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SLOT: ${{ steps.slot.outputs.slot }}
+          TOPIC: ${{ github.event.inputs.topic }}
+        run: echo "slug=$(python agent/generate.py | tail -n 1)" >> "$GITHUB_OUTPUT"
+
+      - name: Render slide images
+        run: python agent/render.py "posts/${{ steps.gen.outputs.slug }}"
+
+      - name: Save post to the repo (so Instagram can download the images)
+        env:
+          SLUG: ${{ steps.gen.outputs.slug }}
+        run: |
+          git config user.name "carousel-bot"
+          git config user.email "carousel-bot@users.noreply.github.com"
+          git add "posts/$SLUG"
+          git commit -m "Auto post: $SLUG"
+          git pull --rebase origin main
+          git push origin main
+          sleep 20
+
+      - name: Publish to Instagram
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          SLUG: ${{ steps.gen.outputs.slug }}
+        run: |
+          python agent/publish.py "posts/$SLUG"
+          git add "posts/$SLUG/published.json"
+          git commit -m "Published $SLUG"
+          git pull --rebase origin main
+          git push origin main

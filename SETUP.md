@@ -1,6 +1,16 @@
 # Paediatrick-or-Treats Carousel Agent: Setup Guide
 
-**What it does:** 3 times a week (Mon/Wed/Fri at 8 AM IST) it picks a topic, has Google Gemini write a 6–10 slide carousel, designs the slides, and sends you a **review page** on GitHub. You check it on your phone and tap **Merge**, and it posts to Instagram. If you close the page instead, nothing gets posted.
+**What it does:** posts automatically **twice a day**, with no approval needed:
+- **~8:00 AM IST:** MBBS / NEET-PG high-yield, using topics from `topics.txt` in order
+- **~7:30 PM IST:** Paeds PG level (cases, quizzes, protocols, viva Q&A, drug focus), with Gemini picking a new topic
+
+Each post is written by Gemini, **fact-checked by a second Gemini pass**, designed in one of **6 rotating themes** (pastel, midnight, notebook, mint, sunset, lavender), and posted. GitHub may start a run up to ~30 minutes late; that's normal.
+
+**Pause posting:** Actions → *Auto post (twice daily)* → **⋯ → Disable workflow** (Enable to resume).
+**Post one now:** Actions → *Auto post (twice daily)* → **Run workflow** → pick morning/evening, with an optional topic.
+**Review mode instead:** Actions → *Create carousel (with review)* → Run workflow opens a review page; merging it posts.
+**Wrong post?** Delete it in the Instagram app (⋯ → Delete). Read your posts when you can: AI fact-checking is not perfect.
+GitHub emails you if a post fails.
 
 **Cost: ₹0.** GitHub, Gemini's free tier and the Instagram API are all free, and no card is needed.
 Note: on the free tier, Google may use what you send to Gemini to improve its products. That's fine for public educational content, but never put patient details in topics.
