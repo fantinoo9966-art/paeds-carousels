@@ -1,52 +1,103 @@
-# Evening posts for paediatric PGs. Posted top to bottom; rotates biostatistics -> ventilation -> social paediatrics -> national programmes.
-# Add, remove or reorder freely. When the list runs out, Gemini picks new PG topics itself.
+# Evening posts for paediatric PGs: the whole PG syllabus.
+# Alternates: clinical topic -> special subject (biostatistics / ventilation / social paediatrics / national programmes).
+# Posted top to bottom. Add, remove or reorder freely. When the list runs out, Gemini picks new PG topics itself.
+Septic shock in children: recognition and first-hour management
 Biostatistics: Sensitivity, specificity, PPV and NPV made easy
+DKA in children: ISPAD fluid and insulin protocol
 Ventilation: Modes of mechanical ventilation in children (VC, PC, PRVC, SIMV, PSV)
+Status epilepticus: time-based treatment algorithm
 Social paediatrics: Recognising child abuse and neglect
+Acute severe asthma: PICU management
 National programme: Universal Immunization Programme and Mission Indradhanush
+Nephrotic syndrome: IAP steroid regimens and relapses
 Biostatistics: Study designs - RCT vs cohort vs case-control vs cross-sectional
+Neonatal jaundice: phototherapy and exchange thresholds (AAP 2022)
 Ventilation: Initial ventilator settings in a child - a practical approach
+Hypoxic-ischaemic encephalopathy: Sarnat staging and therapeutic hypothermia
 Social paediatrics: POCSO Act 2012 - what every paediatrician must know
+Neonatal sepsis: empirical antibiotics and duration
 National programme: Rashtriya Bal Swasthya Karyakram (RBSK) and the 4 Ds
+Approach to a cyanotic newborn
 Biostatistics: p-value and 95% confidence interval explained
+Heart failure in infants: causes and management
 Ventilation: Neonatal CPAP - indications, setup and failure criteria
+Dengue: WHO warning signs and fluid management
 Social paediatrics: UN Convention on the Rights of the Child and Juvenile Justice Act
+Severe malaria in children: artesunate protocol
 National programme: Anaemia Mukt Bharat - the 6x6x6 strategy
+Raised intracranial pressure: recognition and management
 Biostatistics: Type I and Type II errors, power and sample size
+Acute flaccid paralysis and Guillain-Barre syndrome
 Ventilation: ABG interpretation in children - step by step
+Approach to suspected inborn error of metabolism
 Social paediatrics: Adolescent health and RKSK
+Hyperammonemia: emergency management
 National programme: POSHAN Abhiyaan and ICDS
+Acute kidney injury in children: KDIGO staging and management
 Biostatistics: Relative risk, odds ratio, ARR and NNT
+Hyponatremia: approach and safe correction
 Ventilation: Lung-protective ventilation in PARDS
+Hyperkalemia: emergency management
 Social paediatrics: Breastfeeding promotion and the IMS Act
+Approach to short stature
 National programme: IMNCI - classification and treatment
+Congenital adrenal hyperplasia: diagnosis and crisis management
 Biostatistics: Mean, median, mode, SD and normal distribution
+Thalassemia major: transfusion and chelation protocol
 Ventilation: High-flow nasal cannula (HFNC) in children
+Immune thrombocytopenia: when to treat
 Social paediatrics: Nurturing care and early childhood development
+Febrile neutropenia: risk stratification and antibiotics
 National programme: Home Based Newborn Care (HBNC) and Home Based Young Child care (HBYC)
+Tumour lysis syndrome: prevention and management
 Biostatistics: Choosing the right statistical test
+Approach to hepatosplenomegaly
 Ventilation: Oxygenation index, OSI and P/F ratio
+Acute liver failure in children
 Social paediatrics: Child labour, street children and vulnerable groups
+Upper GI bleed in children
 National programme: Facility-based newborn care - SNCU, NBSU and NBCC
+Necrotising enterocolitis: modified Bell staging
 Biostatistics: Bias and confounding in clinical studies
+Patent ductus arteriosus in preterms
 Ventilation: Weaning and extubation readiness in children
+Retinopathy of prematurity: screening and treatment
 Social paediatrics: Disability, inclusion and the RPwD Act 2016
+Bronchopulmonary dysplasia: definition and prevention
 National programme: Janani Shishu Suraksha Karyakram (JSSK)
+Neonatal hypoglycaemia: approach and management
 Biostatistics: ROC curve and likelihood ratios
+Approach to global developmental delay
 Ventilation: Troubleshooting the ventilated child - DOPE
+Autism spectrum disorder: early signs and M-CHAT
 Social paediatrics: Adoption and foster care in India (CARA)
+Severe acute malnutrition: complications and F-75/F-100
 National programme: MAA programme - Mothers' Absolute Affection
+Snake bite: Indian national protocol and ASV dosing
 Biostatistics: Survival analysis and Kaplan-Meier curves
+Organophosphate poisoning: atropine and pralidoxime
 Ventilation: Non-invasive ventilation (BiPAP) in children
+Paracetamol poisoning: nomogram and NAC
 Social paediatrics: Child mortality indicators - IMR, NMR, U5MR
+Scorpion sting: prazosin protocol
 National programme: National Deworming Day and Vitamin A supplementation
+Tuberculous meningitis: staging and treatment
 Biostatistics: Systematic review, meta-analysis and forest plots
+Enteric fever: IAP treatment guidelines
 Ventilation: High-frequency oscillatory ventilation (HFOV) basics
+MIS-C vs Kawasaki disease
 Social paediatrics: Gender, nutrition and the girl child
+Rheumatic fever: Jones criteria 2015 and secondary prophylaxis
 National programme: Stop Diarrhoea Campaign (IDCF) - ORS and zinc
+Juvenile idiopathic arthritis: classification
 Ventilation: Surfactant therapy - INSURE vs LISA
+Acute disseminated encephalomyelitis vs viral encephalitis
 National programme: SAANS - Social Awareness and Action to Neutralise Pneumonia Successfully
+Cerebral palsy: classification and GMFCS
 National programme: India Newborn Action Plan (INAP)
+Approach to a child with recurrent pneumonia
 National programme: Childhood TB under NTEP
+Empyema in children: management
 National programme: Measles-Rubella elimination and surveillance
+Fluid and electrolyte maintenance: Holliday-Segar and isotonic fluids
 National programme: National Iodine Deficiency Disorders Control Programme

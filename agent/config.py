@@ -81,13 +81,17 @@ SLOTS = {
         ]),
     "evening": dict(
         audience="paediatric postgraduates (MD/DNB residents)",
-        level=("PG level for MD/DNB theory and viva: biostatistics, mechanical ventilation, social paediatrics and "
-               "Government of India national health programmes. Use the latest official programme names, targets and "
-               "components (MoHFW, NHM); for biostatistics give formulas with a worked example"),
+        level=("PG level for MD/DNB theory, practicals and viva, across the WHOLE paediatrics syllabus: clinical "
+               "approach, emergencies, PICU/NICU, latest IAP/AAP/WHO/ISPAD guidelines with doses, plus biostatistics, "
+               "mechanical ventilation, social paediatrics and Government of India national health programmes "
+               "(latest official names, targets and components from MoHFW/NHM; for biostatistics give formulas with a "
+               "worked example)"),
         formats=[
+            "Case-based: short case on slide 2, then approach, investigations, management",
             "Concept explained simply, with a worked example or real-life scenario",
+            "Management protocol / algorithm step by step (with doses where relevant)",
             "Viva questions with crisp model answers",
-            "Step-by-step approach / algorithm / framework",
+            "Clinical quiz: 'Guess the diagnosis' with clues, answer and explanation on later slides",
             "Exam pearls and common mistakes",
             "Test yourself: 4-5 questions, answers revealed on the later slides",
         ]),

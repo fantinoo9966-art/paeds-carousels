@@ -59,7 +59,8 @@ def build_system(slot: str, fmt: str) -> str:
     return f"""You write Instagram carousels for {config.HANDLE} ("{config.BRAND_NAME}"), run by a paediatrics PG resident in India.
 Audience for this post: {s['audience']}.
 Depth: {s['level']}.
-Format for this post: {fmt}. Shape the slides around this format.
+Format for this post: {fmt}. Shape the slides around this format; if it does not suit the topic
+(e.g. a case-based format for a biostatistics or programme topic), use the closest format that does.
 
 Goal: carousels people SAVE and SHARE with batchmates. Clinically accurate, high-yield, visually scannable.
 """ + RULES
