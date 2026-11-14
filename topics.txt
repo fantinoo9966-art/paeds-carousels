@@ -1,0 +1,42 @@
+# One topic per line. The agent posts them top to bottom and skips ones already done.
+# Add, remove or reorder freely. When the list runs out, Claude picks new topics itself.
+Developmental milestones you must know by age
+Febrile seizures: simple vs complex
+Kawasaki disease: diagnosis and IVIG
+Acute rheumatic fever: Jones criteria
+Nephrotic syndrome in children
+Acute glomerulonephritis (PSGN)
+Dehydration assessment and ORS (WHO plan A, B, C)
+Severe acute malnutrition: WHO 10 steps
+Neonatal jaundice: physiological vs pathological
+Neonatal resuscitation: the golden minute
+APGAR score made easy
+Bronchiolitis vs asthma in toddlers
+Croup vs epiglottitis
+Pneumonia in children: IMNCI classification
+Paediatric drug doses every intern must know
+IAP immunization schedule at a glance
+Tetralogy of Fallot: tet spells
+Cyanotic vs acyanotic heart disease
+Meningitis in children: CSF patterns
+Diabetic ketoacidosis in children
+Congenital hypothyroidism
+Rickets: types and X-ray signs
+Thalassemia major: transfusion and chelation
+Iron deficiency anaemia in children
+Down syndrome: features and associations
+Measles: stages and complications
+Dengue in children: warning signs
+Intussusception: classic triad
+Hirschsprung disease
+Cerebral palsy: types
+Neonatal sepsis: early vs late onset
+Respiratory distress in newborn: causes
+Growth charts and short stature
+Puberty: precocious and delayed
+Pediatric BLS and PALS essentials
+Poisoning in children: common antidotes
+Henoch-Schonlein purpura (IgA vasculitis)
+ITP in children
+Wilms tumour vs neuroblastoma
+Infant feeding and breastfeeding facts

@@ -1,0 +1,16 @@
+{
+  "topic": "Febrile seizures: simple vs complex",
+  "slides": [
+    {"kind": "cover", "emoji": "🌡️", "title": "Febrile seizures: simple vs complex", "subtitle": "The 2-minute revision every intern needs", "points": [], "highlight": ""},
+    {"kind": "points", "emoji": "📌", "title": "What counts as one?", "subtitle": "", "points": ["Seizure with **fever ≥38°C** without CNS infection", "Age **6 months to 5 years** (peak 12–18 months)", "No prior afebrile seizure, no metabolic cause", "Affects about **2–5%** of children"], "highlight": "Most common seizure type in childhood"},
+    {"kind": "compare", "emoji": "⚖️", "title": "Simple vs complex", "subtitle": "Simple || Complex", "points": ["**Generalised** || **Focal** onset", "Lasts **<15 min** || Lasts **>15 min**", "**Once** in 24 hours || **Recurs** within 24 hours", "No post-ictal deficit || May leave Todd's palsy"], "highlight": "Any ONE complex feature = complex febrile seizure"},
+    {"kind": "points", "emoji": "🚩", "title": "Red flags: think beyond", "subtitle": "", "points": ["**Neck stiffness**, bulging fontanelle → rule out meningitis", "Persistent drowsiness after 1 hour", "Age **<6 months** at first seizure", "Recent antibiotics may **mask meningitis**"], "highlight": "LP if signs of meningitis, or consider if <12 months & unimmunised"},
+    {"kind": "mnemonic", "emoji": "🧠", "title": "Recurrence risk: YOUNG", "subtitle": "", "points": ["Y - Young age at onset (<18 months)", "O - Only brief fever before seizure", "U - Under 40°C at time of seizure", "N - Near relative (family history)", "G - Grows with each factor present"], "highlight": "Overall recurrence ≈ 30%"},
+    {"kind": "takeaway", "emoji": "💡", "title": "Exam pearls", "subtitle": "", "points": ["Simple FS: **no routine EEG or neuroimaging**", "Antipyretics **do not prevent** recurrence", "Epilepsy risk only slightly above general population"], "highlight": "Reassure parents: simple FS has an excellent prognosis"},
+    {"kind": "cta", "emoji": "🔖", "title": "Save this for your exams", "subtitle": "Follow @paediatrick_or_treats for more", "points": ["Share with your PG batch", "Comment the next topic you want"], "highlight": ""}
+  ],
+  "caption": "sample",
+  "hashtags": [],
+  "references": ["Nelson Textbook of Pediatrics, 22nd ed.", "AAP Clinical Practice Guideline: Simple Febrile Seizures (2011)"],
+  "doctor_check": []
+}
