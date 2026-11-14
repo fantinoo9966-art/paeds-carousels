@@ -79,22 +79,27 @@ def publish(post_dir: Path) -> dict:
     repo = os.environ["GITHUB_REPOSITORY"]
     branch = os.environ.get("IMAGE_BRANCH", "main")
     images = sorted(post_dir.glob("slide*.jpg"))[: config.MAX_SLIDES]
-    if len(images) < 2:
-        raise SystemExit("A carousel needs at least 2 slides.")
+    if not images:
+        raise SystemExit("No slide images found.")
     caption = (post_dir / "caption.txt").read_text(encoding="utf-8")[:2200]
 
-    children = []
-    for img in images:
+    def url_for(img: Path) -> str:
         rel = img.relative_to(post_dir.parent.parent).as_posix()
-        url = f"https://raw.githubusercontent.com/{repo}/{branch}/{rel}"
-        cid = call("POST", f"{ig_user}/media", image_url=url, is_carousel_item="true")["id"]
-        children.append(cid)
-        print(f"Uploaded {img.name}")
-    for cid in children:
-        wait_ready(cid)
+        return f"https://raw.githubusercontent.com/{repo}/{branch}/{rel}"
 
-    carousel = call("POST", f"{ig_user}/media", media_type="CAROUSEL",
-                    children=",".join(children), caption=caption)["id"]
+    if len(images) == 1:  # single-image post (e.g. Drug of the Day)
+        carousel = call("POST", f"{ig_user}/media", image_url=url_for(images[0]), caption=caption)["id"]
+        print("Uploaded single image")
+    else:
+        children = []
+        for img in images:
+            cid = call("POST", f"{ig_user}/media", image_url=url_for(img), is_carousel_item="true")["id"]
+            children.append(cid)
+            print(f"Uploaded {img.name}")
+        for cid in children:
+            wait_ready(cid)
+        carousel = call("POST", f"{ig_user}/media", media_type="CAROUSEL",
+                        children=",".join(children), caption=caption)["id"]
     wait_ready(carousel)
     media_id = call("POST", f"{ig_user}/media_publish", creation_id=carousel)["id"]
     permalink = call("GET", media_id, fields="permalink").get("permalink", "")

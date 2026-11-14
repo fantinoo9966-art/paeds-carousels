@@ -20,7 +20,8 @@ import config  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "posts"
-TOPICS_FILE = ROOT / "topics.txt"
+TOPICS_FILE = ROOT / "topics.txt"          # morning: MBBS / NEET-PG
+PG_TOPICS_FILE = ROOT / "topics_pg.txt"    # evening: PG (biostatistics, ventilation, social paeds, programmes)
 
 SLIDE_KINDS = ["cover", "points", "compare", "mnemonic", "takeaway", "cta"]
 
@@ -103,11 +104,11 @@ def used_topics() -> set[str]:
     return used
 
 
-def next_topic() -> str | None:
+def next_topic(path: Path = TOPICS_FILE) -> str | None:
     used = used_topics()
-    if not TOPICS_FILE.exists():
+    if not path.exists():
         return None
-    for line in TOPICS_FILE.read_text(encoding="utf-8").splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         t = line.strip()
         if t and not t.startswith("#") and t.lower() not in used:
             return t
@@ -156,11 +157,13 @@ Draft:
 """
 
 
-def ask_gemini(request: str, system: str) -> dict:
+def ask_gemini(request: str, system: str, schema: dict | None = None, validate=None) -> dict:
     client = genai.Client()  # reads GEMINI_API_KEY
+    schema = schema or SCHEMA
+    validate = validate or clean
     prompt = (
         f"{request}\n\nReply with ONLY a JSON object matching this JSON schema:\n"
-        f"{json.dumps(SCHEMA)}"
+        f"{json.dumps(schema)}"
     )
     errors = []
     for model in config.GEMINI_MODELS:
@@ -175,7 +178,7 @@ def ask_gemini(request: str, system: str) -> dict:
                         temperature=0.6,
                     ),
                 )
-                data = clean(json.loads(response.text))
+                data = validate(json.loads(response.text))
                 print(f"Written by {model}", file=sys.stderr)
                 return data
             except Exception as e:  # model not available, quota, bad JSON: try again / next model
@@ -190,14 +193,15 @@ def main() -> None:
     slot = os.environ.get("SLOT", "").strip() or "morning"
     if slot not in config.SLOTS:
         slot = "morning"
-    count = len([p for p in POSTS.glob("*/slides.json")])
+    count = len([p for p in POSTS.glob("*/slides.json")
+                 if json.loads(p.read_text(encoding="utf-8")).get("slot") != "drug"])
     formats = config.SLOTS[slot]["formats"]
     fmt = formats[(count // 2) % len(formats)]
     theme = config.THEME_ORDER[count % len(config.THEME_ORDER)]
     system = build_system(slot, fmt)
 
     forced = " ".join(sys.argv[1:]).strip() or os.environ.get("TOPIC", "").strip()
-    topic = forced or (next_topic() if slot == "morning" else None)
+    topic = forced or next_topic(TOPICS_FILE if slot == "morning" else PG_TOPICS_FILE)
     if topic:
         request = f"Write the carousel on this topic: {topic}"
     else:
@@ -218,6 +222,8 @@ def main() -> None:
     except SystemExit:
         print("Fact-check pass failed; using first draft", file=sys.stderr)
     data.update({"slot": slot, "format": fmt, "theme": theme})
+    if topic:
+        data["topic"] = topic  # keep the exact list wording so it is never repeated
 
     slides = data["slides"][: config.MAX_SLIDES]
     if len(slides) < 2:

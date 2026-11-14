@@ -70,7 +70,8 @@ THEME_ORDER = ["pastel", "midnight", "notebook", "mint", "sunset", "lavender"]
 SLOTS = {
     "morning": dict(
         audience="MBBS students, interns and NEET-PG / INI-CET aspirants",
-        level="high-yield exam revision: crisp facts, numbers, one-liners and PYQ-style points",
+        level=("NEET-PG / INI-CET high-yield exam revision: crisp, clean, standard-textbook facts, numbers, one-liners "
+               "and PYQ-style points; no clutter, no controversy"),
         formats=[
             "High-yield summary of the topic",
             "Mnemonic-led revision (one strong mnemonic slide plus supporting facts)",
@@ -80,13 +81,15 @@ SLOTS = {
         ]),
     "evening": dict(
         audience="paediatric postgraduates (MD/DNB residents)",
-        level="PG level: clinical approach, recent IAP/AAP/WHO guideline points, drug doses, practical ward and viva tips",
+        level=("PG level for MD/DNB theory and viva: biostatistics, mechanical ventilation, social paediatrics and "
+               "Government of India national health programmes. Use the latest official programme names, targets and "
+               "components (MoHFW, NHM); for biostatistics give formulas with a worked example"),
         formats=[
-            "Case-based: short case on slide 2, then approach, investigations, management",
-            "Clinical quiz: 'Guess the diagnosis' with clues, answer and explanation on later slides",
-            "Management protocol / algorithm step by step (with doses)",
+            "Concept explained simply, with a worked example or real-life scenario",
             "Viva questions with crisp model answers",
-            "Drug focus: indications, paediatric dose, side effects, monitoring",
+            "Step-by-step approach / algorithm / framework",
+            "Exam pearls and common mistakes",
+            "Test yourself: 4-5 questions, answers revealed on the later slides",
         ]),
 }
 

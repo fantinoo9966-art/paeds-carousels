@@ -2,6 +2,7 @@
 
 Usage: python agent/render.py posts/<slug>
 """
+import datetime
 import html
 import json
 import re
@@ -27,7 +28,7 @@ def split2(text: str) -> list[str]:
     return parts + [""] * (2 - len(parts))
 
 
-LEVEL_TAGS = {"morning": "MBBS · NEET-PG high-yield", "evening": "Paeds PG · Clinical"}
+LEVEL_TAGS = {"morning": "MBBS · NEET-PG high-yield", "evening": "Paeds PG · MD / DNB"}
 
 
 def build_context(slide: dict, index: int, total: int, theme: dict, slot: str = "") -> dict:
@@ -38,6 +39,8 @@ def build_context(slide: dict, index: int, total: int, theme: dict, slot: str = 
         "level_tag": LEVEL_TAGS.get(slot, ""),
         "brand": config.BRAND_NAME, "handle": config.HANDLE,
         "points": [rich(p) for p in slide.get("points", [])],
+        "doses": [rich(p) for p in slide.get("doses", [])],
+        "today": datetime.date.today().strftime("%d %b"),
     }
     if slide["kind"] == "compare":
         ctx["headers"] = split2(slide.get("subtitle") or "||")

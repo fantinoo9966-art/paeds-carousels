@@ -1,8 +1,9 @@
 # Paediatrick-or-Treats Carousel Agent: Setup Guide
 
-**What it does:** posts automatically **twice a day**, with no approval needed:
-- **~8:00 AM IST:** MBBS / NEET-PG high-yield, using topics from `topics.txt` in order
-- **~7:30 PM IST:** Paeds PG level (cases, quizzes, protocols, viva Q&A, drug focus), with Gemini picking a new topic
+**What it does:** posts automatically **3 times a day**, with no approval needed:
+- **~8:00 AM IST:** MBBS / NEET-PG high-yield carousel, from `topics.txt` in order
+- **~12:00 PM IST:** 💊 **Drug of the Day**, one slide (name, class, mechanism, uses, paediatric dose). Doses come only from your PedDose file, stored encrypted in `data/drugs.enc` (130 drugs, then it repeats). Needs the `DRUGS_KEY` secret.
+- **~7:30 PM IST:** Paeds PG carousel (biostatistics, ventilation, social paediatrics, national programmes), from `topics_pg.txt` in order
 
 Each post is written by Gemini, **fact-checked by a second Gemini pass**, designed in one of **6 rotating themes** (pastel, midnight, notebook, mint, sunset, lavender), and posted. GitHub may start a run up to ~30 minutes late; that's normal.
 

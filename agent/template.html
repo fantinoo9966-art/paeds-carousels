@@ -54,16 +54,29 @@
   .dotsnav { display: flex; gap: 10px; }
   .dotsnav span { width: 14px; height: 14px; border-radius: 50%; background: color-mix(in srgb, var(--ink) 20%, transparent); }
   .dotsnav span.on { background: var(--ink); width: 38px; border-radius: 8px; }
+  .drug .emoji { display: none; }
+  .drug .card { padding: 46px 52px; }
+  .drug h1 { font-size: {{ (80 * t.get('head_scale', 1)) | round }}px; }
+  .drug .sub { margin-top: 6px; font-size: 30px; }
+  .chip { display: inline-block; margin-top: 16px; background: var(--accent); color: var(--on-accent); border: 3px solid var(--border); border-radius: 999px; padding: 6px 22px; font-weight: 800; font-size: 28px; }
+  .sec { margin-top: 26px; font-family: var(--head); font-weight: {{ t.head_weight }}; font-size: 30px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); }
+  .moa { margin-top: 8px; font-size: 32px; line-height: 1.32; }
+  .uses { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .uses span { font-size: 28px; font-weight: 700; padding: 6px 16px; border-radius: 12px; border: 2px solid var(--border); background: color-mix(in srgb, var(--accent) 35%, var(--card)); }
+  .doses { margin-top: 6px; }
+  .doses li { font-size: 31px; padding: 10px 0 10px 50px; }
+  .doses li::before { top: 20px; }
   .tag { font-family: var(--body); font-weight: 800; font-size: 22px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
 </style>
 </head>
 <body class="{{ slide.kind }}">
   <div class="pattern {{ t.pattern }}"></div><div class="blob b1"></div><div class="blob b2"></div>
   <div class="frame">
-    <div class="top"><span>🩺 {{ brand }}</span><span class="pill">{{ index }}/{{ total }}</span></div>
+    <div class="top"><span>🩺 {{ brand }}</span>{% if total > 1 %}<span class="pill">{{ index }}/{{ total }}</span>{% else %}<span class="pill">{{ today }}</span>{% endif %}</div>
     <div class="content" id="content">
       <div class="card" id="card">
         {% if slide.kind == 'cover' and level_tag %}<div class="tag">{{ level_tag }}</div>{% endif %}
+        {% if slide.kind == 'drug' %}<div class="tag">💊 Drug of the day</div>{% endif %}
         {% if slide.emoji %}<div class="emoji">{{ slide.emoji }}</div>{% endif %}
         <h1>{% if slide.kind == 'cover' %}<span class="u">{{ slide.title }}</span>{% else %}{{ slide.title }}{% endif %}</h1>
         {% if slide.subtitle and slide.kind != 'compare' %}<div class="sub">{{ slide.subtitle }}</div>{% endif %}
@@ -73,19 +86,27 @@
             <tr>{% for h in headers %}<th>{{ h }}</th>{% endfor %}</tr>
             {% for row in rows %}<tr><td>{{ row[0] | safe }}</td><td>{{ row[1] | safe }}</td></tr>{% endfor %}
           </table>
+        {% elif slide.kind == 'drug' %}
+          <div class="chip">{{ slide.drug_class }}</div>
+          <div class="sec">Mechanism of action</div>
+          <p class="moa">{{ slide.moa }}</p>
+          <div class="sec">Uses</div>
+          <div class="uses">{% for u in slide.uses %}<span>{{ u }}</span>{% endfor %}</div>
+          <div class="sec">Paediatric dose</div>
+          <ul class="doses">{% for d in doses %}<li>{{ d | safe }}</li>{% endfor %}</ul>
         {% elif slide.kind == 'mnemonic' %}
           <ul class="mn">{% for p in mn %}<li><span class="letter">{{ p[0] }}</span>{{ p[1] | safe }}</li>{% endfor %}</ul>
         {% elif points %}
           <ul>{% for p in points %}<li>{{ p | safe }}</li>{% endfor %}</ul>
         {% endif %}
 
-        {% if slide.highlight %}<div class="hl">★ {{ slide.highlight }}</div>{% endif %}
+        {% if slide.highlight %}<div class="hl">{{ '⚠ ' if slide.kind == 'drug' else '★ ' }}{{ slide.highlight }}</div>{% endif %}
       </div>
       {% if slide.kind == 'cover' %}<div class="swipe">Swipe to learn ➜</div>{% endif %}
     </div>
     <div class="bottom">
       <span>{{ handle }}</span>
-      <span class="dotsnav">{% for i in range(1, total + 1) %}<span class="{{ 'on' if i == index else '' }}"></span>{% endfor %}</span>
+      {% if total > 1 %}<span class="dotsnav">{% for i in range(1, total + 1) %}<span class="{{ 'on' if i == index else '' }}"></span>{% endfor %}</span>{% endif %}
       <span>{{ 'Save 🔖' if index == total else 'Swipe ➜' }}</span>
     </div>
   </div>
@@ -96,7 +117,7 @@
     const content = document.getElementById('content');
     const card = document.getElementById('card');
     let scale = 1;
-    const nodes = card.querySelectorAll('h1, .sub, li, td, th, .hl, .emoji, .tag');
+    const nodes = card.querySelectorAll('h1, .sub, li, td, th, .hl, .emoji, .tag, .chip, .sec, .moa, .uses span');
     const base = [...nodes].map(n => parseFloat(getComputedStyle(n).fontSize));
     while (card.scrollHeight + 40 > content.clientHeight && scale > 0.5) {
       scale -= 0.04;

@@ -1,0 +1,52 @@
+# Evening posts for paediatric PGs. Posted top to bottom; rotates biostatistics -> ventilation -> social paediatrics -> national programmes.
+# Add, remove or reorder freely. When the list runs out, Gemini picks new PG topics itself.
+Biostatistics: Sensitivity, specificity, PPV and NPV made easy
+Ventilation: Modes of mechanical ventilation in children (VC, PC, PRVC, SIMV, PSV)
+Social paediatrics: Recognising child abuse and neglect
+National programme: Universal Immunization Programme and Mission Indradhanush
+Biostatistics: Study designs - RCT vs cohort vs case-control vs cross-sectional
+Ventilation: Initial ventilator settings in a child - a practical approach
+Social paediatrics: POCSO Act 2012 - what every paediatrician must know
+National programme: Rashtriya Bal Swasthya Karyakram (RBSK) and the 4 Ds
+Biostatistics: p-value and 95% confidence interval explained
+Ventilation: Neonatal CPAP - indications, setup and failure criteria
+Social paediatrics: UN Convention on the Rights of the Child and Juvenile Justice Act
+National programme: Anaemia Mukt Bharat - the 6x6x6 strategy
+Biostatistics: Type I and Type II errors, power and sample size
+Ventilation: ABG interpretation in children - step by step
+Social paediatrics: Adolescent health and RKSK
+National programme: POSHAN Abhiyaan and ICDS
+Biostatistics: Relative risk, odds ratio, ARR and NNT
+Ventilation: Lung-protective ventilation in PARDS
+Social paediatrics: Breastfeeding promotion and the IMS Act
+National programme: IMNCI - classification and treatment
+Biostatistics: Mean, median, mode, SD and normal distribution
+Ventilation: High-flow nasal cannula (HFNC) in children
+Social paediatrics: Nurturing care and early childhood development
+National programme: Home Based Newborn Care (HBNC) and Home Based Young Child care (HBYC)
+Biostatistics: Choosing the right statistical test
+Ventilation: Oxygenation index, OSI and P/F ratio
+Social paediatrics: Child labour, street children and vulnerable groups
+National programme: Facility-based newborn care - SNCU, NBSU and NBCC
+Biostatistics: Bias and confounding in clinical studies
+Ventilation: Weaning and extubation readiness in children
+Social paediatrics: Disability, inclusion and the RPwD Act 2016
+National programme: Janani Shishu Suraksha Karyakram (JSSK)
+Biostatistics: ROC curve and likelihood ratios
+Ventilation: Troubleshooting the ventilated child - DOPE
+Social paediatrics: Adoption and foster care in India (CARA)
+National programme: MAA programme - Mothers' Absolute Affection
+Biostatistics: Survival analysis and Kaplan-Meier curves
+Ventilation: Non-invasive ventilation (BiPAP) in children
+Social paediatrics: Child mortality indicators - IMR, NMR, U5MR
+National programme: National Deworming Day and Vitamin A supplementation
+Biostatistics: Systematic review, meta-analysis and forest plots
+Ventilation: High-frequency oscillatory ventilation (HFOV) basics
+Social paediatrics: Gender, nutrition and the girl child
+National programme: Stop Diarrhoea Campaign (IDCF) - ORS and zinc
+Ventilation: Surfactant therapy - INSURE vs LISA
+National programme: SAANS - Social Awareness and Action to Neutralise Pneumonia Successfully
+National programme: India Newborn Action Plan (INAP)
+National programme: Childhood TB under NTEP
+National programme: Measles-Rubella elimination and surveillance
+National programme: National Iodine Deficiency Disorders Control Programme
