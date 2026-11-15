@@ -17,6 +17,7 @@ from google.genai import types
 
 sys.path.insert(0, str(Path(__file__).parent))
 import config  # noqa: E402
+from due import ist_today  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "posts"
@@ -222,7 +223,7 @@ def main() -> None:
             print("Fact-check pass applied", file=sys.stderr)
     except SystemExit:
         print("Fact-check pass failed; using first draft", file=sys.stderr)
-    data.update({"slot": slot, "format": fmt, "theme": theme})
+    data.update({"slot": slot, "format": fmt, "theme": theme, "ist_date": ist_today()})
     if topic:
         data["topic"] = topic  # keep the exact list wording so it is never repeated
 
@@ -231,7 +232,7 @@ def main() -> None:
         sys.exit("Too few slides were generated.")
     data["slides"] = slides
 
-    slug = f"{datetime.date.today():%Y-%m-%d}-{slugify(data['topic'])}"
+    slug = f"{ist_today()}-{slugify(data['topic'])}"
     out = POSTS / slug
     out.mkdir(parents=True, exist_ok=True)
     (out / "slides.json").write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")

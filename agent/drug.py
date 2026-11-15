@@ -15,6 +15,7 @@ from cryptography.fernet import Fernet
 
 sys.path.insert(0, str(Path(__file__).parent))
 import config  # noqa: E402
+from due import ist_today  # noqa: E402
 from generate import POSTS, ask_gemini, slugify  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -119,13 +120,13 @@ def main() -> None:
         "drug_class": data["drug_class"], "moa": data["moa"], "uses": data["uses"], "doses": data["doses"],
     }
     post = {
-        "topic": f"Drug of the Day: {data['drug_name']}", "slot": "drug", "theme": theme,
+        "topic": f"Drug of the Day: {data['drug_name']}", "slot": "drug", "theme": theme, "ist_date": ist_today(),
         "slides": [slide], "caption": data["caption"], "hashtags": data["hashtags"],
         "references": [f"PedDose / paediatric drug handbook, p.{drug.get('source_page')}"],
         "doctor_check": data["doctor_check"], "source_drug": drug["name"],
     }
 
-    slug = f"{datetime.date.today():%Y-%m-%d}-drug-{slugify(data['drug_name'])}"
+    slug = f"{ist_today()}-drug-{slugify(data['drug_name'])}"
     out = POSTS / slug
     out.mkdir(parents=True, exist_ok=True)
     (out / "slides.json").write_text(json.dumps(post, indent=2, ensure_ascii=False), encoding="utf-8")

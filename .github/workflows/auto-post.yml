@@ -1,12 +1,13 @@
 name: Auto post (3 times daily)
 
 # Fully automatic: writes, fact-checks, designs and posts with no approval step.
+# Posting times (IST): 08:00 MBBS carousel, 12:00 Drug of the Day, 19:30 PG carousel.
+# GitHub's scheduler can start late or skip runs, so this checks every 30 minutes and posts
+# whichever slot is due and not yet posted today (see agent/due.py). Most checks finish in seconds.
 # To pause posting: Actions -> "Auto post (3 times daily)" -> ... -> Disable workflow.
 on:
   schedule:
-    - cron: "30 2 * * *"   # 08:00 IST  - morning carousel (MBBS / NEET-PG)
-    - cron: "30 6 * * *"   # 12:00 IST  - Drug of the Day (single slide)
-    - cron: "0 14 * * *"   # 19:30 IST  - evening carousel (Paeds PG)
+    - cron: "7,37 * * * *"
   workflow_dispatch:
     inputs:
       slot:
@@ -32,25 +33,27 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
 
-      - name: Choose slot
+      - name: Is a post due?
         id: slot
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "30 2 * * *" ]; then
-            echo "slot=morning" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "30 6 * * *" ]; then
-            echo "slot=drug" >> "$GITHUB_OUTPUT"
+            SLOT="${{ github.event.inputs.slot }}"
           else
-            echo "slot=evening" >> "$GITHUB_OUTPUT"
+            SLOT="$(python3 agent/due.py)"
           fi
+          echo "slot=$SLOT" >> "$GITHUB_OUTPUT"
+          echo "Slot due: ${SLOT:-none}"
+
+      - uses: actions/setup-python@v5
+        if: steps.slot.outputs.slot != ''
+        with:
+          python-version: "3.12"
+      - if: steps.slot.outputs.slot != ''
+        run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
 
       - name: Write and fact-check slides with Gemini
+        if: steps.slot.outputs.slot != ''
         id: gen
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -59,12 +62,16 @@ jobs:
           TOPIC: ${{ github.event.inputs.topic }}
         run: |
           if [ "$SLOT" = "drug" ]; then SCRIPT=agent/drug.py; else SCRIPT=agent/generate.py; fi
-          echo "slug=$(python $SCRIPT | tail -n 1)" >> "$GITHUB_OUTPUT"
+          SLUG="$(python $SCRIPT | tail -n 1)"
+          test -n "$SLUG"
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
 
       - name: Render slide images
+        if: steps.slot.outputs.slot != ''
         run: python agent/render.py "posts/${{ steps.gen.outputs.slug }}"
 
       - name: Save post to the repo (so Instagram can download the images)
+        if: steps.slot.outputs.slot != ''
         env:
           SLUG: ${{ steps.gen.outputs.slug }}
         run: |
@@ -77,6 +84,7 @@ jobs:
           sleep 20
 
       - name: Publish to Instagram
+        if: steps.slot.outputs.slot != ''
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           SLUG: ${{ steps.gen.outputs.slug }}
