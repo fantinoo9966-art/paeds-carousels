@@ -199,7 +199,10 @@ def main() -> None:
                  if json.loads(p.read_text(encoding="utf-8")).get("slot") != "drug"])
     formats = config.SLOTS[slot]["formats"]
     fmt = formats[(count // 2) % len(formats)]
-    theme = config.THEME_ORDER[count % len(config.THEME_ORDER)]
+    same_slot = len([p for p in POSTS.glob("*/slides.json")
+                     if json.loads(p.read_text(encoding="utf-8")).get("slot") == slot])
+    themes = config.SLOT_THEMES[slot]
+    theme = themes[same_slot % len(themes)]
     system = build_system(slot, fmt)
 
     forced = " ".join(sys.argv[1:]).strip() or os.environ.get("TOPIC", "").strip()

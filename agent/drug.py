@@ -113,7 +113,7 @@ def main() -> None:
     except SystemExit:
         print("Fact-check pass failed; using first draft", file=sys.stderr)
 
-    theme = config.THEME_ORDER[len(done) % len(config.THEME_ORDER)]
+    theme = config.SLOT_THEMES["drug"][len(done) % len(config.SLOT_THEMES["drug"])]
     slide = {
         "kind": "drug", "emoji": "💊", "title": data["drug_name"], "subtitle": data["aka"],
         "points": [], "highlight": data["caution"],

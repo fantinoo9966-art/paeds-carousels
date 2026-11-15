@@ -63,8 +63,28 @@ THEMES = {
         head="Outfit:wght@600;700;800", head_family="Outfit", head_weight=800,
         body="Outfit:wght@400;500;700", body_family="Outfit", pattern="none", radius=32, shadow=0,
         accents=["#CFC6FF", "#B9E6FF", "#FFD6EC", "#D7F5C8"]),
+    "slate": dict(
+        paper="#14191F", card="#1E252D", ink="#EAF1F4", muted="#9AAAB5", border="#33404B",
+        hl_bg="#4FD1C5", hl_ink="#0F1418", on_accent="#0F1418", strong_ink="accent", mark="none",
+        head="DM+Serif+Display", head_family="DM Serif Display", head_weight=400,
+        body="Inter:wght@400;500;700;800", body_family="Inter", pattern="grid", radius=18, shadow=0,
+        accents=["#4FD1C5", "#F6AD55", "#FC8181", "#90CDF4"]),
+    "royal": dict(
+        paper="#0E1B33", card="#16264A", ink="#F7F3E8", muted="#A9B4CC", border="#2C3E66",
+        hl_bg="#E2B657", hl_ink="#0E1B33", on_accent="#0E1B33", strong_ink="accent", mark="none",
+        head="Fraunces:wght@600;700;800", head_family="Fraunces", head_weight=700,
+        body="Inter:wght@400;500;700;800", body_family="Inter", pattern="none", radius=20, shadow=0,
+        accents=["#E2B657", "#F0D58C", "#9EC5FF", "#F2A7A0"]),
 }
 THEME_ORDER = ["pastel", "midnight", "notebook", "mint", "sunset", "lavender"]
+
+# Each audience has its own look, so followers can tell the posts apart at a glance:
+# MBBS = bright and playful, PG = dark and premium, Drug of the Day = clean and clinical.
+SLOT_THEMES = {
+    "morning": ["pastel", "notebook", "sunset"],
+    "evening": ["midnight", "slate", "royal"],
+    "drug": ["mint", "lavender"],
+}
 
 # Daily slots: who each post is for and which formats it rotates through.
 SLOTS = {
