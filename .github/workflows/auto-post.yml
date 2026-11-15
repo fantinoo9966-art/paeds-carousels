@@ -4,7 +4,7 @@ name: Auto post (3 times daily)
 # Posting times (IST): 08:00 MBBS carousel, 12:00 Drug of the Day, 19:30 PG carousel.
 # GitHub's scheduler can start late or skip runs, so this checks every 30 minutes and posts
 # whichever slot is due and not yet posted today (see agent/due.py). Most checks finish in seconds.
-# Backup trigger: cron-job.org calls this workflow every 30 min with slot=auto (same safe logic).
+# Main trigger: clock.yml wakes up at each posting time and starts this workflow with slot=auto.
 # To pause posting: Actions -> "Auto post (3 times daily)" -> ... -> Disable workflow.
 on:
   schedule:
@@ -24,6 +24,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency: auto-post
 
@@ -95,3 +96,12 @@ jobs:
           git commit -m "Published $SLUG"
           git pull --rebase origin main
           git push origin main
+
+      - name: Another post still due today? Start it now
+        if: steps.slot.outputs.slot != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NEXT="$(python3 agent/due.py)"
+          echo "Next due: ${NEXT:-none}"
+          if [ -n "$NEXT" ]; then gh workflow run auto-post.yml --ref main -f slot=auto; fi

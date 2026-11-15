@@ -1,0 +1,53 @@
+name: Clock (starts the posts on time)
+
+# GitHub's own cron is unreliable (it skipped most of 15 Nov), so this workflow keeps its own time:
+# it sleeps until the next posting time (08:00, 12:00, 19:30 IST), starts "Auto post" with slot=auto,
+# then starts a fresh copy of itself. Only one clock runs at a time. The cron below restarts the
+# clock if the chain ever breaks. To start it by hand: Actions -> Clock -> Run workflow.
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: clock
+  cancel-in-progress: true
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - name: Sleep until the next posting time
+        run: |
+          python3 - <<'PY'
+          import datetime, time
+          IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
+          now = datetime.datetime.now(IST)
+          targets = []
+          for d in (0, 1):
+              day = (now + datetime.timedelta(days=d)).date()
+              for h, m in ((8, 2), (12, 2), (19, 32)):
+                  targets.append(datetime.datetime(day.year, day.month, day.day, h, m, tzinfo=IST))
+          nxt = min(t for t in targets if t > now)
+          secs = min((nxt - now).total_seconds(), 5 * 3600)
+          print(f"Now {now:%d %b %H:%M} IST, next posting time {nxt:%d %b %H:%M}, sleeping {secs/60:.0f} min")
+          time.sleep(max(secs, 0))
+          PY
+
+      - name: Start Auto post (it only posts if something is due)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh workflow run auto-post.yml --ref main -f slot=auto
+
+      - name: Start the next clock
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh workflow run clock.yml --ref main

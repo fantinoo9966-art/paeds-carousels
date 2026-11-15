@@ -12,11 +12,11 @@ from pathlib import Path
 POSTS = Path(__file__).resolve().parent.parent / "posts"
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 
-# slot: (start, end) in IST, 24-hour clock
+# slot: (start, end) in IST, 24-hour clock. A missed slot is still posted later the same day.
 WINDOWS = {
-    "morning": ((8, 0), (12, 0)),
-    "drug": ((12, 0), (17, 0)),
-    "evening": ((19, 30), (23, 30)),
+    "morning": ((8, 0), (24, 0)),
+    "drug": ((12, 0), (24, 0)),
+    "evening": ((19, 30), (24, 0)),
 }
 
 
@@ -26,7 +26,9 @@ def posted_today(slot: str, today: str) -> bool:
             data = json.loads(f.read_text(encoding="utf-8"))
         except Exception:
             continue
-        if data.get("slot") == slot and data.get("ist_date") == today:
+        # Only counts once it is actually live on Instagram (published.json written).
+        if (data.get("slot") == slot and data.get("ist_date") == today
+                and (f.parent / "published.json").exists()):
             return True
     return False
 
