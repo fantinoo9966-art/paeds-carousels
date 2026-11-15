@@ -4,6 +4,7 @@ name: Auto post (3 times daily)
 # Posting times (IST): 08:00 MBBS carousel, 12:00 Drug of the Day, 19:30 PG carousel.
 # GitHub's scheduler can start late or skip runs, so this checks every 30 minutes and posts
 # whichever slot is due and not yet posted today (see agent/due.py). Most checks finish in seconds.
+# Backup trigger: cron-job.org calls this workflow every 30 min with slot=auto (same safe logic).
 # To pause posting: Actions -> "Auto post (3 times daily)" -> ... -> Disable workflow.
 on:
   schedule:
@@ -11,11 +12,11 @@ on:
   workflow_dispatch:
     inputs:
       slot:
-        description: "morning (MBBS), drug (Drug of the Day) or evening (PG)"
+        description: "auto (whatever is due now), morning (MBBS), drug (Drug of the Day) or evening (PG)"
         required: true
-        default: "morning"
+        default: "auto"
         type: choice
-        options: [morning, drug, evening]
+        options: [auto, morning, drug, evening]
       topic:
         description: "Topic or drug name (optional)"
         required: false
@@ -37,7 +38,7 @@ jobs:
       - name: Is a post due?
         id: slot
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.slot }}" != "auto" ]; then
             SLOT="${{ github.event.inputs.slot }}"
           else
             SLOT="$(python3 agent/due.py)"
