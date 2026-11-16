@@ -1,0 +1,30 @@
+🦠 Neonatal sepsis: one Reel for wards & exams | PG Notes · Neonatology 04
+
+⏱️ EOS ≤ 72 h: vertical, maternal flora (E. coli, Klebsiella, GBS)
+⏱️ LOS > 72 h: nosocomial/community (Klebsiella, Acinetobacter, S. aureus, CoNS)
+
+⚠️ EOS risk factors: PROM > 18 h · maternal fever ≥ 38 °C · chorioamnionitis · foul-smelling liquor · prematurity/LBW · GBS colonisation · multiple PV exams · perinatal asphyxia
+
+🩺 Clinical is non-specific: poor feeding, lethargy, temperature instability, apnoea/grunting, CRT > 3 s, hypotension, hypo/hyperglycaemia, seizures/bulging fontanelle (meningitis)
+
+🧪 Workup:
+• Blood culture before antibiotics (≥ 1 ml) = gold standard
+• Sepsis screen (≥ 2 positive): TLC < 5000 · low ANC · I/T ratio ≥ 0.2 · CRP ≥ 10 mg/L · micro-ESR > 15 mm 1st h
+• LP in LOS, culture-positive or clinically sick babies
+
+💊 Empirical antibiotics:
+• EOS: ampicillin + gentamicin
+• LOS: per unit antibiogram, e.g. pip-taz + amikacin; add vancomycin if MRSA suspected
+• Meningitis: cefotaxime + ampicillin (per local resistance)
+
+📅 Duration: culture-negative & well → stop at 36–48 h · culture-positive 10–14 days · meningitis 14 days (GBS) / 21 days (Gram-negative)
+
+⭐ Pearls: Klebsiella & E. coli lead EOS in India · CRP rises 6–12 h after onset · blood culture is the gold standard
+
+📚 Ref: NNF/IAP guidelines, NICE NG195 (2021)
+➡️ Next: HIE & therapeutic cooling
+Follow @paediatrick_or_treats & save for revision 📌
+
+⚠️ For medical education. Verify with current guidelines and your unit protocol.
+
+#neonatalsepsis #sepsis #neonatology #NICU #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #medstudent #highyield #newborn #medicos
