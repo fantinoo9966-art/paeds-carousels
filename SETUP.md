@@ -1,11 +1,15 @@
 # Paediatrick-or-Treats Carousel Agent: Setup Guide
 
 **What it does:** posts automatically **3 times a day**, with no approval needed:
-- **~8:00 AM IST:** MBBS / NEET-PG high-yield carousel, from `topics.txt` in order
+- **~8:00 AM IST:** 🎬 the next queued **Parents Reel** (if one is waiting), then the MBBS / NEET-PG high-yield carousel, from `topics.txt` in order
 - **~12:00 PM IST:** 💊 **Drug of the Day**, one slide (name, class, mechanism, uses, paediatric dose). Doses come only from your PedDose file, stored encrypted in `data/drugs.enc` (130 drugs, then it repeats). Needs the `DRUGS_KEY` secret.
-- **~7:30 PM IST:** Paeds PG carousel covering the whole PG syllabus. `topics_pg.txt` alternates a clinical topic (emergencies, NICU/PICU, protocols) with a special subject (biostatistics, ventilation, social paediatrics, national programmes)
+- **~8:00 PM IST:** 🎬 the next queued **PG Reel** (if one is waiting), then the Paeds PG carousel covering the whole PG syllabus. `topics_pg.txt` alternates a clinical topic (emergencies, NICU/PICU, protocols) with a special subject (biostatistics, ventilation, social paediatrics, national programmes)
 
-Each post is written by Gemini, **fact-checked by a second Gemini pass**, designed in one of **6 rotating themes** (pastel, midnight, notebook, mint, sunset, lavender), and posted. GitHub may start a run up to ~30 minutes late; that's normal.
+**Reels** are the finished videos made in the Video Editor. Queue one with
+`python tools/queue_reel.py "<video.mp4>" "<CAPTION.txt>" parents|pg --cover 2` (add `--test` to check an upload
+without posting). One Reel per slot per day, oldest first; if the queue is empty only the carousel posts.
+
+Each carousel is written by Gemini, **fact-checked by a second Gemini pass**, designed in one of **6 rotating themes** (pastel, midnight, notebook, mint, sunset, lavender), and posted. GitHub may start a run up to ~30 minutes late; that's normal.
 
 **Pause posting:** Actions → *Auto post (twice daily)* → **⋯ → Disable workflow** (Enable to resume).
 **Post one now:** Actions → *Auto post (twice daily)* → **Run workflow** → pick morning/evening, with an optional topic.
