@@ -72,6 +72,13 @@ def main() -> None:
         raise SystemExit("Video or caption file not found.")
     if a.video.stat().st_size > 95e6:
         raise SystemExit("Video is over 95 MB; GitHub won't take it. Re-encode it smaller first.")
+    cap = caption_text(a.caption).strip()
+    if not cap:
+        raise SystemExit("Caption is empty: the Reel would be posted without a caption.")
+    if len(cap.encode("utf-16-le")) // 2 > 2150:  # Instagram's limit is 2200; keep a margin
+        raise SystemExit(f"Caption is too long for Instagram ({len(cap)} characters, max ~2150). Shorten it first.")
+    if cap.count("#") > 30:
+        raise SystemExit("Caption has more than 30 hashtags; Instagram would reject it.")
 
     slug = re.sub(r"[^a-z0-9]+", "-", a.video.stem.lower()).strip("-")[:50]
     reel_id = f"{datetime.datetime.now():%Y-%m-%d-%H%M%S}-{slug}"
