@@ -1,0 +1,39 @@
+{
+  "audience": "pg",
+  "topic": "Neonatal hypoglycaemia",
+  "title": "Neonatal Hypoglycaemia Reel - PG",
+  "system": "NEONATOLOGY",
+  "tab": "PG NOTES · NEONATOLOGY 07",
+  "disclaimer": "For medical education · Verify with current guidelines",
+  "seed": 0,
+  "cover_s": 3,
+  "scenes": [
+    { "type": "hook", "title": "Neonatal *hypoglycaemia*", "sub": "Who to screen · threshold · treatment · GIR", "mood": "sleepy", "icon": "drop", "hand": "Check before feeds" },
+    { "type": "big", "text": "Treat if blood glucose is *below 45 mg/dl*", "visual": { "kind": "number", "value": "45 mg/dl", "label": "operational threshold (2.5 mmol/L)" }, "sub": "Many babies are **asymptomatic**: screen the at-risk ones" },
+    { "type": "list", "title": "Screen these *babies*", "style": "chips", "items": [
+      { "text": "Preterm" }, { "text": "SGA / IUGR" }, { "text": "LGA" }, { "text": "Infant of diabetic mother" },
+      { "text": "Sepsis" }, { "text": "Asphyxia" }, { "text": "Hypothermia" }, { "text": "Poor feeding" }
+    ] },
+    { "type": "list", "title": "Symptoms", "style": "rows", "items": [
+      { "text": "Jitteriness, tremors", "icon": "bolt" },
+      { "text": "Lethargy, poor feeding, weak cry", "icon": "bottle" },
+      { "text": "Apnoea, cyanosis", "icon": "lungs" },
+      { "text": "Hypotonia, hypothermia", "icon": "ice" },
+      { "text": "**Seizures**", "icon": "siren" }
+    ] },
+    { "type": "list", "title": "Step-wise *management*", "style": "steps", "items": [
+      { "text": "Asymptomatic, mild: **feed** and recheck in 30–60 min" },
+      { "text": "Symptomatic or persistent: **2 ml/kg of 10% dextrose** IV" },
+      { "text": "Then infusion at **GIR 6–8 mg/kg/min**" },
+      { "text": "Still low: raise GIR in steps of **2 mg/kg/min**" },
+      { "text": "Refractory: think **hyperinsulinism**; hydrocortisone, glucagon, diazoxide" }
+    ] },
+    { "type": "pearls", "title": "Exam *pearls*", "items": [
+      "**GIR (mg/kg/min) = % dextrose × ml/kg/day ÷ 144**",
+      "Needing GIR **> 8–10** suggests **hyperinsulinism**",
+      "Commonest cause of persistent hypoglycaemia in infancy: **congenital hyperinsulinism**"
+    ] },
+    { "type": "cta", "line": "Follow for the full *Neonatology* series", "sub": "Next: Neonatal seizures" }
+  ],
+  "caption": "🩸🍬 Neonatal hypoglycaemia | PG Notes · Neonatology 07\n\n🎯 Treat if blood glucose < 45 mg/dl (2.5 mmol/L), the operational threshold. Many babies are asymptomatic: screen the at-risk ones.\n\n🔍 Screen: preterm · SGA/IUGR · LGA · infant of diabetic mother · sepsis · asphyxia · hypothermia · poor feeding\n\n🩺 Symptoms: jitteriness, tremors · lethargy, poor feeding, weak cry · apnoea, cyanosis · hypotonia, hypothermia · seizures\n\n🪜 Management:\n1️⃣ Asymptomatic, mild: feed and recheck in 30–60 min\n2️⃣ Symptomatic or persistent: 2 ml/kg of 10% dextrose IV\n3️⃣ Then infusion at GIR 6–8 mg/kg/min\n4️⃣ Still low: raise GIR in steps of 2 mg/kg/min\n5️⃣ Refractory: think hyperinsulinism; hydrocortisone, glucagon, diazoxide\n\n⭐ Pearls:\n• GIR (mg/kg/min) = % dextrose × ml/kg/day ÷ 144\n• Needing GIR > 8–10 suggests hyperinsulinism\n• Commonest cause of persistent hypoglycaemia in infancy: congenital hyperinsulinism\n\n📚 Ref: NNF clinical practice guidelines, AAP, Nelson\n➡️ Next: Neonatal seizures\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines and your unit protocol.\n\n#hypoglycemia #neonatology #NICU #newborn #GIR #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #highyield #medicos"
+}

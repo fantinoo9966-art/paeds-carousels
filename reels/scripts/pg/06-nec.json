@@ -1,0 +1,42 @@
+{
+  "audience": "pg",
+  "topic": "Necrotising enterocolitis: modified Bell staging",
+  "title": "NEC Reel - PG",
+  "system": "NEONATOLOGY",
+  "tab": "PG NOTES · NEONATOLOGY 06",
+  "disclaimer": "For medical education · Verify with current guidelines",
+  "seed": 4,
+  "cover_s": 3,
+  "scenes": [
+    { "type": "hook", "title": "*NEC*: Bell staging", "sub": "Risk · signs · X-ray · management", "mood": "ouch", "icon": "bowl", "hand": "Exam favourite" },
+    { "type": "list", "title": "Risk *factors*", "style": "chips", "items": [
+      { "text": "**Prematurity** (biggest)" }, { "text": "Formula feeds" }, { "text": "Rapid feed advance" },
+      { "text": "Asphyxia / hypoxia" }, { "text": "Absent/reversed EDF" }, { "text": "Polycythaemia" },
+      { "text": "Exchange transfusion" }, { "text": "Umbilical catheters" }
+    ] },
+    { "type": "list", "title": "Clinical *signs*", "style": "rows", "items": [
+      { "text": "Feed intolerance, rising **gastric aspirates**", "icon": "bowl" },
+      { "text": "Abdominal distension, tenderness", "icon": "warn" },
+      { "text": "**Bilious** vomiting", "icon": "drop" },
+      { "text": "Blood in stools", "icon": "blood" },
+      { "text": "Apnoea, lethargy, temperature instability", "icon": "ice" }
+    ] },
+    { "type": "cards", "title": "Modified *Bell staging*", "cards": [
+      { "title": "Stage I · Suspected", "lines": ["Systemic + mild GI signs; X-ray normal or mild ileus"] },
+      { "title": "Stage II · Definite", "lines": ["**Pneumatosis intestinalis** ± portal venous gas"] },
+      { "title": "Stage III · Advanced", "lines": ["Shock, DIC, peritonitis; **pneumoperitoneum = IIIB**"] }
+    ] },
+    { "type": "cards", "title": "*Management*", "cards": [
+      { "title": "Gut rest", "lines": ["**NPO + gastric decompression**", "TPN; NPO about **7–14 days** in stage II"] },
+      { "title": "Antibiotics", "lines": ["Broad-spectrum IV, e.g. **ampicillin + gentamicin + metronidazole**"] },
+      { "title": "Surgery", "lines": ["**Perforation** (IIIB) or clinical deterioration"] }
+    ] },
+    { "type": "pearls", "title": "Exam *pearls*", "items": [
+      "**Pneumatosis intestinalis** is the hallmark of stage II",
+      "**Football sign / Rigler sign** = pneumoperitoneum",
+      "Breast milk protects; **probiotics** reduce NEC in preterms"
+    ] },
+    { "type": "cta", "line": "Follow for the full *Neonatology* series", "sub": "Next: Neonatal hypoglycaemia" }
+  ],
+  "caption": "🍼⚠️ NEC: modified Bell staging | PG Notes · Neonatology 06\n\n⚡ Risk factors: prematurity (biggest) · formula feeds · rapid feed advance · asphyxia/hypoxia · absent/reversed EDF · polycythaemia · exchange transfusion · umbilical catheters\n\n🩺 Signs: feed intolerance with rising gastric aspirates · abdominal distension, tenderness · bilious vomiting · blood in stools · apnoea, lethargy, temperature instability\n\n📊 Modified Bell staging:\n• Stage I (suspected): systemic + mild GI signs; X-ray normal or mild ileus\n• Stage II (definite): pneumatosis intestinalis ± portal venous gas\n• Stage III (advanced): shock, DIC, peritonitis; pneumoperitoneum = IIIB\n\n💊 Management:\n• NPO + gastric decompression; TPN; NPO about 7–14 days in stage II\n• Broad-spectrum IV antibiotics, e.g. ampicillin + gentamicin + metronidazole\n• Surgery: perforation (IIIB) or clinical deterioration\n\n⭐ Pearls: pneumatosis intestinalis = hallmark of stage II · football / Rigler sign = pneumoperitoneum · breast milk protects; probiotics reduce NEC in preterms\n\n📚 Ref: Walsh & Kliegman modified Bell staging, Nelson\n➡️ Next: Neonatal hypoglycaemia\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines and your unit protocol.\n\n#NEC #necrotizingenterocolitis #neonatology #NICU #preterm #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #highyield #medicos"
+}

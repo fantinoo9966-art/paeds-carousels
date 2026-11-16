@@ -1,0 +1,30 @@
+{
+  "audience": "parents",
+  "topic": "Urine infection in children",
+  "title": "Urine Infection Reel - Parents",
+  "seed": 7,
+  "cover_s": 2,
+  "scenes": [
+    { "type": "hook", "title": "Fever but *no cold?*", "mood": "hot", "icon": "urine", "hand": "Check the urine!" },
+    { "type": "split", "title": "Babies vs *older kids*",
+      "left": { "title": "Babies", "icon": "newborn", "lines": ["Fever may be the **only sign**", "Poor feeding, vomiting", "Very cranky"] },
+      "right": { "title": "Older kids", "icon": "urine", "lines": ["Burning, passing urine often", "Tummy or back pain", "New wetting at night"] } },
+    { "type": "big", "text": "The test needs a *clean* urine sample", "visual": { "kind": "icon", "name": "tube" }, "sub": "**Not from the nappy**: your doctor will show you how" },
+    { "type": "list", "title": "Help your child *heal*", "style": "rows", "tone": "good", "items": [
+      { "text": "Finish the **full antibiotic course**", "icon": "pill" },
+      { "text": "Plenty of fluids", "icon": "water" },
+      { "text": "Don't hold urine: toilet every **3–4 hours**", "icon": "clock" },
+      { "text": "Wipe girls **front to back**", "icon": "heart" },
+      { "text": "Treat constipation too", "icon": "bowl" }
+    ] },
+    { "type": "list", "title": "See a doctor *urgently* if:", "style": "flags", "tone": "alert", "items": [
+      { "text": "Baby **under 3 months** with fever" },
+      { "text": "Vomiting, can't keep medicine down" },
+      { "text": "Very sleepy or very unwell" },
+      { "text": "Fever not better after **2 days** of antibiotics" },
+      { "text": "Urine infections that keep coming back" }
+    ] },
+    { "type": "cta" }
+  ],
+  "caption": "🌡️🚽 Fever but no cold? Think of a urine infection.\n\n👶 Babies: fever may be the only sign · poor feeding, vomiting · very cranky\n🧒 Older kids: burning, passing urine often · tummy or back pain · new wetting at night\n\n🧪 The test needs a clean urine sample, NOT from the nappy. Your doctor will show you how.\n\n💚 Help your child heal:\n1️⃣ Finish the full antibiotic course\n2️⃣ Plenty of fluids\n3️⃣ Don't hold urine: toilet every 3–4 hours\n4️⃣ Wipe girls front to back\n5️⃣ Treat constipation too\n\n🚨 See a doctor URGENTLY if:\n• Baby under 3 months with fever\n• Vomiting, can't keep medicine down\n• Very sleepy or very unwell\n• Fever not better after 2 days of antibiotics\n• Urine infections that keep coming back\n\n📌 Save this & share with every parent 💛\nFollow @paediatrick_or_treats for simple paediatrics.\n\n⚠️ For information only. Always consult your doctor.\n\n#UTI #urineinfection #fever #kidshealth #childhealth #paediatrics #pediatrician #parentingtips #newparents #momlife #indianparents #babycare #healthawareness #doctorsofinstagram #reelsindia"
+}

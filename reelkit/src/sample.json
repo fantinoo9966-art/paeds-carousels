@@ -1,0 +1,36 @@
+{
+  "audience": "parents",
+  "topic": "Newborn jaundice",
+  "title": "Newborn Jaundice Reel - Parents",
+  "seed": 2,
+  "cover_s": 2,
+  "scenes": [
+    { "type": "hook", "title": "Is your newborn turning *yellow?*", "mood": "sleepy", "icon": "lamp", "hand": "Very common!" },
+    { "type": "big", "text": "About *6 in 10* newborns get jaundice", "visual": { "kind": "number", "value": "60%", "label": "of full-term babies" }, "sub": "It usually shows on **day 2–3** and fades by **2 weeks**" },
+    { "type": "split", "title": "Normal or not?",
+      "left": { "title": "Usually normal", "icon": "newborn", "lines": ["Starts **after 24 hours**", "Baby feeds well and is active", "Fades by **2 weeks**"], "verdict": "Keep feeding ✓" },
+      "right": { "title": "Not normal", "icon": "warn", "lines": ["Yellow in the **first 24 hours**", "Spreads to legs, palms, soles", "Lasts **beyond 2 weeks**"], "verdict": "See a doctor" } },
+    { "type": "list", "title": "What *really helps*", "style": "wheel", "tone": "good", "items": [
+      { "text": "Feed often: **8–12 times** a day", "sub": "breastfeeding is best", "icon": "breast" },
+      { "text": "Count wet nappies: **6 or more** a day", "sub": "from day 5", "icon": "urine" },
+      { "text": "Baby check within **2–3 days** of going home", "icon": "cal" },
+      { "text": "Phototherapy if your doctor advises", "sub": "it is safe and works well", "icon": "lamp" }
+    ] },
+    { "type": "list", "title": "Please don't", "style": "notes", "tone": "bad", "items": [
+      { "text": "Put baby in direct sunlight", "icon": "warn" },
+      { "text": "Give water or glucose water", "icon": "noglass" },
+      { "text": "Stop breastfeeding", "icon": "breast" },
+      { "text": "Try home remedies on the skin", "icon": "rash" }
+    ] },
+    { "type": "list", "title": "See a doctor *urgently* if:", "style": "flags", "tone": "alert", "items": [
+      { "text": "Yellow in the **first 24 hours**" },
+      { "text": "Very sleepy, hard to wake, not feeding" },
+      { "text": "High-pitched cry or arching back" },
+      { "text": "**Pale or white stools**, dark yellow urine" },
+      { "text": "Yellow palms and soles" },
+      { "text": "Still yellow after **2 weeks** (3 weeks if premature)" }
+    ] },
+    { "type": "cta" }
+  ],
+  "caption": "👶💛 Is your newborn turning yellow? Here's when it's normal and when it's NOT.\n\n✅ About 6 in 10 full-term babies get jaundice. It usually shows on day 2–3 and fades by 2 weeks.\n\n🟢 Usually normal: starts after 24 hours, baby feeds well and is active, fades by 2 weeks.\n🔴 Not normal: yellow in the first 24 hours, spreading to legs, palms and soles, or lasting beyond 2 weeks.\n\n💚 What really helps:\n1️⃣ Feed often: 8–12 times a day (breastfeeding is best)\n2️⃣ Count wet nappies: 6 or more a day from day 5\n3️⃣ Get baby checked within 2–3 days of going home\n4️⃣ Phototherapy if your doctor advises: it is safe and works well\n\n❌ Please don't:\n• Put baby in direct sunlight\n• Give water or glucose water\n• Stop breastfeeding\n• Try home remedies on the skin\n\n🚨 See a doctor URGENTLY if:\n• Yellow in the first 24 hours\n• Very sleepy, hard to wake, not feeding\n• High-pitched cry or arching back\n• Pale or white stools, dark yellow urine\n• Yellow palms and soles\n• Still yellow after 2 weeks (3 weeks if premature)\n\n📌 Save this & share it with every new parent 💛\nFollow @paediatrick_or_treats for simple paediatrics.\n\n⚠️ For information only. Always consult your doctor.\n\n#newbornjaundice #jaundice #newborn #newbornbaby #babycare #breastfeeding #childhealth #paediatrics #pediatrician #newparents #newmom #parentingtips #indianparents #momlife #healthawareness #doctorsofinstagram #reelsindia"
+}

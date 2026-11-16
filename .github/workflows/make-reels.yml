@@ -1,0 +1,75 @@
+name: Make Reels (keeps the queue full)
+
+# Every night (~2:15 AM IST) this makes sure 2 Parents Reels and 2 PG Reels are waiting in the queue, so the
+# 8 AM / 8 PM Reel posts never stop. It uses the next hand-written script in reels/scripts/<parents|pg>/ (written
+# with Claude); if none is left, Gemini writes one (fact-checked twice, like the carousels). Renders the video
+# with the same look as the hand-made Reels (reelkit/), adds original music, and queues it with its caption.
+# Also runs when new scripts are pushed. Run by hand: Actions -> this workflow -> Run workflow (dry run = build only, queue nothing).
+on:
+  schedule:
+    - cron: "45 20 * * *"
+  push:
+    branches: [main]
+    paths: ["reels/scripts/**", "reelkit/src/**"]
+  workflow_dispatch:
+    inputs:
+      audience:
+        description: "both, parents or pg"
+        default: "both"
+        type: choice
+        options: [both, parents, pg]
+      dry_run:
+        description: "Build one Reel per audience but don't queue it"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency: make-reels
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          ref: reel-files
+          path: reel-files
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji > /dev/null
+          pip install -q numpy google-genai
+          cd reelkit
+          npm install --no-audit --no-fund --loglevel=error
+          npx -y playwright@1.48.2 install-deps chromium > /dev/null
+          npx remotion browser ensure
+      - name: Build and queue Reels
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PYTHONUTF8: "1"
+        run: |
+          git config --global user.name "reel-bot"
+          git config --global user.email "reel-bot@users.noreply.github.com"
+          ARGS="${{ github.event.inputs.audience || 'both' }}"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          python agent/make_reels.py $ARGS
+      - name: Keep the dry-run videos to download
+        if: github.event.inputs.dry_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dry-run-reels
+          path: reelkit/out/*.mp4
+          retention-days: 3

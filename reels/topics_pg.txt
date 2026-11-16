@@ -1,0 +1,52 @@
+# PG Reels (8 PM), system-wise. Format: SYSTEM | Topic. Used top to bottom when a script must be written
+# automatically; topics that already have a script in reels/scripts/pg/ are skipped. Add, remove or reorder freely.
+NEONATOLOGY | Neonatal sepsis
+NEONATOLOGY | HIE: Sarnat staging and therapeutic cooling
+NEONATOLOGY | Necrotising enterocolitis: modified Bell staging
+NEONATOLOGY | Neonatal hypoglycaemia
+NEONATOLOGY | Neonatal seizures
+NEONATOLOGY | Retinopathy of prematurity
+GROWTH & DEVELOPMENT | Developmental milestones by age
+GROWTH & DEVELOPMENT | Approach to short stature
+GROWTH & DEVELOPMENT | Developmental red flags
+NUTRITION | Severe acute malnutrition: WHO protocol
+NUTRITION | Rickets: types and X-ray signs
+NUTRITION | Vitamin A deficiency
+INFECTIOUS DISEASES | Dengue: WHO warning signs and fluids
+INFECTIOUS DISEASES | Measles
+INFECTIOUS DISEASES | TB in children
+INFECTIOUS DISEASES | Enteric fever
+INFECTIOUS DISEASES | IAP immunisation schedule
+RESPIRATORY | Bronchiolitis
+RESPIRATORY | Pneumonia: WHO classification
+RESPIRATORY | Acute asthma (GINA)
+RESPIRATORY | Croup vs epiglottitis
+CARDIOLOGY | Approach to congenital heart disease
+CARDIOLOGY | Kawasaki disease
+CARDIOLOGY | Acute rheumatic fever: Jones criteria
+CARDIOLOGY | Myocarditis
+GI & HEPATOLOGY | Acute gastroenteritis: WHO plans A, B, C
+GI & HEPATOLOGY | Neonatal cholestasis and biliary atresia
+GI & HEPATOLOGY | Wilson disease
+NEPHROLOGY | Nephrotic syndrome (ISPN)
+NEPHROLOGY | Acute glomerulonephritis
+NEPHROLOGY | UTI and VUR
+NEPHROLOGY | Acute kidney injury (KDIGO)
+NEUROLOGY | Febrile seizures
+NEUROLOGY | Status epilepticus algorithm
+NEUROLOGY | Bacterial meningitis
+NEUROLOGY | Guillain-Barre syndrome
+HAEMATO-ONCOLOGY | Iron deficiency anaemia
+HAEMATO-ONCOLOGY | Thalassaemia major
+HAEMATO-ONCOLOGY | Immune thrombocytopenia
+HAEMATO-ONCOLOGY | Acute lymphoblastic leukaemia
+ENDOCRINOLOGY | Diabetic ketoacidosis (ISPAD)
+ENDOCRINOLOGY | Congenital hypothyroidism
+ENDOCRINOLOGY | Congenital adrenal hyperplasia
+GENETICS & IEM | Down syndrome
+GENETICS & IEM | Approach to inborn errors of metabolism
+IMMUNOLOGY | IVIG: indications and dosing
+IMMUNOLOGY | Juvenile idiopathic arthritis
+EMERGENCY & PICU | Shock (PALS)
+EMERGENCY & PICU | Common poisonings and antidotes
+EMERGENCY & PICU | Anaphylaxis

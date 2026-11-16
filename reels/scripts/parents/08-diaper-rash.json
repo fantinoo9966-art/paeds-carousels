@@ -1,0 +1,36 @@
+{
+  "audience": "parents",
+  "topic": "Skin rashes and diaper rash",
+  "title": "Diaper Rash Reel - Parents",
+  "seed": 3,
+  "cover_s": 2,
+  "scenes": [
+    { "type": "hook", "title": "Red rash in the *nappy area?*", "mood": "ouch", "icon": "rash", "hand": "Easy to fix!" },
+    { "type": "list", "title": "Fix it with *A B C D E*", "style": "steps", "items": [
+      { "text": "**A**ir: nappy-free time every day" },
+      { "text": "**B**arrier: zinc cream or petroleum jelly" },
+      { "text": "**C**lean gently with water & soft cloth" },
+      { "text": "**D**iaper: change often, right size" },
+      { "text": "**E**ducate: no scented wipes or soap" }
+    ] },
+    { "type": "split", "title": "Nappy rash or *fungal?*",
+      "left": { "title": "Nappy rash", "icon": "rash", "lines": ["Red, shiny skin", "Skin folds are **spared**"], "verdict": "Barrier cream" },
+      "right": { "title": "Fungal (thrush)", "icon": "germ", "lines": ["Bright red **in the folds**", "Small **spots** around it"], "verdict": "See a doctor" } },
+    { "type": "list", "title": "Please don't", "style": "notes", "tone": "bad", "items": [
+      { "text": "Talcum powder", "icon": "warn" },
+      { "text": "Tight nappies all day", "icon": "shirt" },
+      { "text": "Scented wipes or soap", "icon": "drop" },
+      { "text": "Steroid creams without a doctor", "icon": "tube" }
+    ] },
+    { "type": "list", "title": "See a doctor if:", "style": "flags", "tone": "alert", "items": [
+      { "text": "Fever with the rash" },
+      { "text": "Blisters, pus or open sores" },
+      { "text": "Rash spreads beyond the nappy area" },
+      { "text": "Not better after **3 days** of care" },
+      { "text": "Purple spots that **don't fade** when pressed" },
+      { "text": "Baby is unwell or not feeding" }
+    ] },
+    { "type": "cta" }
+  ],
+  "caption": "👶🔴 Red rash in the nappy area? It's usually easy to fix.\n\n✨ Remember A B C D E:\n🅰️ Air: nappy-free time every day\n🅱️ Barrier: zinc cream or petroleum jelly\n©️ Clean gently with water & a soft cloth\n🇩 Diaper: change often, right size\n🇪 Educate: no scented wipes or soap\n\n🔍 Nappy rash or fungal?\n• Nappy rash: red, shiny skin, skin folds are spared → barrier cream\n• Fungal (thrush): bright red in the folds with small spots around → see a doctor\n\n❌ Please don't:\n• Use talcum powder\n• Keep tight nappies on all day\n• Use scented wipes or soap\n• Use steroid creams without a doctor\n\n🚨 See a doctor if:\n• Fever with the rash\n• Blisters, pus or open sores\n• Rash spreads beyond the nappy area\n• Not better after 3 days of care\n• Purple spots that don't fade when pressed\n• Baby is unwell or not feeding\n\n📌 Save this & share with every new parent 💛\nFollow @paediatrick_or_treats for simple paediatrics.\n\n⚠️ For information only. Always consult your doctor.\n\n#diaperrash #nappyrash #babyskin #babycare #newborn #newparents #newmom #paediatrics #pediatrician #parentingtips #momlife #indianparents #babyhealth #healthawareness #doctorsofinstagram #reelsindia"
+}

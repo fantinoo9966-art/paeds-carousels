@@ -1,0 +1,30 @@
+# Parents Reels (8 AM), common -> rare. Used top to bottom when a Reel script must be written automatically.
+# Topics that already have a script in reels/scripts/parents/ are skipped. Add, remove or reorder freely.
+Newborn jaundice: when it's normal, when it's not
+Ear pain and ear infection
+Constipation in children
+Skin rashes and diaper rash
+Wheezing and asthma in children
+Febrile seizures: what to do and what not to do
+Urine infection in children
+Anaemia and iron for picky eaters
+Dengue warning signs
+Food allergy and anaphylaxis
+Swollen eyes and body: nephrotic syndrome
+Type 1 diabetes: the 4 Ts
+Kawasaki disease: red eyes and fever
+Epilepsy basics for parents
+Heart disease signs in babies
+Childhood cancer warning signs
+Newborn screening and rare metabolic disorders
+Teething: facts and myths
+Head injury in children: when to worry
+Choking: first aid for babies and children
+Burns at home: first aid
+Screen time and toddlers
+Vaccination schedule made simple (IAP)
+Worms in children: deworming
+Bed-wetting
+Breath-holding spells
+Colic in babies
+Fever myths

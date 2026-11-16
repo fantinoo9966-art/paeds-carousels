@@ -1,0 +1,192 @@
+{
+  "audience": "pg",
+  "topic": "Neonatal sepsis",
+  "title": "Neonatal Sepsis Reel - PG",
+  "system": "NEONATOLOGY",
+  "tab": "PG NOTES · NEONATOLOGY 04",
+  "disclaimer": "For medical education · Based on NNF/IAP & NICE guidance",
+  "seed": 5,
+  "cover_s": 3,
+  "scenes": [
+    {
+      "type": "hook",
+      "title": "*Neonatal sepsis*",
+      "sub": "EOS vs LOS · sepsis screen · antibiotics",
+      "mood": "hot",
+      "icon": "germ",
+      "hand": "Save for wards & exams"
+    },
+    {
+      "type": "split",
+      "title": "EOS vs *LOS*",
+      "left": {
+        "title": "Early onset",
+        "lines": [
+          "**≤ 72 h** of life",
+          "Vertical: maternal genital flora",
+          "**E. coli, Klebsiella, GBS**"
+        ]
+      },
+      "right": {
+        "title": "Late onset",
+        "lines": [
+          "**> 72 h** of life",
+          "Nosocomial or community",
+          "**Klebsiella, Acinetobacter, S. aureus, CoNS**"
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "title": "EOS *risk factors*",
+      "style": "chips",
+      "items": [
+        {
+          "text": "PROM **> 18 h**"
+        },
+        {
+          "text": "Maternal fever **≥ 38 °C**"
+        },
+        {
+          "text": "Chorioamnionitis"
+        },
+        {
+          "text": "Foul-smelling liquor"
+        },
+        {
+          "text": "Prematurity / LBW"
+        },
+        {
+          "text": "GBS colonisation"
+        },
+        {
+          "text": "Multiple PV exams"
+        },
+        {
+          "text": "Perinatal asphyxia"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Clinical: often *non-specific*",
+      "style": "rows",
+      "items": [
+        {
+          "text": "Poor feeding, lethargy, **not doing well**",
+          "icon": "bottle"
+        },
+        {
+          "text": "Temperature instability",
+          "icon": "ice"
+        },
+        {
+          "text": "Apnoea, tachypnoea, grunting",
+          "icon": "lungs"
+        },
+        {
+          "text": "CRT **> 3 s**, hypotension",
+          "icon": "clock"
+        },
+        {
+          "text": "Hypo- or hyperglycaemia",
+          "icon": "drop"
+        },
+        {
+          "text": "Seizures, bulging fontanelle: think **meningitis**",
+          "icon": "bolt"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Sepsis *workup*",
+      "cards": [
+        {
+          "title": "Gold standard",
+          "lines": [
+            "**Blood culture** before antibiotics (≥ 1 ml)"
+          ]
+        },
+        {
+          "title": "Sepsis screen (≥ 2 positive)",
+          "lines": [
+            "TLC **< 5000/mm³** · low ANC",
+            "I/T ratio **≥ 0.2**",
+            "CRP **≥ 10 mg/L** · micro-ESR **> 15 mm** 1st h"
+          ]
+        },
+        {
+          "title": "Lumbar puncture",
+          "lines": [
+            "In **LOS**, culture-positive or clinically sick babies"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Empirical *antibiotics*",
+      "cards": [
+        {
+          "title": "EOS",
+          "lines": [
+            "**Ampicillin + Gentamicin**"
+          ]
+        },
+        {
+          "title": "LOS",
+          "lines": [
+            "As per unit antibiogram, e.g. **Pip-taz + Amikacin**",
+            "MRSA suspected: add **Vancomycin**"
+          ]
+        },
+        {
+          "title": "Meningitis",
+          "lines": [
+            "**Cefotaxime + Ampicillin** (per local resistance)"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "How *long?*",
+      "cards": [
+        {
+          "title": "Culture negative, baby well",
+          "lines": [
+            "Stop at **36–48 h**"
+          ]
+        },
+        {
+          "title": "Culture-positive sepsis",
+          "lines": [
+            "**10–14 days**"
+          ]
+        },
+        {
+          "title": "Meningitis",
+          "lines": [
+            "**14 days** (GBS) · **21 days** (Gram-negative)"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pearls",
+      "title": "Exam *pearls*",
+      "items": [
+        "Commonest EOS organisms in India: **Klebsiella, E. coli** (not GBS)",
+        "CRP rises **6–12 h** after onset: repeat at 24 h",
+        "Blood culture is the **gold standard**; sepsis screen only supports"
+      ]
+    },
+    {
+      "type": "cta",
+      "line": "Follow for the full *Neonatology* series",
+      "sub": "Next: HIE & therapeutic cooling"
+    }
+  ],
+  "caption": "🦠 Neonatal sepsis: one Reel for wards & exams | PG Notes · Neonatology 04\n\n⏱️ EOS ≤ 72 h: vertical, maternal flora (E. coli, Klebsiella, GBS)\n⏱️ LOS > 72 h: nosocomial/community (Klebsiella, Acinetobacter, S. aureus, CoNS)\n\n⚠️ EOS risk factors: PROM > 18 h · maternal fever ≥ 38 °C · chorioamnionitis · foul-smelling liquor · prematurity/LBW · GBS colonisation · multiple PV exams · perinatal asphyxia\n\n🩺 Clinical is non-specific: poor feeding, lethargy, temperature instability, apnoea/grunting, CRT > 3 s, hypotension, hypo/hyperglycaemia, seizures/bulging fontanelle (meningitis)\n\n🧪 Workup:\n• Blood culture before antibiotics (≥ 1 ml) = gold standard\n• Sepsis screen (≥ 2 positive): TLC < 5000 · low ANC · I/T ratio ≥ 0.2 · CRP ≥ 10 mg/L · micro-ESR > 15 mm 1st h\n• LP in LOS, culture-positive or clinically sick babies\n\n💊 Empirical antibiotics:\n• EOS: ampicillin + gentamicin\n• LOS: per unit antibiogram, e.g. pip-taz + amikacin; add vancomycin if MRSA suspected\n• Meningitis: cefotaxime + ampicillin (per local resistance)\n\n📅 Duration: culture-negative & well → stop at 36–48 h · culture-positive 10–14 days · meningitis 14 days (GBS) / 21 days (Gram-negative)\n\n⭐ Pearls: Klebsiella & E. coli lead EOS in India · CRP rises 6–12 h after onset · blood culture is the gold standard\n\n📚 Ref: NNF/IAP guidelines, NICE NG195 (2021)\n➡️ Next: HIE & therapeutic cooling\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines and your unit protocol.\n\n#neonatalsepsis #sepsis #neonatology #NICU #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #medstudent #highyield #newborn #medicos"
+}

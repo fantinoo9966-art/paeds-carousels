@@ -1,0 +1,35 @@
+{
+  "audience": "parents",
+  "topic": "Febrile seizures: what to do and what not to do",
+  "title": "Febrile Seizures Reel - Parents",
+  "seed": 6,
+  "cover_s": 2,
+  "scenes": [
+    { "type": "hook", "title": "Fever… then a *fit?*", "mood": "hot", "icon": "bolt", "hand": "Stay calm" },
+    { "type": "big", "text": "About *1 in 30* young children have a fever fit", "visual": { "kind": "clock" }, "sub": "Age **6 months to 5 years** · most stop within **5 minutes**" },
+    { "type": "list", "title": "During a fit: *do this*", "style": "steps", "items": [
+      { "text": "Stay calm and **note the time**", "icon": "clock" },
+      { "text": "Lay your child **on their side**, on the floor", "icon": "newborn" },
+      { "text": "Loosen clothes, move hard things away", "icon": "shirt" },
+      { "text": "Stay with them until they wake", "icon": "heart" },
+      { "text": "Call an ambulance if it lasts **over 5 minutes**", "icon": "siren" }
+    ] },
+    { "type": "list", "title": "Please don't", "style": "notes", "tone": "bad", "items": [
+      { "text": "Put anything in the mouth", "icon": "warn" },
+      { "text": "Hold them down", "icon": "bolt" },
+      { "text": "Give water or medicine during the fit", "icon": "noglass" },
+      { "text": "Put them in cold water", "icon": "ice" }
+    ] },
+    { "type": "list", "title": "Go to hospital *now* if:", "style": "chat", "items": [
+      { "text": "The fit lasts **more than 5 minutes**" },
+      { "text": "Another fit within **24 hours**" },
+      { "text": "Only one side of the body jerks" },
+      { "text": "Not waking up fully afterwards" },
+      { "text": "Stiff neck, rash or very sleepy" },
+      { "text": "Child **under 6 months**" }
+    ] },
+    { "type": "big", "text": "Fever medicine does *not* prevent fits", "visual": { "kind": "icon", "name": "syrup" }, "sub": "It helps comfort: give it **as your doctor advises**" },
+    { "type": "cta" }
+  ],
+  "caption": "🌡️⚡ Fever… then a fit? Stay calm. Here's exactly what to do.\n\n✅ About 1 in 30 young children (6 months to 5 years) have a fever fit. Most stop within 5 minutes.\n\n🟢 During a fit, do this:\n1️⃣ Stay calm and note the time\n2️⃣ Lay your child on their side, on the floor\n3️⃣ Loosen clothes, move hard things away\n4️⃣ Stay with them until they wake\n5️⃣ Call an ambulance if it lasts over 5 minutes\n\n❌ Please don't:\n• Put anything in the mouth\n• Hold them down\n• Give water or medicine during the fit\n• Put them in cold water\n\n🚨 Go to hospital NOW if:\n• The fit lasts more than 5 minutes\n• Another fit within 24 hours\n• Only one side of the body jerks\n• Not waking up fully afterwards\n• Stiff neck, rash or very sleepy\n• Child under 6 months\n\n💊 Fever medicine does NOT prevent fits. It helps comfort: give it as your doctor advises.\n\n📌 Save this: it may help in a scary moment 💛\nFollow @paediatrick_or_treats for simple paediatrics.\n\n⚠️ For information only. Always consult your doctor.\n\n#febrileseizure #seizure #fever #firstaid #kidshealth #childhealth #paediatrics #pediatrician #parentingtips #newparents #momlife #indianparents #toddlermom #healthawareness #doctorsofinstagram #reelsindia"
+}
