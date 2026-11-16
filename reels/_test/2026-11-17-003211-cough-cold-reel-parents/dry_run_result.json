@@ -1,0 +1,11 @@
+{
+  "slot": "reel_test",
+  "ist_date": "2026-11-17",
+  "method": "resumable",
+  "resumable_error": "",
+  "checked_at": "2026-11-16T19:03:41Z",
+  "dry_run": true,
+  "container": "18035692832887318",
+  "note": "Instagram processed the video OK. Nothing was posted; the upload expires in 24 h.",
+  "result": "ok"
+}
