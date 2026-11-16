@@ -1,0 +1,53 @@
+name: Test Reel upload (posts nothing)
+
+# Safe check: uploads the newest test Reel in reels/_test/ to Instagram and waits until Instagram has
+# processed it, but never presses "post". The unposted upload expires by itself after 24 hours.
+# Runs when a test Reel is added (tools/queue_reel.py --test) or by hand: Actions -> this workflow -> Run.
+on:
+  push:
+    branches: [main]
+    paths: ["reels/_test/**/reel.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          ref: reel-files
+          path: reel-files
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Upload and process (no posting)
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          pip install requests
+          git config user.name "carousel-bot"
+          git config user.email "carousel-bot@users.noreply.github.com"
+          TEST="$(ls -d reels/_test/*/ | sort | tail -n 1)"; TEST="$(basename "$TEST")"
+          if python agent/publish_reel.py reel_test reel-files --dry-run; then RESULT=ok; else RESULT=failed; fi
+          [ -f "reels/_test/$TEST/dry_run_result.json" ] || echo "{\"result\": \"$RESULT\"}" > "reels/_test/$TEST/dry_run_result.json"
+          git add reels/_test
+          git commit -m "Test reel upload: $RESULT"
+          git pull --rebase origin main && git push origin main
+          # Remove the test video from reel-files
+          cd reel-files
+          git config user.name "carousel-bot"
+          git config user.email "carousel-bot@users.noreply.github.com"
+          OLD="$(git rev-parse HEAD)"
+          git checkout -q --orphan fresh
+          git rm -q --cached --ignore-unmatch "$TEST.mp4"; rm -f "$TEST.mp4"
+          git commit -q --allow-empty -m "Reels waiting to be posted"
+          git push --force-with-lease=reel-files:"$OLD" origin fresh:reel-files || true
+          cd ..
+          test "$RESULT" = ok

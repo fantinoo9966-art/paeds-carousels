@@ -1,7 +1,8 @@
 name: Auto post (3 times daily)
 
 # Fully automatic: writes, fact-checks, designs and posts with no approval step.
-# Posting times (IST): 08:00 MBBS carousel, 12:00 Drug of the Day, 19:30 PG carousel.
+# Posting times (IST): 08:00 Parents Reel + MBBS carousel, 12:00 Drug of the Day, 20:00 PG Reel + PG carousel.
+# Reels are finished videos queued in reels/ (see agent/publish_reel.py); a Reel slot is skipped if none is waiting.
 # GitHub's scheduler can start late or skip runs, so this checks every 30 minutes and posts
 # whichever slot is due and not yet posted today (see agent/due.py). Most checks finish in seconds.
 # Main trigger: clock.yml wakes up at each posting time and starts this workflow with slot=auto.
@@ -12,11 +13,11 @@ on:
   workflow_dispatch:
     inputs:
       slot:
-        description: "auto (whatever is due now), morning (MBBS), drug (Drug of the Day) or evening (PG)"
+        description: "auto (whatever is due now), morning (MBBS), drug (Drug of the Day), evening (PG), reel_morning, reel_evening"
         required: true
         default: "auto"
         type: choice
-        options: [auto, morning, drug, evening]
+        options: [auto, morning, drug, evening, reel_morning, reel_evening]
       topic:
         description: "Topic or drug name (optional)"
         required: false
@@ -45,17 +46,65 @@ jobs:
             SLOT="$(python3 agent/due.py)"
           fi
           echo "slot=$SLOT" >> "$GITHUB_OUTPUT"
+          case "$SLOT" in reel_*) KIND=reel ;; "") KIND="" ;; *) KIND=carousel ;; esac
+          echo "kind=$KIND" >> "$GITHUB_OUTPUT"
           echo "Slot due: ${SLOT:-none}"
 
+      # ---------- Reel (finished video from the queue) ----------
+      - name: Get the queued Reel video
+        if: steps.slot.outputs.kind == 'reel'
+        uses: actions/checkout@v4
+        with:
+          ref: reel-files
+          path: reel-files
+          fetch-depth: 1
       - uses: actions/setup-python@v5
-        if: steps.slot.outputs.slot != ''
+        if: steps.slot.outputs.kind == 'reel'
         with:
           python-version: "3.12"
-      - if: steps.slot.outputs.slot != ''
+      - name: Post the Reel to Instagram
+        if: steps.slot.outputs.kind == 'reel'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          SLOT: ${{ steps.slot.outputs.slot }}
+        run: |
+          pip install requests
+          git config user.name "carousel-bot"
+          git config user.email "carousel-bot@users.noreply.github.com"
+          ID="$(python agent/publish_reel.py --pending "$SLOT")"
+          echo "Reel: ${ID:-none}"
+          if [ -z "$ID" ]; then exit 0; fi
+          if ! python agent/publish_reel.py "$SLOT" reel-files; then
+            # Note the failure so a broken Reel can't block the other posts (skipped after 2 tries a day)
+            python agent/publish_reel.py --failed "$ID"
+            git add "reels/$ID/failures.json"
+            git commit -m "Reel $ID failed to post"
+            git pull --rebase origin main && git push origin main
+            exit 1
+          fi
+          git add "reels/$ID/published.json"
+          git commit -m "Published reel $ID"
+          git pull --rebase origin main
+          git push origin main
+          # Remove the posted video from reel-files (one fresh commit, so old videos don't pile up in the repo)
+          cd reel-files
+          git config user.name "carousel-bot"
+          git config user.email "carousel-bot@users.noreply.github.com"
+          OLD="$(git rev-parse HEAD)"
+          git checkout -q --orphan fresh
+          git rm -q --cached --ignore-unmatch "$ID.mp4"; rm -f "$ID.mp4"
+          git commit -q --allow-empty -m "Reels waiting to be posted"
+          git push --force-with-lease=reel-files:"$OLD" origin fresh:reel-files || echo "reel-files changed meanwhile; video left in place"
+
+      - uses: actions/setup-python@v5
+        if: steps.slot.outputs.kind == 'carousel'
+        with:
+          python-version: "3.12"
+      - if: steps.slot.outputs.kind == 'carousel'
         run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
 
       - name: Write and fact-check slides with Gemini
-        if: steps.slot.outputs.slot != ''
+        if: steps.slot.outputs.kind == 'carousel'
         id: gen
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -69,11 +118,11 @@ jobs:
           echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
 
       - name: Render slide images
-        if: steps.slot.outputs.slot != ''
+        if: steps.slot.outputs.kind == 'carousel'
         run: python agent/render.py "posts/${{ steps.gen.outputs.slug }}"
 
       - name: Save post to the repo (so Instagram can download the images)
-        if: steps.slot.outputs.slot != ''
+        if: steps.slot.outputs.kind == 'carousel'
         env:
           SLUG: ${{ steps.gen.outputs.slug }}
         run: |
@@ -86,7 +135,7 @@ jobs:
           sleep 20
 
       - name: Publish to Instagram
-        if: steps.slot.outputs.slot != ''
+        if: steps.slot.outputs.kind == 'carousel'
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           SLUG: ${{ steps.gen.outputs.slug }}
@@ -98,7 +147,7 @@ jobs:
           git push origin main
 
       - name: Another post still due today? Start it now
-        if: steps.slot.outputs.slot != ''
+        if: always() && steps.slot.outputs.slot != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
