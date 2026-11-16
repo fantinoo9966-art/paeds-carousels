@@ -77,7 +77,7 @@ def main() -> None:
     reel_id = f"{datetime.datetime.now():%Y-%m-%d-%H%M%S}-{slug}"
     slot = "reel_morning" if a.audience == "parents" else "reel_evening"
 
-    git("pull", "-q", "--ff-only")
+    git("pull", "-q", "--ff-only", "origin", "main")
     push_video(a.video, reel_id)
 
     folder = REPO / "reels" / ("_test" if a.test else "") / reel_id
@@ -88,8 +88,8 @@ def main() -> None:
     (folder / "caption.txt").write_text(caption_text(a.caption), encoding="utf-8")
     git("add", str(folder.relative_to(REPO)))
     git("commit", "-q", "-m", f"{'Test' if a.test else 'Queue'} reel {reel_id}")
-    git("pull", "-q", "--rebase")
-    git("push", "-q")
+    git("pull", "-q", "--rebase", "origin", "main")
+    git("push", "-q", "origin", "main")
     when = "test upload (posts nothing)" if a.test else ("next free 8:00 AM" if slot == "reel_morning" else "next free 8:00 PM")
     print(f"Queued {reel_id} -> {when}")
 
