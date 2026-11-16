@@ -1,0 +1,8 @@
+{
+  "slot": "reel_morning",
+  "thumb_ms": 2000,
+  "source": "Newborn Jaundice Reel - Parents.mp4",
+  "script": "reels/scripts/parents/05-newborn-jaundice.json",
+  "auto_script": false,
+  "queued_at": "2026-11-16T20:26:11"
+}
