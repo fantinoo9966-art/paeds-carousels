@@ -15,10 +15,10 @@
       "title": "Q: Set up the classic 2x2 table?",
       "subtitle": "Always keep disease on top, test result on side",
       "points": [
-        "Disease Present (D+): True Positives (a) + False Negatives (c) = Total (a + c)",
-        "Disease Absent (D-): False Positives (b) + True Negatives (d) = Total (b + d)",
-        "Test Positive (T+): Sum of row 1 = a + b (used as denominator for PPV)",
-        "Test Negative (T-): Sum of row 2 = c + d (used as denominator for NPV)"
+        "**Disease Present (D+)**: True Positives (a) + False Negatives (c) = Total (a + c)",
+        "**Disease Absent (D-)**: False Positives (b) + True Negatives (d) = Total (b + d)",
+        "**Test Positive (T+)**: Sum of row 1 = a + b (used as denominator for PPV)",
+        "**Test Negative (T-)**: Sum of row 2 = c + d (used as denominator for NPV)"
       ],
       "highlight": "Vertical columns = Disease status (Sens/Spec); Horizontal rows = Test outcome (PPV/NPV)"
     },
@@ -43,10 +43,10 @@
       "title": "Q: What is the Prevalence Trap?",
       "subtitle": "Crucial distinction between test parameters",
       "points": [
-        "Sensitivity & Specificity: Stable test characteristics; do NOT change with prevalence",
-        "Prevalence increases: PPV rises markedly, NPV drops",
-        "Prevalence decreases: PPV plummets (more false positives), NPV approaches 100%",
-        "Clinical pearl: A positive rapid test in low-prevalence setting needs confirmation"
+        "**Sensitivity & Specificity**: Stable test characteristics; do NOT change with prevalence",
+        "**Prevalence increases**: PPV rises markedly, NPV drops",
+        "**Prevalence decreases**: PPV plummets (more false positives), NPV approaches 100%",
+        "**Clinical pearl**: A positive rapid test in low-prevalence setting needs confirmation"
       ],
       "highlight": "PPV and NPV are NOT fixed properties; they strictly depend on disease prevalence"
     },
@@ -56,10 +56,10 @@
       "title": "Worked Example: Rapid Strep Test",
       "subtitle": "1,000 children with pharyngitis, 20% prevalence (200 true cases)",
       "points": [
-        "Test has 90% sensitivity (180 TP, 20 FN) and 90% specificity (720 TN, 80 FP)",
-        "Sensitivity: 180 / 200 = 90% | Specificity: 720 / 800 = 90%",
-        "PPV: 180 / (180 + 80) = 180 / 260 = 69.2% (~3 in 10 positives are false!)",
-        "NPV: 720 / (720 + 20) = 720 / 740 = 97.3%"
+        "Test has **90% sensitivity** (180 TP, 20 FN) and **90% specificity** (720 TN, 80 FP)",
+        "**Sensitivity**: 180 / 200 = 90% | **Specificity**: 720 / 800 = 90%",
+        "**PPV**: 180 / (180 + 80) = 180 / 260 = **69.2%** (~3 in 10 positives are false!)",
+        "**NPV**: 720 / (720 + 20) = 720 / 740 = **97.3%**"
       ],
       "highlight": "Exam trap: Despite 90% spec, ~3 in 10 positive tests here are false positives!"
     },
@@ -82,9 +82,9 @@
       "title": "Viva Cheat Sheet",
       "subtitle": "Quick recall for the biostatistics station",
       "points": [
-        "Screening tests demand high sensitivity (do not miss cases, e.g., newborn TSH)",
-        "Confirmatory tests demand high specificity (avoid false labels, e.g., sweat chloride in CF)",
-        "Post-test odds = Pre-test odds × Likelihood Ratio (convert probability to odds first)"
+        "Screening tests demand **high sensitivity** (do not miss cases, e.g., newborn TSH)",
+        "Confirmatory tests demand **high specificity** (avoid false labels, e.g., sweat chloride in CF)",
+        "**Post-test odds** = Pre-test odds × Likelihood Ratio (convert probability to odds first)"
       ],
       "highlight": "Exam pearl: When prevalence is low, even an accurate test yields low PPV"
     },

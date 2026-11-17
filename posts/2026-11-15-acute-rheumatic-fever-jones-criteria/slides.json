@@ -43,10 +43,10 @@
       "title": "Minor Criteria & GAS Proof",
       "subtitle": "",
       "points": [
-        "4 Minor criteria: Fever, arthralgia, raised ESR/CRP, prolonged PR interval",
-        "Prolonged PR: Counts only if carditis is NOT used as a Major criterion",
-        "Same joint rule: Don't count joint symptoms in both Major and Minor",
-        "GAS evidence: Positive throat culture, RADT, or elevated/rising ASO/anti-DNase B"
+        "**4 Minor criteria**: Fever, arthralgia, raised ESR/CRP, prolonged PR interval",
+        "**Prolonged PR**: Counts only if carditis is NOT used as a Major criterion",
+        "**Same joint rule**: Don't count joint symptoms in both Major and Minor",
+        "**GAS evidence**: Positive throat culture, RADT, or elevated/rising ASO/anti-DNase B"
       ],
       "highlight": "ASO peaks at 3–6 weeks; anti-DNase B helps if ASO is negative"
     },
@@ -56,10 +56,10 @@
       "title": "Diagnostic Rules: Initial vs Recurrent",
       "subtitle": "",
       "points": [
-        "Initial ARF: 2 Major OR 1 Major + 2 Minor (+ GAS evidence)",
-        "Recurrent ARF: 2 Major OR 1 Major + 2 Minor OR 3 Minor (+ GAS evidence)",
-        "Most common Major sign overall: Migratory polyarthritis (~75%)",
-        "Valves affected: Mitral valve most common, followed by aortic valve"
+        "**Initial ARF**: 2 Major OR 1 Major + 2 Minor (+ GAS evidence)",
+        "**Recurrent ARF**: 2 Major OR 1 Major + 2 Minor OR **3 Minor** (+ GAS evidence)",
+        "**Most common** Major sign overall: Migratory polyarthritis (~75%)",
+        "**Valves affected**: Mitral valve most common, followed by aortic valve"
       ],
       "highlight": "Red flag: Treat strep pharyngitis within 9 days to prevent ARF"
     },
@@ -69,10 +69,10 @@
       "title": "3 Classic Jones Exceptions",
       "subtitle": "",
       "points": [
-        "Sydenham chorea: Diagnoses ARF alone (rule out other causes); GAS may be normal",
-        "Indolent carditis: Alone diagnoses ARF (rule out other causes); GAS may be absent",
-        "Recurrent ARF: 3 Minor criteria suffice if GAS infection is proven",
-        "Chorea timing: Appears 1–6 months post-GAS as a late manifestation"
+        "**Sydenham chorea**: Diagnoses ARF alone (rule out other causes); GAS may be normal",
+        "**Indolent carditis**: Alone diagnoses ARF (rule out other causes); GAS may be absent",
+        "**Recurrent ARF**: 3 Minor criteria suffice if GAS infection is proven",
+        "**Chorea timing**: Appears 1–6 months post-GAS as a late manifestation"
       ],
       "highlight": "Exam pearl: Chorea & indolent carditis don't require GAS proof"
     },
@@ -82,9 +82,9 @@
       "title": "High-Yield Exam Takeaways",
       "subtitle": "Quick revision before your test",
       "points": [
-        "India = Mod/High risk: Lower cut-offs (Fever >=38°C, ESR >=30 mm/hr)",
-        "Monoarthritis & polyarthralgia are Major criteria in Mod/High risk",
-        "Subclinical carditis on Doppler echo counts as Major carditis"
+        "**India = Mod/High risk**: Lower cut-offs (Fever >=38°C, ESR >=30 mm/hr)",
+        "**Monoarthritis** & **polyarthralgia** are Major criteria in Mod/High risk",
+        "**Subclinical carditis** on Doppler echo counts as Major carditis"
       ],
       "highlight": "Exam pearl: Joint involvement in ARF shows dramatic response to aspirin"
     },

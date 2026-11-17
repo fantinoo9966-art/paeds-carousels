@@ -15,10 +15,10 @@
       "title": "Recognition: Don't Wait for Hypotension",
       "subtitle": "Early clinical signs of compensated shock",
       "points": [
-        "Hypotension is a late sign; recognize tachycardia, poor perfusion & altered sensorium early.",
-        "Warm shock: bounding pulses, flash CRT (<1 s), warm peripheries, wide pulse pressure.",
-        "Cold shock: feeble pulses, CRT >2 s, mottled cool skin, narrow pulse pressure.",
-        "Phoenix Sepsis Criteria (2024): >=2 organ dysfunction pts; shock = sepsis + >=1 CV point."
+        "**Hypotension is a late sign**; recognize tachycardia, poor perfusion & altered sensorium early.",
+        "**Warm shock**: bounding pulses, flash CRT (<1 s), warm peripheries, wide pulse pressure.",
+        "**Cold shock**: feeble pulses, CRT >2 s, mottled cool skin, narrow pulse pressure.",
+        "**Phoenix Sepsis Criteria (2024)**: >=2 organ dysfunction pts; shock = sepsis + >=1 CV point."
       ],
       "highlight": "Exam pearl: Hypotension <5th centile (SBP <70+2x age yr, 1-10 yr) = decompensated."
     },
@@ -28,10 +28,10 @@
       "title": "0–5 Min: Airway, Breathing & Access",
       "subtitle": "Immediate bedside priorities",
       "points": [
-        "Give high-flow O2 (non-rebreather/HFNC); prepare early intubation if refractory.",
-        "Obtain 2 large-bore IVs; if failed in 90 sec or 2 attempts, insert IO needle.",
-        "Draw blood cultures (2 sites if feasible), VBG, lactate, CBC, RFT, LFT, glucose, Ca2+.",
-        "Check POC glucose & ionized Ca2+ immediately; correct hypoglycemia & hypocalcemia."
+        "Give **high-flow O2** (non-rebreather/HFNC); prepare early intubation if refractory.",
+        "Obtain **2 large-bore IVs**; if failed in 90 sec or 2 attempts, insert **IO needle**.",
+        "Draw **blood cultures** (2 sites if feasible), VBG, lactate, CBC, RFT, LFT, glucose, Ca2+.",
+        "Check **POC glucose & ionized Ca2+** immediately; correct hypoglycemia & hypocalcemia."
       ],
       "highlight": "Red flag: Avoid etomidate for RSI in septic shock (adrenal suppression risk per SSC)."
     },
@@ -41,10 +41,10 @@
       "title": "Within 1 Hour: Empiric Antibiotics",
       "subtitle": "Do not delay for LP or imaging",
       "points": [
-        "Start IV broad-spectrum antibiotics within 1 hr of recognition (3 hr if no shock).",
-        "Community (1 mo+): Ceftriaxone 50 mg/kg IV q12h (max 2 g/dose) + Vancomycin if MRSA risk.",
-        "Neonates: Ampicillin + Gentamicin (or Cefotaxime if meningitis suspected).",
-        "Hospital-acquired/immunocompromised: Pip-Tazo or Meropenem + Vancomycin."
+        "Start **IV broad-spectrum antibiotics** within 1 hr of recognition (3 hr if no shock).",
+        "Community (1 mo+): **Ceftriaxone 50 mg/kg IV q12h** (max 2 g/dose) + Vancomycin if MRSA risk.",
+        "Neonates: **Ampicillin** + **Gentamicin** (or Cefotaxime if meningitis suspected).",
+        "Hospital-acquired/immunocompromised: **Pip-Tazo** or **Meropenem** + Vancomycin."
       ],
       "highlight": "Exam pearl: Every 1-hour delay in antibiotics significantly increases PICU mortality."
     },
@@ -54,10 +54,10 @@
       "title": "Fluid Boluses: PICU vs No-PICU Rule",
       "subtitle": "SSC 2020 balanced crystalloid protocol",
       "points": [
-        "With PICU availability: Give 10–20 mL/kg balanced crystalloids (RL/Plasmalyte) IV/IO.",
-        "Reassess after each bolus; up to 40–60 mL/kg in 1st hour if fluid-responsive.",
-        "STOP fluids immediately if hepatomegaly, basal crepitations or gallop rhythm appear.",
-        "No PICU & no hypotension: Avoid bolus fluids; start maintenance fluids (FEAST trial)."
+        "**With PICU availability**: Give **10–20 mL/kg** balanced crystalloids (RL/Plasmalyte) IV/IO.",
+        "Reassess after **each bolus**; up to **40–60 mL/kg** in 1st hour if fluid-responsive.",
+        "**STOP fluids** immediately if hepatomegaly, basal crepitations or gallop rhythm appear.",
+        "**No PICU & no hypotension**: Avoid bolus fluids; start maintenance fluids (FEAST trial)."
       ],
       "highlight": "Exam pearl: Balanced crystalloids preferred over 0.9% NS (less hyperchloremic acidosis)."
     },
@@ -67,10 +67,10 @@
       "title": "Fluid-Refractory Shock: Vasopressors",
       "subtitle": "Epinephrine (Cold/First-Line) || Norepinephrine (Warm Shock)",
       "points": [
-        "Preferred in cold shock / low CO || Preferred in warm shock / low SVR",
-        "Dose: 0.05–0.3 mcg/kg/min IV/IO inf. || Dose: 0.05–0.3 mcg/kg/min IV/IO inf.",
+        "Preferred in **cold shock** / low CO || Preferred in **warm shock** / low SVR",
+        "Dose: **0.05–0.3 mcg/kg/min** IV/IO inf. || Dose: **0.05–0.3 mcg/kg/min** IV/IO inf.",
         "Beta-1 + alpha-1 agonist (inotrope) || Potent alpha-1 agonist (vasoconstrictor)",
-        "Safe via peripheral IV/IO initially || Safe via peripheral IV/IO initially"
+        "Safe via **peripheral IV/IO** initially || Safe via **peripheral IV/IO** initially"
       ],
       "highlight": "Red flag: Never delay vasoactives waiting for central line; dilute & run peripherally."
     },
@@ -80,10 +80,10 @@
       "title": "Refractory Shock & 1st-Hour Targets",
       "subtitle": "Escalation & resuscitation endpoints",
       "points": [
-        "Refractory shock: Hydrocortisone 2 mg/kg IV (max 100 mg), then 1 mg/kg IV q6h (per IAP).",
-        "Target MAP >=5th centile for age, CRT <= 2 sec, warm extremities & normal sensorium.",
-        "Target urine output >= 1 mL/kg/hr, normal mental status & ScvO2 >= 70%.",
-        "Monitor lactate clearance (>10% drop q2h); consider Milrinone if cold + normotensive."
+        "Refractory shock: **Hydrocortisone** 2 mg/kg IV (max 100 mg), then 1 mg/kg IV q6h (per IAP).",
+        "Target **MAP >=5th centile** for age, **CRT <= 2 sec**, warm extremities & normal sensorium.",
+        "Target **urine output >= 1 mL/kg/hr**, normal mental status & **ScvO2 >= 70%**.",
+        "Monitor **lactate clearance** (>10% drop q2h); consider **Milrinone** if cold + normotensive."
       ],
       "highlight": "Exam pearl: Rule out pneumothorax, tamponade & IAH in refractory shock."
     },
@@ -93,9 +93,9 @@
       "title": "PG Viva & Exam High-Yield Pearls",
       "subtitle": "Must-know SSC 2020 & IAP updates",
       "points": [
-        "SSC 2020 removed routine 60 mL/kg push in resource-limited settings without hypotension.",
-        "Epinephrine or Norepinephrine replaced Dopamine as first-line vasoactive in pediatrics.",
-        "Correct hypoglycemia (D10W 2–5 mL/kg IV) & hypocalcemia (Ca gluc 10% 0.5–1 mL/kg IV)."
+        "SSC 2020 **removed** routine 60 mL/kg push in resource-limited settings without hypotension.",
+        "**Epinephrine or Norepinephrine** replaced Dopamine as first-line vasoactive in pediatrics.",
+        "Correct **hypoglycemia** (D10W 2–5 mL/kg IV) & **hypocalcemia** (Ca gluc 10% 0.5–1 mL/kg IV)."
       ],
       "highlight": "Remember: 1st-hour goal = O2 + IV/IO + Abx + Titrated Fluids + Early Vasoactives!"
     },
