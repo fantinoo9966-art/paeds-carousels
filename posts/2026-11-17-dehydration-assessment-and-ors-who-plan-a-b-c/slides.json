@@ -1,0 +1,145 @@
+{
+  "topic": "Dehydration assessment and ORS (WHO plan A, B, C)",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "💧",
+      "title": "WHO Dehydration & ORS: High-Yield PYQs",
+      "subtitle": "Rapid-fire exam one-liners on Plan A, B, C & ORS composition",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "points",
+      "emoji": "🩺",
+      "title": "WHO Dehydration Assessment",
+      "subtitle": "4 key clinical parameters (IMNCI)",
+      "points": [
+        "Assess **4 core signs**: general condition, eyes, thirst, and skin pinch",
+        "Need **>=2 signs** in a category to classify as Some or Severe dehydration",
+        "Skin pinch: **<=2 sec (slowly)** = Some; **>2 sec (very slowly)** = Severe",
+        "Restless + drinks eagerly = **Some**; Lethargic + drinks poorly = **Severe**",
+        "Note: **Sunken eyes** & **skin pinch** can mislead in Severe Acute Malnutrition"
+      ],
+      "highlight": "Exam pearl: Most reliable indicator of dehydration severity is % weight loss."
+    },
+    {
+      "kind": "points",
+      "emoji": "🧪",
+      "title": "WHO Low-Osmolarity ORS",
+      "subtitle": "Total osmolarity = 245 mOsm/L",
+      "points": [
+        "**Sodium 75 mEq/L** + **Glucose 75 mmol/L** (1:1 ratio drives SGLT-1 uptake)",
+        "**Potassium 20 mEq/L**, **Chloride 65 mEq/L**, and **Citrate 10 mmol/L**",
+        "Total packet weight is **20.5 g** dissolved in **1 L** clean drinking water",
+        "Sodium chloride **2.6 g** + Anhydrous glucose **13.5 g** per litre",
+        "KCl **1.5 g** + Trisodium citrate **2.9 g**; discard unused ORS after **24 hrs**"
+      ],
+      "highlight": "Citrate corrects metabolic acidosis & prolongs shelf life vs bicarbonate."
+    },
+    {
+      "kind": "points",
+      "emoji": "🏠",
+      "title": "WHO Plan A: No Dehydration",
+      "subtitle": "Home-based fluid + Zinc therapy",
+      "points": [
+        "Extra ORS after each stool: **50-100 mL** (<2 yrs) & **100-200 mL** (2-10 yrs)",
+        "Children **>10 yrs**: give as much ORS or home fluid as wanted orally",
+        "**Oral Zinc for 14 days**: **10 mg/day** (<6 mo) and **20 mg/day** (>=6 mo)",
+        "Continue **breastfeeding** & age-appropriate feeding; never starve the gut",
+        "Danger signs to return: **blood in stool**, fever, poor drinking, worsening"
+      ],
+      "highlight": "Zinc reduces stool volume, episode duration, and recurrence for 2-3 months."
+    },
+    {
+      "kind": "points",
+      "emoji": "🥤",
+      "title": "WHO Plan B: Some Dehydration",
+      "subtitle": "Supervised ORS in health facility",
+      "points": [
+        "Dose: **75 mL/kg** of low-osmolarity ORS given orally over **4 hours**",
+        "Wait **10 mins** if child vomits, then resume slowly (1 spoon every 2-3 min)",
+        "Reassess after **4 hours**: shift to **Plan A**, repeat **Plan B**, or **Plan C**",
+        "Keep **breastfeeding** during Plan B whenever the infant wants",
+        "Persistent vomiting/refusal -> consider **NG tube** or shift to **Plan C**"
+      ],
+      "highlight": "Exam pearl: Do NOT give antibiotics routinely in acute watery diarrhea."
+    },
+    {
+      "kind": "compare",
+      "emoji": "💉",
+      "title": "WHO Plan C: 100 mL/kg IV RL",
+      "subtitle": "Infants (<12 mo) || Older (>=12 mo)",
+      "points": [
+        "First **30 mL/kg** over **1 hour** || First **30 mL/kg** over **30 mins**",
+        "Next **70 mL/kg** over **5 hours** || Next **70 mL/kg** over **2.5 hours**",
+        "Total duration = **6 hours** || Total duration = **3 hours**",
+        "Start ORS (5 mL/kg/hr) at **3-4 hrs** || Start ORS (5 mL/kg/hr) at **1-2 hrs**"
+      ],
+      "highlight": "Fluid of choice: Ringer's Lactate (RL); NEVER give 5% Dextrose alone!"
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "⚡",
+      "title": "High-Yield PYQ Traps",
+      "subtitle": "Don't lose marks on these twists",
+      "points": [
+        "If radial pulse remains weak after 30 mL/kg bolus, **repeat 30 mL/kg IV RL**",
+        "In **SAM**, avoid routine IV fluids; use **ReSoMal** (Na 45, K 40 mEq/L)",
+        "**Cholera** (severe): **Plan C** + single-dose **azithromycin** (DOC in kids)",
+        "No IV access in Plan C? Give **NG ORS at 20 mL/kg/hr** for 6 hrs (120 mL/kg)"
+      ],
+      "highlight": "Low-osmolarity ORS (245 mOsm/L) cuts **stool output** & **IV fluid need** vs old ORS."
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this for your exams 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for more",
+      "points": [
+        "Share this with your NEET-PG / INI-CET study group",
+        "Comment which IMNCI / Pediatrics topic you want next!"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Every single NEET-PG & INI-CET paper loves asking at least ONE question from WHO Dehydration & ORS! 💧\n\nSwipe through for rapid-fire, exam-ready one-liners:\n• WHO/IMNCI 4-sign dehydration assessment\n• Exact Low-Osmolarity ORS composition (245 mOsm/L & 20.5 g breakdown)\n• Plan A (+ Zinc doses), Plan B (75 mL/kg over 4 hrs) & Plan C (100 mL/kg IV RL splits)\n• High-yield traps: ReSoMal in SAM, NG tube dosing & repeating the 30 mL/kg bolus\n\nQuick quiz for the comments: What is the exact sodium & potassium concentration in ReSoMal? Drop it below! 👇\n\nSave 🔖 & share with a batchmate!\n\nFor education only; follow local protocols.",
+  "hashtags": [
+    "#pediatrics",
+    "#neetpg",
+    "#inicet",
+    "#mbbs",
+    "#medstudent",
+    "#fmge",
+    "#pediatricsmadesimple",
+    "#paediatrics",
+    "#ors",
+    "#dehydration",
+    "#imnci",
+    "#who",
+    "#medicalnotes",
+    "#neetpgpreparation",
+    "#inicetpreparation",
+    "#pgaspirants",
+    "#medicalstudentindia",
+    "#clinicalpediatrics",
+    "#diarrhea",
+    "#examrevision"
+  ],
+  "references": [
+    "WHO. The Treatment of Diarrhoea: A Manual for Physicians and Other Senior Health Workers (4th rev., 2005)",
+    "WHO / Ministry of Health & Family Welfare India. Integrated Management of Neonatal and Childhood Illness (IMNCI) Guidelines",
+    "Nelson Textbook of Pediatrics, 21st Edition (Acute Gastroenteritis & Oral Rehydration Therapy)",
+    "Indian Academy of Pediatrics (IAP) Guidelines on Management of Acute Diarrhea & Zinc Supplementation",
+    "Ghai Essential Pediatrics, 10th Edition"
+  ],
+  "doctor_check": [
+    "Slide 2: Corrected skin pinch cut-off for Some dehydration from '<2 sec' to '<=2 sec (slowly)' to match exact WHO IMNCI wording (<=2 sec vs >2 sec).",
+    "Slide 7: Clarified the cholera point so it specifies severe cholera needs Plan C (not all cholera) and notes single-dose azithromycin as DOC in children.",
+    "Slide 7 highlight: Replaced 'does NOT reduce stool volume directly' with the clearer exam pearl that low-osmolarity ORS (245 mOsm/L) reduces stool output and unscheduled IV fluid need compared to old WHO ORS."
+  ],
+  "slot": "morning",
+  "format": "Rapid-fire exam one-liners (PYQ style)",
+  "theme": "sunset",
+  "ist_date": "2026-11-17"
+}
