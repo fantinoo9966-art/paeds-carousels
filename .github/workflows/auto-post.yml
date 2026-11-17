@@ -4,7 +4,7 @@ name: Auto post (3 times daily)
 # Posting times (IST): 08:00 Parents Reel + MBBS carousel, 12:00 Drug of the Day, 20:00 PG Reel + PG carousel.
 # Reels are finished videos queued in reels/ (see agent/publish_reel.py); a Reel slot is skipped if none is waiting.
 # GitHub's scheduler can start late or skip runs, so this checks every 30 minutes and posts
-# whichever slot is due and not yet posted today (see agent/due.py). Most checks finish in seconds.
+# the slot due right now, if any (see agent/due.py: missed slots are skipped, posts stay 2 h apart). Most checks finish in seconds.
 # Main trigger: clock.yml wakes up at each posting time and starts this workflow with slot=auto.
 # To pause posting: Actions -> "Auto post (3 times daily)" -> ... -> Disable workflow.
 on:

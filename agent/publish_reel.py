@@ -122,7 +122,8 @@ def publish_reel(reel_dir: Path, video: Path, slot: str, dry_run: bool = False) 
         return result
     media_id = ig.call("POST", f"{user}/media_publish", creation_id=container)["id"]
     permalink = ig.call("GET", media_id, fields="permalink").get("permalink", "")
-    result.update(media_id=media_id, permalink=permalink)
+    result.update(media_id=media_id, permalink=permalink,
+                  published_at=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
     (reel_dir / "published.json").write_text(json.dumps(result, indent=2))
     print(f"Published: {permalink}")
     return result

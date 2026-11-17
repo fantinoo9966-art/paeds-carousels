@@ -1,7 +1,7 @@
 name: Clock (starts the posts on time)
 
 # GitHub's own cron is unreliable (it skipped most of 15 Nov), so this workflow keeps its own time:
-# it sleeps until the next posting time (08:00, 12:00, 20:00 IST), starts "Auto post" with slot=auto,
+# it sleeps until the next possible posting time (IST), starts "Auto post" with slot=auto,
 # then starts a fresh copy of itself. Only one clock runs at a time. The cron below restarts the
 # clock if the chain ever breaks. To start it by hand: Actions -> Clock -> Run workflow.
 on:
@@ -31,7 +31,7 @@ jobs:
           targets = []
           for d in (0, 1):
               day = (now + datetime.timedelta(days=d)).date()
-              for h, m in ((8, 2), (12, 2), (20, 2)):
+              for h, m in ((8, 2), (10, 2), (12, 2), (12, 32), (17, 32), (20, 2)):  # due.py decides if anything is due
                   targets.append(datetime.datetime(day.year, day.month, day.day, h, m, tzinfo=IST))
           nxt = min(t for t in targets if t > now)
           secs = min((nxt - now).total_seconds(), 5 * 3600)
