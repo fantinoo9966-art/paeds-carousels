@@ -15,10 +15,10 @@
       "title": "Classic Presentation & Latent Period",
       "subtitle": "",
       "points": [
-        "Age: **5–12 years** (rare <3 yrs) with slight male predominance",
-        "Latent period: **1–2 weeks** post-pharyngitis; **3–6 weeks** post-pyoderma",
-        "Classic triad: **Cola-colored hematuria**, **edema**, and **hypertension**",
-        "Often accompanied by **oliguria** and sub-nephrotic proteinuria"
+        "Age: 5–12 years (rare <3 yrs) with slight male predominance",
+        "Latent period: 1–2 weeks post-pharyngitis; 3–6 weeks post-pyoderma",
+        "Classic triad: Cola-colored hematuria, edema, and hypertension",
+        "Often accompanied by oliguria and sub-nephrotic proteinuria"
       ],
       "highlight": "Exam pearl: Synpharyngitic hematuria (1–2 days) points to IgA nephropathy!"
     },
@@ -28,10 +28,10 @@
       "title": "Red Flags: Urgent Complications",
       "subtitle": "",
       "points": [
-        "**Hypertensive encephalopathy**: headache, vomiting, seizures, altered sensorium",
-        "**Acute pulmonary edema**: tachypnea, orthopnea, basal creps, gallop rhythm",
-        "**Acute kidney injury**: severe oliguria/anuria, rising creatinine, hyperkalemia",
-        "**Congestive heart failure**: tender hepatomegaly, raised JVP from fluid overload"
+        "Hypertensive encephalopathy: headache, vomiting, seizures, altered sensorium",
+        "Acute pulmonary edema: tachypnea, orthopnea, basal creps, gallop rhythm",
+        "Acute kidney injury: severe oliguria/anuria, rising creatinine, hyperkalemia",
+        "Congestive heart failure: tender hepatomegaly, raised JVP from fluid overload"
       ],
       "highlight": "Red flag: Seizures or vision changes in PSGN = Hypertensive emergency!"
     },
@@ -41,11 +41,11 @@
       "title": "Must-Know Labs & Biopsy Findings",
       "subtitle": "",
       "points": [
-        "**Low C3** (normalises in **6–8 weeks**); serum **C4 is normal**",
-        "**ASO titre** rises post-pharyngitis; **Anti-DNase B** best post-pyoderma",
-        "Urine: **Dysmorphic RBCs** and **RBC casts** confirm glomerular origin",
-        "LM: **Diffuse endocapillary proliferation**; EM: **Subepithelial humps**",
-        "IF: **Starry-sky** granular deposits of **IgG and C3**"
+        "Low C3 (normalises in 6–8 weeks); serum C4 is normal",
+        "ASO titre rises post-pharyngitis; Anti-DNase B best post-pyoderma",
+        "Urine: Dysmorphic RBCs and RBC casts confirm glomerular origin",
+        "LM: Diffuse endocapillary proliferation; EM: Subepithelial humps",
+        "IF: Starry-sky granular deposits of IgG and C3"
       ],
       "highlight": "Red flag: C3 low >8–12 weeks? Think MPGN or C3 glomerulopathy!"
     },
@@ -68,10 +68,10 @@
       "title": "Red Flags: Indications for Biopsy",
       "subtitle": "",
       "points": [
-        "**Persistent low C3** lasting beyond **8–12 weeks**",
-        "**Persistent nephrotic proteinuria** or gross hematuria >4 weeks",
-        "**Rapidly progressive** renal failure (suspected RPGN/crescents)",
-        "Absent latent period or **systemic signs** (rash, arthralgia — SLE/HSP)"
+        "Persistent low C3 lasting beyond 8–12 weeks",
+        "Persistent nephrotic proteinuria or gross hematuria >4 weeks",
+        "Rapidly progressive renal failure (suspected RPGN/crescents)",
+        "Absent latent period or systemic signs (rash, arthralgia — SLE/HSP)"
       ],
       "highlight": "Exam pearl: Routine renal biopsy is NOT needed in typical PSGN."
     },
@@ -81,10 +81,10 @@
       "title": "Management & Emergency Doses",
       "subtitle": "",
       "points": [
-        "First-line: **Salt & fluid restriction** with strict I/O and BP charting",
-        "Edema / HTN: **IV Furosemide 1–2 mg/kg/dose** q6–12h (max 6 mg/kg/day)",
-        "HTN emergency: **IV Labetalol 0.4–1 mg/kg/hr** (max 3 mg/kg/hr)",
-        "Eradicate strep: **PO Amoxicillin 50 mg/kg/day** q12h × 10d (max 1 g/d)"
+        "First-line: Salt & fluid restriction with strict I/O and BP charting",
+        "Edema / HTN: IV Furosemide 1–2 mg/kg/dose q6–12h (max 6 mg/kg/day)",
+        "HTN emergency: IV Labetalol 0.4–1 mg/kg/hr (max 3 mg/kg/hr)",
+        "Eradicate strep: PO Amoxicillin 50 mg/kg/day q12h × 10d (max 1 g/d)"
       ],
       "highlight": "Red flag: In HTN emergency, reduce BP by ≤25% over the first 8 hours!"
     },
@@ -94,9 +94,9 @@
       "title": "High-Yield Exam Takeaways",
       "subtitle": "",
       "points": [
-        "**Group A Strep** (nephritogenic M types e.g. **12** throat, **49** skin)",
-        "**No role of steroids** in routine PSGN (reserved for crescentic RPGN)",
-        "**Antibiotics do NOT prevent** PSGN (unlike acute rheumatic fever)"
+        "Group A Strep (nephritogenic M types e.g. 12 throat, 49 skin)",
+        "No role of steroids in routine PSGN (reserved for crescentic RPGN)",
+        "Antibiotics do NOT prevent PSGN (unlike acute rheumatic fever)"
       ],
       "highlight": "Exam pearl: Microscopic hematuria can persist up to 1–2 years benignly!"
     },
