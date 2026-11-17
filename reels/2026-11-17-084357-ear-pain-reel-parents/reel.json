@@ -1,0 +1,8 @@
+{
+  "slot": "reel_morning",
+  "thumb_ms": 2000,
+  "source": "Ear Pain Reel - Parents.mp4",
+  "script": "reels/scripts/parents/06-ear-pain.json",
+  "auto_script": false,
+  "queued_at": "2026-11-17T03:19:40"
+}
