@@ -9,6 +9,12 @@ on:
         description: "Topic (leave empty to use the next one from topics.txt)"
         required: false
         default: ""
+      slot:
+        description: "morning = MBBS style, evening = PG style"
+        required: false
+        default: "morning"
+        type: choice
+        options: [morning, evening]
 
 permissions:
   contents: write
@@ -31,6 +37,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TOPIC: ${{ github.event.inputs.topic }}
+          SLOT: ${{ github.event.inputs.slot }}
         run: echo "slug=$(python agent/generate.py | tail -n 1)" >> "$GITHUB_OUTPUT"
 
       - name: Render slide images
