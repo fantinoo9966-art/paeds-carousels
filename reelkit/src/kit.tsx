@@ -61,7 +61,7 @@ export const sceneLen = (s: Scene, pace: number): number => {
 };
 
 export const totalLen = (sc: Script) => {
-  const pace = sc.pace ?? 1.3;
+  const pace = sc.pace ?? 1.0;
   return sc.scenes.reduce((a, s) => a + sceneLen(s, pace), 0) - T * (sc.scenes.length - 1);
 };
 
@@ -608,7 +608,7 @@ const Pearls: React.FC<{ s: Extract<Scene, { type: "pearls" }>; pg: boolean; see
 export const SceneView: React.FC<{ s: Scene; sc: Script; i: number }> = ({ s, sc, i }) => {
   const pg = sc.audience === "pg";
   const seed = (sc.seed ?? 0) + i;
-  const pace = sc.pace ?? 1.3;
+  const pace = sc.pace ?? 1.0;
   const tab = pg && sc.tab ? <Tab text={sc.tab} /> : null;
   let el: React.ReactNode;
   switch (s.type) {

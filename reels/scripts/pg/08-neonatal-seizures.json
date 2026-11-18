@@ -8,33 +8,122 @@
   "seed": 1,
   "cover_s": 3,
   "scenes": [
-    { "type": "hook", "title": "*Neonatal seizures*", "sub": "Types · causes · jitteriness vs seizure · drugs", "mood": "ouch", "icon": "bolt", "hand": "Save for the night shift" },
-    { "type": "list", "title": "Types (*Volpe*)", "style": "rows", "items": [
-      { "text": "**Subtle**: lip smacking, eye deviation, apnoea, pedalling", "sub": "commonest" },
-      { "text": "**Clonic**: focal or multifocal jerks" },
-      { "text": "**Tonic**: posturing, often in preterms" },
-      { "text": "**Myoclonic**: worst prognosis" }
-    ] },
-    { "type": "list", "title": "Causes", "style": "chips", "items": [
-      { "text": "**HIE** (commonest)" }, { "text": "Hypoglycaemia" }, { "text": "Hypocalcaemia" }, { "text": "Hypomagnesaemia" },
-      { "text": "Sepsis / meningitis" }, { "text": "ICH / IVH / stroke" }, { "text": "IEM" }, { "text": "Pyridoxine dependency" }
-    ] },
-    { "type": "split", "title": "Jitteriness or *seizure?*",
-      "left": { "title": "Jitteriness", "lines": ["**Stops** when the limb is held", "Stimulus-sensitive", "No eye signs, vitals normal"] },
-      "right": { "title": "Seizure", "lines": ["**Not** stopped by holding", "Spontaneous", "Eye deviation, apnoea, ↑ HR/BP"] } },
-    { "type": "list", "title": "Treatment *steps*", "style": "steps", "items": [
-      { "text": "ABC; check **glucose**: low → **2 ml/kg 10% dextrose**" },
-      { "text": "Low Ca: **2 ml/kg 10% calcium gluconate** IV slowly, on monitor" },
-      { "text": "1st line: **phenobarbitone 20 mg/kg** IV" },
-      { "text": "Still seizing: extra **10 mg/kg** (up to **40 mg/kg**)" },
-      { "text": "2nd line: **phenytoin 20 mg/kg** or **levetiracetam 40–60 mg/kg**" }
-    ] },
-    { "type": "pearls", "title": "Exam *pearls*", "items": [
-      "Many neonatal seizures are **electrographic only**: confirm with **aEEG/EEG**",
-      "Refractory with no cause found: **pyridoxine 100 mg IV** trial",
-      "HIE seizures usually start within **12–24 h** of birth"
-    ] },
-    { "type": "cta", "line": "Follow for the full *Neonatology* series", "sub": "Next: ROP screening" }
+    {
+      "type": "hook",
+      "title": "*Neonatal seizures*",
+      "sub": "Types · causes · jitteriness vs seizure · drugs",
+      "mood": "ouch",
+      "icon": "bolt",
+      "hand": "Save for the night shift"
+    },
+    {
+      "type": "list",
+      "title": "Types (*Volpe*)",
+      "style": "rows",
+      "items": [
+        {
+          "text": "**Subtle**: lip smacking, eye deviation, apnoea, pedalling",
+          "sub": "commonest"
+        },
+        {
+          "text": "**Clonic**: focal or multifocal jerks"
+        },
+        {
+          "text": "**Tonic**: posturing, often in preterms"
+        },
+        {
+          "text": "**Myoclonic**: worst prognosis"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Causes",
+      "style": "chips",
+      "items": [
+        {
+          "text": "**HIE** (commonest)"
+        },
+        {
+          "text": "Hypoglycaemia"
+        },
+        {
+          "text": "Hypocalcaemia"
+        },
+        {
+          "text": "Hypomagnesaemia"
+        },
+        {
+          "text": "Sepsis / meningitis"
+        },
+        {
+          "text": "ICH / IVH / stroke"
+        },
+        {
+          "text": "IEM"
+        },
+        {
+          "text": "Pyridoxine dependency"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "title": "Jitteriness or *seizure?*",
+      "left": {
+        "title": "Jitteriness",
+        "lines": [
+          "**Stops** when the limb is held",
+          "Stimulus-sensitive",
+          "No eye signs, vitals normal"
+        ]
+      },
+      "right": {
+        "title": "Seizure",
+        "lines": [
+          "**Not** stopped by holding",
+          "Spontaneous",
+          "Eye deviation, apnoea, ↑ HR/BP"
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "title": "Treatment *steps*",
+      "style": "steps",
+      "items": [
+        {
+          "text": "ABC; check **glucose**: low → **2 ml/kg 10% dextrose**"
+        },
+        {
+          "text": "Low Ca: **2 ml/kg 10% calcium gluconate** IV slowly, on monitor"
+        },
+        {
+          "text": "1st line: **phenobarbitone 20 mg/kg** IV"
+        },
+        {
+          "text": "Still seizing: extra **10 mg/kg** (up to **40 mg/kg**)"
+        },
+        {
+          "text": "2nd line: **phenytoin 20 mg/kg** or **levetiracetam 40–60 mg/kg**"
+        }
+      ]
+    },
+    {
+      "type": "pearls",
+      "title": "Exam *pearls*",
+      "items": [
+        "Many neonatal seizures are **electrographic only**: confirm with **aEEG/EEG**",
+        "Refractory with no cause found: **pyridoxine 100 mg IV** trial",
+        "HIE seizures usually start within **12–24 h** of birth"
+      ]
+    },
+    {
+      "type": "cta",
+      "line": "Follow for the full *Neonatology* series",
+      "sub": "Next: ROP screening"
+    }
   ],
-  "caption": "⚡🧠 Neonatal seizures | PG Notes · Neonatology 08\n\n📋 Types (Volpe): subtle (commonest: lip smacking, eye deviation, apnoea, pedalling) · clonic · tonic (preterms) · myoclonic (worst prognosis)\n\n🔎 Causes: HIE (commonest) · hypoglycaemia · hypocalcaemia · hypomagnesaemia · sepsis/meningitis · ICH/IVH/stroke · IEM · pyridoxine dependency\n\n↔️ Jitteriness vs seizure: jitteriness stops when the limb is held, is stimulus-sensitive, no eye signs, normal vitals. A seizure is not stopped by holding, is spontaneous, with eye deviation, apnoea, ↑ HR/BP.\n\n💊 Treatment:\n1️⃣ ABC; check glucose: low → 2 ml/kg 10% dextrose\n2️⃣ Low Ca: 2 ml/kg 10% calcium gluconate IV slowly, on monitor\n3️⃣ 1st line: phenobarbitone 20 mg/kg IV\n4️⃣ Still seizing: extra 10 mg/kg (up to 40 mg/kg)\n5️⃣ 2nd line: phenytoin 20 mg/kg or levetiracetam 40–60 mg/kg\n\n⭐ Pearls: many seizures are electrographic only (aEEG/EEG) · refractory, no cause: pyridoxine 100 mg IV trial · HIE seizures usually start within 12–24 h\n\n📚 Ref: ILAE 2023 neonatal seizure guideline, NNF, Volpe\n➡️ Next: ROP screening\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines and your unit protocol.\n\n#neonatalseizures #seizures #neonatology #NICU #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #highyield #pedsneuro #medicos"
+  "caption": "⚡🧠 Neonatal seizures | PG Notes · Neonatology 08\n\n📋 Types (Volpe): subtle (commonest: lip smacking, eye deviation, apnoea, pedalling) · clonic · tonic (preterms) · myoclonic (worst prognosis)\n\n🔎 Causes: HIE (commonest) · hypoglycaemia · hypocalcaemia · hypomagnesaemia · sepsis/meningitis · ICH/IVH/stroke · IEM · pyridoxine dependency\n\n↔️ Jitteriness vs seizure: jitteriness stops when the limb is held, is stimulus-sensitive, no eye signs, normal vitals. A seizure is not stopped by holding, is spontaneous, with eye deviation, apnoea, ↑ HR/BP.\n\n💊 Treatment:\n1️⃣ ABC; check glucose: low → 2 ml/kg 10% dextrose\n2️⃣ Low Ca: 2 ml/kg 10% calcium gluconate IV slowly, on monitor\n3️⃣ 1st line: phenobarbitone 20 mg/kg IV\n4️⃣ Still seizing: extra 10 mg/kg (up to 40 mg/kg)\n5️⃣ 2nd line: phenytoin 20 mg/kg or levetiracetam 40–60 mg/kg\n\n⭐ Pearls: many seizures are electrographic only (aEEG/EEG) · refractory, no cause: pyridoxine 100 mg IV trial · HIE seizures usually start within 12–24 h\n\n📚 Ref: ILAE 2023 neonatal seizure guideline, NNF, Volpe\n➡️ Next: ROP screening\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines and your unit protocol.\n\n#neonatalseizures #seizures #neonatology #NICU #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #highyield #pedsneuro #medicos",
+  "music": "lofi"
 }

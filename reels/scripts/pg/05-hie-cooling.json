@@ -8,36 +8,149 @@
   "seed": 3,
   "cover_s": 3,
   "scenes": [
-    { "type": "hook", "title": "*HIE* & cooling", "sub": "Sarnat staging · cooling criteria · protocol", "mood": "sleepy", "icon": "ice", "hand": "Save for NICU rounds" },
-    { "type": "cards", "title": "Evidence of *asphyxia*", "cards": [
-      { "title": "Cord / 1st-hour gas", "lines": ["pH **≤ 7.0** or base deficit **≥ 16**"] },
-      { "title": "At birth", "lines": ["Apgar **≤ 5 at 10 min**, or ongoing resuscitation at 10 min"] },
-      { "title": "Plus", "lines": ["**Moderate–severe encephalopathy** (Sarnat / Thompson)"] }
-    ] },
-    { "type": "cards", "title": "Sarnat *staging*", "cards": [
-      { "title": "Stage 1 · Mild", "lines": ["Hyperalert, irritable, **dilated pupils**, no seizures"] },
-      { "title": "Stage 2 · Moderate", "lines": ["Lethargic, hypotonia, **constricted pupils**, **seizures** common"] },
-      { "title": "Stage 3 · Severe", "lines": ["Stupor/coma, flaccid, absent reflexes, **highest mortality**"] }
-    ] },
-    { "type": "list", "title": "Who to *cool*", "style": "rows", "tone": "good", "items": [
-      { "text": "**≥ 36 weeks** gestation", "icon": "newborn" },
-      { "text": "Start within **6 hours** of birth", "icon": "clock" },
-      { "text": "**Moderate or severe** encephalopathy ± abnormal aEEG", "icon": "bolt" },
-      { "text": "In a unit with **ventilation & monitoring**", "icon": "shield" }
-    ] },
-    { "type": "split", "title": "The cooling *protocol*",
-      "left": { "title": "Cool", "icon": "ice", "lines": ["Core temp **33.5 °C** (33–34)", "For **72 hours**"] },
-      "right": { "title": "Rewarm", "icon": "lamp", "lines": ["**0.5 °C per hour**", "Watch for **seizures**"] } },
-    { "type": "list", "title": "Supportive *care*", "style": "chips", "items": [
-      { "text": "Avoid **hyperthermia**" }, { "text": "Avoid **hypocarbia**" }, { "text": "Keep glucose normal" },
-      { "text": "Maintain BP" }, { "text": "Seizures: **phenobarbitone 20 mg/kg**" }, { "text": "Watch for SIADH, AKI" }, { "text": "MRI after rewarming" }
-    ] },
-    { "type": "pearls", "title": "Exam *pearls*", "items": [
-      "Pupils: **dilated** in stage 1, **constricted** in stage 2",
-      "**HELIX trial (2021)**: cooling in low/middle-income settings did **not** reduce death or disability: follow unit policy",
-      "Cooling is not standard for **< 36 weeks** outside trials"
-    ] },
-    { "type": "cta", "line": "Follow for the full *Neonatology* series", "sub": "Next: NEC & Bell staging" }
+    {
+      "type": "hook",
+      "title": "*HIE* & cooling",
+      "sub": "Sarnat staging · cooling criteria · protocol",
+      "mood": "sleepy",
+      "icon": "ice",
+      "hand": "Save for NICU rounds"
+    },
+    {
+      "type": "cards",
+      "title": "Evidence of *asphyxia*",
+      "cards": [
+        {
+          "title": "Cord / 1st-hour gas",
+          "lines": [
+            "pH **≤ 7.0** or base deficit **≥ 16**"
+          ]
+        },
+        {
+          "title": "At birth",
+          "lines": [
+            "Apgar **≤ 5 at 10 min**, or ongoing resuscitation at 10 min"
+          ]
+        },
+        {
+          "title": "Plus",
+          "lines": [
+            "**Moderate–severe encephalopathy** (Sarnat / Thompson)"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Sarnat *staging*",
+      "cards": [
+        {
+          "title": "Stage 1 · Mild",
+          "lines": [
+            "Hyperalert, irritable, **dilated pupils**, no seizures"
+          ]
+        },
+        {
+          "title": "Stage 2 · Moderate",
+          "lines": [
+            "Lethargic, hypotonia, **constricted pupils**, **seizures** common"
+          ]
+        },
+        {
+          "title": "Stage 3 · Severe",
+          "lines": [
+            "Stupor/coma, flaccid, absent reflexes, **highest mortality**"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Who to *cool*",
+      "style": "rows",
+      "tone": "good",
+      "items": [
+        {
+          "text": "**≥ 36 weeks** gestation",
+          "icon": "newborn"
+        },
+        {
+          "text": "Start within **6 hours** of birth",
+          "icon": "clock"
+        },
+        {
+          "text": "**Moderate or severe** encephalopathy ± abnormal aEEG",
+          "icon": "bolt"
+        },
+        {
+          "text": "In a unit with **ventilation & monitoring**",
+          "icon": "shield"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "title": "The cooling *protocol*",
+      "left": {
+        "title": "Cool",
+        "icon": "ice",
+        "lines": [
+          "Core temp **33.5 °C** (33–34)",
+          "For **72 hours**"
+        ]
+      },
+      "right": {
+        "title": "Rewarm",
+        "icon": "lamp",
+        "lines": [
+          "**0.5 °C per hour**",
+          "Watch for **seizures**"
+        ]
+      }
+    },
+    {
+      "type": "list",
+      "title": "Supportive *care*",
+      "style": "chips",
+      "items": [
+        {
+          "text": "Avoid **hyperthermia**"
+        },
+        {
+          "text": "Avoid **hypocarbia**"
+        },
+        {
+          "text": "Keep glucose normal"
+        },
+        {
+          "text": "Maintain BP"
+        },
+        {
+          "text": "Seizures: **phenobarbitone 20 mg/kg**"
+        },
+        {
+          "text": "Watch for SIADH, AKI"
+        },
+        {
+          "text": "MRI after rewarming"
+        }
+      ]
+    },
+    {
+      "type": "pearls",
+      "title": "Exam *pearls*",
+      "items": [
+        "Pupils: **dilated** in stage 1, **constricted** in stage 2",
+        "**HELIX trial (2021)**: cooling in low/middle-income settings did **not** reduce death or disability: follow unit policy",
+        "Cooling is not standard for **< 36 weeks** outside trials"
+      ]
+    },
+    {
+      "type": "cta",
+      "line": "Follow for the full *Neonatology* series",
+      "sub": "Next: NEC & Bell staging"
+    }
   ],
-  "caption": "🧊🧠 HIE & therapeutic cooling | PG Notes · Neonatology 05\n\n🩸 Evidence of asphyxia: cord/1st-hour gas pH ≤ 7.0 or base deficit ≥ 16 · Apgar ≤ 5 at 10 min or ongoing resuscitation · plus moderate–severe encephalopathy\n\n📊 Sarnat staging:\n• Stage 1 (mild): hyperalert, irritable, dilated pupils, no seizures\n• Stage 2 (moderate): lethargic, hypotonia, constricted pupils, seizures common\n• Stage 3 (severe): stupor/coma, flaccid, absent reflexes, highest mortality\n\n✅ Who to cool: ≥ 36 weeks · start within 6 h of birth · moderate/severe encephalopathy ± abnormal aEEG · unit with ventilation & monitoring\n\n🌡️ Protocol: core 33.5 °C (33–34) for 72 h → rewarm 0.5 °C/hour, watch for seizures\n\n🛟 Supportive: avoid hyperthermia & hypocarbia · normal glucose · maintain BP · seizures: phenobarbitone 20 mg/kg · watch for SIADH, AKI · MRI after rewarming\n\n⭐ Pearls:\n• Pupils dilated in stage 1, constricted in stage 2\n• HELIX trial (2021): cooling in low/middle-income settings did not reduce death or disability: follow unit policy\n• Not standard for < 36 weeks outside trials\n\n📚 Ref: NICE/BAPM, TOBY, NICHD, HELIX trials\n➡️ Next: NEC & Bell staging\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines and your unit protocol.\n\n#HIE #therapeutichypothermia #asphyxia #neonatology #NICU #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #highyield #medicos"
+  "caption": "🧊🧠 HIE & therapeutic cooling | PG Notes · Neonatology 05\n\n🩸 Evidence of asphyxia: cord/1st-hour gas pH ≤ 7.0 or base deficit ≥ 16 · Apgar ≤ 5 at 10 min or ongoing resuscitation · plus moderate–severe encephalopathy\n\n📊 Sarnat staging:\n• Stage 1 (mild): hyperalert, irritable, dilated pupils, no seizures\n• Stage 2 (moderate): lethargic, hypotonia, constricted pupils, seizures common\n• Stage 3 (severe): stupor/coma, flaccid, absent reflexes, highest mortality\n\n✅ Who to cool: ≥ 36 weeks · start within 6 h of birth · moderate/severe encephalopathy ± abnormal aEEG · unit with ventilation & monitoring\n\n🌡️ Protocol: core 33.5 °C (33–34) for 72 h → rewarm 0.5 °C/hour, watch for seizures\n\n🛟 Supportive: avoid hyperthermia & hypocarbia · normal glucose · maintain BP · seizures: phenobarbitone 20 mg/kg · watch for SIADH, AKI · MRI after rewarming\n\n⭐ Pearls:\n• Pupils dilated in stage 1, constricted in stage 2\n• HELIX trial (2021): cooling in low/middle-income settings did not reduce death or disability: follow unit policy\n• Not standard for < 36 weeks outside trials\n\n📚 Ref: NICE/BAPM, TOBY, NICHD, HELIX trials\n➡️ Next: NEC & Bell staging\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines and your unit protocol.\n\n#HIE #therapeutichypothermia #asphyxia #neonatology #NICU #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #highyield #medicos",
+  "music": "jazzhop"
 }

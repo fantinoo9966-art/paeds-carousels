@@ -5,35 +5,124 @@
   "seed": 4,
   "cover_s": 2,
   "scenes": [
-    { "type": "hook", "title": "Whistling sound when your child *breathes?*", "mood": "think", "icon": "lungs", "hand": "That's a wheeze" },
-    { "type": "big", "text": "About *1 in 3* children wheeze before age 3", "visual": { "kind": "icon", "name": "lungs" }, "sub": "Many outgrow it: **not every wheeze is asthma**" },
-    { "type": "list", "title": "Common *triggers*", "style": "rows", "items": [
-      { "text": "Colds and other viruses", "icon": "germ" },
-      { "text": "Dust, mites, pets", "icon": "warn" },
-      { "text": "Smoke: cigarettes, mosquito coils, chulha", "icon": "kettle" },
-      { "text": "Cold air and hard exercise", "icon": "ice" },
-      { "text": "Strong smells and pollen", "icon": "nosedrop" }
-    ] },
-    { "type": "list", "title": "If your child has an *inhaler*", "style": "wheel", "tone": "good", "items": [
-      { "text": "Use the **spacer**, every time", "icon": "tube" },
-      { "text": "Preventer **every day**, even when well", "icon": "cal" },
-      { "text": "Reliever for attacks, as the doctor planned", "icon": "lungs" },
-      { "text": "Rinse mouth after the steroid inhaler", "icon": "cup" }
-    ] },
-    { "type": "list", "title": "Please don't", "style": "notes", "tone": "bad", "items": [
-      { "text": "Cough syrups for a wheeze", "icon": "syrup" },
-      { "text": "Stop the preventer when well", "icon": "pill" },
-      { "text": "Smoke near your child", "icon": "warn" },
-      { "text": "Hot steam (burns!)", "icon": "kettle" }
-    ] },
-    { "type": "list", "title": "Go to hospital *now* if:", "style": "flags", "tone": "alert", "items": [
-      { "text": "Struggling to breathe, can't talk or feed" },
-      { "text": "Chest pulling in, ribs showing" },
-      { "text": "Blue or grey lips" },
-      { "text": "Reliever not working or needed **every 4 hours**" },
-      { "text": "Very sleepy or confused" }
-    ] },
-    { "type": "cta" }
+    {
+      "type": "hook",
+      "title": "Whistling sound when your child *breathes?*",
+      "mood": "think",
+      "icon": "lungs",
+      "hand": "That's a wheeze"
+    },
+    {
+      "type": "big",
+      "text": "About *1 in 3* children wheeze before age 3",
+      "visual": {
+        "kind": "icon",
+        "name": "lungs"
+      },
+      "sub": "Many outgrow it: **not every wheeze is asthma**"
+    },
+    {
+      "type": "list",
+      "title": "Common *triggers*",
+      "style": "rows",
+      "items": [
+        {
+          "text": "Colds and other viruses",
+          "icon": "germ"
+        },
+        {
+          "text": "Dust, mites, pets",
+          "icon": "warn"
+        },
+        {
+          "text": "Smoke: cigarettes, mosquito coils, chulha",
+          "icon": "kettle"
+        },
+        {
+          "text": "Cold air and hard exercise",
+          "icon": "ice"
+        },
+        {
+          "text": "Strong smells and pollen",
+          "icon": "nosedrop"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "If your child has an *inhaler*",
+      "style": "wheel",
+      "tone": "good",
+      "items": [
+        {
+          "text": "Use the **spacer**, every time",
+          "icon": "tube"
+        },
+        {
+          "text": "Preventer **every day**, even when well",
+          "icon": "cal"
+        },
+        {
+          "text": "Reliever for attacks, as the doctor planned",
+          "icon": "lungs"
+        },
+        {
+          "text": "Rinse mouth after the steroid inhaler",
+          "icon": "cup"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Please don't",
+      "style": "notes",
+      "tone": "bad",
+      "items": [
+        {
+          "text": "Cough syrups for a wheeze",
+          "icon": "syrup"
+        },
+        {
+          "text": "Stop the preventer when well",
+          "icon": "pill"
+        },
+        {
+          "text": "Smoke near your child",
+          "icon": "warn"
+        },
+        {
+          "text": "Hot steam (burns!)",
+          "icon": "kettle"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Go to hospital *now* if:",
+      "style": "flags",
+      "tone": "alert",
+      "items": [
+        {
+          "text": "Struggling to breathe, can't talk or feed"
+        },
+        {
+          "text": "Chest pulling in, ribs showing"
+        },
+        {
+          "text": "Blue or grey lips"
+        },
+        {
+          "text": "Reliever not working or needed **every 4 hours**"
+        },
+        {
+          "text": "Very sleepy or confused"
+        }
+      ]
+    },
+    {
+      "type": "cta"
+    }
   ],
-  "caption": "🫁😮‍💨 Whistling sound when your child breathes? That's a wheeze. Here's what to know.\n\n✅ About 1 in 3 children wheeze before age 3. Many outgrow it: not every wheeze is asthma.\n\n⚡ Common triggers: colds & viruses · dust, mites, pets · smoke (cigarettes, mosquito coils, chulha) · cold air & hard exercise · strong smells & pollen\n\n💚 If your child has an inhaler:\n1️⃣ Use the spacer, every time\n2️⃣ Preventer every day, even when well\n3️⃣ Reliever for attacks, as the doctor planned\n4️⃣ Rinse mouth after the steroid inhaler\n\n❌ Please don't:\n• Give cough syrups for a wheeze\n• Stop the preventer when your child is well\n• Smoke near your child\n• Use hot steam (burns!)\n\n🚨 Go to hospital NOW if:\n• Struggling to breathe, can't talk or feed\n• Chest pulling in, ribs showing\n• Blue or grey lips\n• Reliever not working or needed every 4 hours\n• Very sleepy or confused\n\n📌 Save this & share with every parent 💛\nFollow @paediatrick_or_treats for simple paediatrics.\n\n⚠️ For information only. Always consult your doctor.\n\n#asthma #wheezing #childasthma #inhaler #kidshealth #childhealth #paediatrics #pediatrician #parentingtips #momlife #indianparents #toddlermom #healthawareness #doctorsofinstagram #reelsindia"
+  "caption": "🫁😮‍💨 Whistling sound when your child breathes? That's a wheeze. Here's what to know.\n\n✅ About 1 in 3 children wheeze before age 3. Many outgrow it: not every wheeze is asthma.\n\n⚡ Common triggers: colds & viruses · dust, mites, pets · smoke (cigarettes, mosquito coils, chulha) · cold air & hard exercise · strong smells & pollen\n\n💚 If your child has an inhaler:\n1️⃣ Use the spacer, every time\n2️⃣ Preventer every day, even when well\n3️⃣ Reliever for attacks, as the doctor planned\n4️⃣ Rinse mouth after the steroid inhaler\n\n❌ Please don't:\n• Give cough syrups for a wheeze\n• Stop the preventer when your child is well\n• Smoke near your child\n• Use hot steam (burns!)\n\n🚨 Go to hospital NOW if:\n• Struggling to breathe, can't talk or feed\n• Chest pulling in, ribs showing\n• Blue or grey lips\n• Reliever not working or needed every 4 hours\n• Very sleepy or confused\n\n📌 Save this & share with every parent 💛\nFollow @paediatrick_or_treats for simple paediatrics.\n\n⚠️ For information only. Always consult your doctor.\n\n#asthma #wheezing #childasthma #inhaler #kidshealth #childhealth #paediatrics #pediatrician #parentingtips #momlife #indianparents #toddlermom #healthawareness #doctorsofinstagram #reelsindia",
+  "music": "piano"
 }

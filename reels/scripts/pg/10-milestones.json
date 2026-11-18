@@ -8,33 +8,115 @@
   "seed": 5,
   "cover_s": 3,
   "scenes": [
-    { "type": "hook", "title": "*Milestones* made easy", "sub": "Gross motor · fine motor · language · social", "mood": "happy", "icon": "newborn", "hand": "Viva favourite!" },
-    { "type": "cards", "title": "Gross *motor*", "cards": [
-      { "title": "First year", "lines": ["Neck holding **3 m** · rolls over **5 m**", "Sits without support **8 m** · stands holding on **9 m**"] },
-      { "title": "After one", "lines": ["Walks alone **12–13 m** · runs **18 m**", "Tricycle **3 y** · hops **4 y** · skips **5 y**"] }
-    ] },
-    { "type": "cards", "title": "Fine *motor*", "cards": [
-      { "title": "Hands", "lines": ["Reaches with both hands **4–5 m** · transfers **6 m**", "Immature pincer **9 m** · mature pincer **12 m**"] },
-      { "title": "Drawing", "lines": ["Scribbles **15–18 m** · circle **3 y**", "Cross **4 y** · triangle **5 y**"] }
-    ] },
-    { "type": "cards", "title": "Language & *social*", "cards": [
-      { "title": "Language", "lines": ["Coos **3 m** · babbles **6 m** · 'mama' **9 m**", "1–2 words **12 m** · 2-word phrases **2 y** · sentences **3 y**"] },
-      { "title": "Social", "lines": ["Social smile **2 m** · stranger anxiety **6–9 m**", "Waves bye-bye **9 m** · parallel play **2 y**"] }
-    ] },
-    { "type": "list", "title": "Red *flags*", "style": "flags", "tone": "alert", "items": [
-      { "text": "No social smile by **3 months**" },
-      { "text": "Not sitting without support by **9 months**" },
-      { "text": "Not walking by **18 months**" },
-      { "text": "No words by **16 months**, no phrases by **2 years**" },
-      { "text": "Hand preference before **18 months**" },
-      { "text": "**Loss** of any attained milestone" }
-    ] },
-    { "type": "pearls", "title": "Exam *pearls*", "items": [
-      "**DQ = developmental age ÷ chronological age × 100**; DQ **< 70** = delay",
-      "Correct for prematurity until **2 years** of age",
-      "Regression of milestones: always investigate (think **neurodegenerative / Rett**)"
-    ] },
-    { "type": "cta", "line": "Follow for the full *PG notes* series", "sub": "Next: Approach to short stature" }
+    {
+      "type": "hook",
+      "title": "*Milestones* made easy",
+      "sub": "Gross motor · fine motor · language · social",
+      "mood": "happy",
+      "icon": "newborn",
+      "hand": "Viva favourite!"
+    },
+    {
+      "type": "cards",
+      "title": "Gross *motor*",
+      "cards": [
+        {
+          "title": "First year",
+          "lines": [
+            "Neck holding **3 m** · rolls over **5 m**",
+            "Sits without support **8 m** · stands holding on **9 m**"
+          ]
+        },
+        {
+          "title": "After one",
+          "lines": [
+            "Walks alone **12–13 m** · runs **18 m**",
+            "Tricycle **3 y** · hops **4 y** · skips **5 y**"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Fine *motor*",
+      "cards": [
+        {
+          "title": "Hands",
+          "lines": [
+            "Reaches with both hands **4–5 m** · transfers **6 m**",
+            "Immature pincer **9 m** · mature pincer **12 m**"
+          ]
+        },
+        {
+          "title": "Drawing",
+          "lines": [
+            "Scribbles **15–18 m** · circle **3 y**",
+            "Cross **4 y** · triangle **5 y**"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Language & *social*",
+      "cards": [
+        {
+          "title": "Language",
+          "lines": [
+            "Coos **3 m** · babbles **6 m** · 'mama' **9 m**",
+            "1–2 words **12 m** · 2-word phrases **2 y** · sentences **3 y**"
+          ]
+        },
+        {
+          "title": "Social",
+          "lines": [
+            "Social smile **2 m** · stranger anxiety **6–9 m**",
+            "Waves bye-bye **9 m** · parallel play **2 y**"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Red *flags*",
+      "style": "flags",
+      "tone": "alert",
+      "items": [
+        {
+          "text": "No social smile by **3 months**"
+        },
+        {
+          "text": "Not sitting without support by **9 months**"
+        },
+        {
+          "text": "Not walking by **18 months**"
+        },
+        {
+          "text": "No words by **16 months**, no phrases by **2 years**"
+        },
+        {
+          "text": "Hand preference before **18 months**"
+        },
+        {
+          "text": "**Loss** of any attained milestone"
+        }
+      ]
+    },
+    {
+      "type": "pearls",
+      "title": "Exam *pearls*",
+      "items": [
+        "**DQ = developmental age ÷ chronological age × 100**; DQ **< 70** = delay",
+        "Correct for prematurity until **2 years** of age",
+        "Regression of milestones: always investigate (think **neurodegenerative / Rett**)"
+      ]
+    },
+    {
+      "type": "cta",
+      "line": "Follow for the full *PG notes* series",
+      "sub": "Next: Approach to short stature"
+    }
   ],
-  "caption": "👶➡️🧒 Developmental milestones made easy | PG Notes · Growth & Development 01\n\n🏃 Gross motor: neck holding 3 m · rolls 5 m · sits without support 8 m · stands holding on 9 m · walks alone 12–13 m · runs 18 m · tricycle 3 y · hops 4 y · skips 5 y\n\n✋ Fine motor: bidextrous reach 4–5 m · transfers 6 m · immature pincer 9 m · mature pincer 12 m · scribbles 15–18 m · circle 3 y · cross 4 y · triangle 5 y\n\n🗣️ Language: coos 3 m · babbles 6 m · 'mama' 9 m · 1–2 words 12 m · 2-word phrases 2 y · sentences 3 y\n\n😊 Social: social smile 2 m · stranger anxiety 6–9 m · waves bye-bye 9 m · parallel play 2 y\n\n🚩 Red flags: no social smile by 3 m · not sitting by 9 m · not walking by 18 m · no words by 16 m, no phrases by 2 y · hand preference before 18 m · loss of any milestone\n\n⭐ Pearls: DQ = DA ÷ CA × 100, DQ < 70 = delay · correct for prematurity until 2 years · regression: always investigate\n\n📚 Ref: Nelson, IAP, Ghai\n➡️ Next: Approach to short stature\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines.\n\n#milestones #development #growthanddevelopment #paediatrics #pediatrics #pgnotes #neetpg #inicet #mbbs #pediatricresident #medstudent #highyield #medicos"
+  "caption": "👶➡️🧒 Developmental milestones made easy | PG Notes · Growth & Development 01\n\n🏃 Gross motor: neck holding 3 m · rolls 5 m · sits without support 8 m · stands holding on 9 m · walks alone 12–13 m · runs 18 m · tricycle 3 y · hops 4 y · skips 5 y\n\n✋ Fine motor: bidextrous reach 4–5 m · transfers 6 m · immature pincer 9 m · mature pincer 12 m · scribbles 15–18 m · circle 3 y · cross 4 y · triangle 5 y\n\n🗣️ Language: coos 3 m · babbles 6 m · 'mama' 9 m · 1–2 words 12 m · 2-word phrases 2 y · sentences 3 y\n\n😊 Social: social smile 2 m · stranger anxiety 6–9 m · waves bye-bye 9 m · parallel play 2 y\n\n🚩 Red flags: no social smile by 3 m · not sitting by 9 m · not walking by 18 m · no words by 16 m, no phrases by 2 y · hand preference before 18 m · loss of any milestone\n\n⭐ Pearls: DQ = DA ÷ CA × 100, DQ < 70 = delay · correct for prematurity until 2 years · regression: always investigate\n\n📚 Ref: Nelson, IAP, Ghai\n➡️ Next: Approach to short stature\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines.\n\n#milestones #development #growthanddevelopment #paediatrics #pediatrics #pgnotes #neetpg #inicet #mbbs #pediatricresident #medstudent #highyield #medicos",
+  "music": "studypiano"
 }

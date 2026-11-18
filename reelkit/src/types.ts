@@ -32,6 +32,6 @@ export type Script = {
   tab?: string; // PG notebook tab, e.g. "PG NOTES · NEONATOLOGY 04"
   disclaimer?: string;
   seed?: number; // varies transitions / entrances / colours
-  pace?: number; // 1 = old speed; default 1.3 (slower, user asked 2026-11-17)
+  pace?: number; // default 1.0 = the original hand-made Reel pace (user, 2026-11-18); >1 = slower
   scenes: Scene[];
 };

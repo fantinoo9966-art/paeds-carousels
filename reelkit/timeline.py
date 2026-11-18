@@ -57,7 +57,7 @@ def scene_len(s: dict, pace: float) -> int:
 
 
 def timeline(script: dict):
-    pace = script.get("pace", 1.3)
+    pace = script.get("pace", 1.0)
     starts, t = [], 0
     for s in script["scenes"]:
         n = scene_len(s, pace)

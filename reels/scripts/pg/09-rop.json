@@ -8,29 +8,99 @@
   "seed": 2,
   "cover_s": 3,
   "scenes": [
-    { "type": "hook", "title": "*ROP* screening", "sub": "Who · when · stages · when to treat", "mood": "happy", "icon": "eye", "hand": "Don't miss a single baby" },
-    { "type": "cards", "title": "Who & *when*", "cards": [
-      { "title": "Screen (India)", "lines": ["Birth weight **< 2000 g** or GA **< 34 weeks**", "34–36 wk with risk factors (O₂, sepsis, shock)"] },
-      { "title": "First exam", "lines": ["By **day 30** of life", "By **day 20** if **< 28 weeks** or **< 1200 g**"] }
-    ] },
-    { "type": "list", "title": "Stages (*ICROP*)", "style": "steps", "items": [
-      { "text": "**Stage 1**: demarcation line" },
-      { "text": "**Stage 2**: ridge" },
-      { "text": "**Stage 3**: extraretinal fibrovascular proliferation" },
-      { "text": "**Stage 4**: partial retinal detachment" },
-      { "text": "**Stage 5**: total retinal detachment" }
-    ] },
-    { "type": "big", "text": "*Plus disease*: dilated, tortuous posterior vessels", "visual": { "kind": "icon", "name": "eye" }, "sub": "Zones: **I** around the disc · **II** to nasal ora · **III** temporal crescent" },
-    { "type": "cards", "title": "Treat *Type 1* ROP", "cards": [
-      { "title": "Indications (ETROP)", "lines": ["Zone I: any stage **with plus**, or **stage 3** without plus", "Zone II: stage **2 or 3 with plus**"] },
-      { "title": "How", "lines": ["**Laser photocoagulation** or **anti-VEGF**, within **48–72 h**"] }
-    ] },
-    { "type": "pearls", "title": "Exam *pearls*", "items": [
-      "Avoid O₂ swings: target SpO₂ about **90–95%** in preterms",
-      "**AP-ROP** (aggressive posterior ROP) needs urgent treatment",
-      "After **anti-VEGF**, follow up longer: late recurrence"
-    ] },
-    { "type": "cta", "line": "Follow for the full *Neonatology* series", "sub": "Next: Developmental milestones" }
+    {
+      "type": "hook",
+      "title": "*ROP* screening",
+      "sub": "Who · when · stages · when to treat",
+      "mood": "happy",
+      "icon": "eye",
+      "hand": "Don't miss a single baby"
+    },
+    {
+      "type": "cards",
+      "title": "Who & *when*",
+      "cards": [
+        {
+          "title": "Screen (India)",
+          "lines": [
+            "Birth weight **< 2000 g** or GA **< 34 weeks**",
+            "34–36 wk with risk factors (O₂, sepsis, shock)"
+          ]
+        },
+        {
+          "title": "First exam",
+          "lines": [
+            "By **day 30** of life",
+            "By **day 20** if **< 28 weeks** or **< 1200 g**"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Stages (*ICROP*)",
+      "style": "steps",
+      "items": [
+        {
+          "text": "**Stage 1**: demarcation line"
+        },
+        {
+          "text": "**Stage 2**: ridge"
+        },
+        {
+          "text": "**Stage 3**: extraretinal fibrovascular proliferation"
+        },
+        {
+          "text": "**Stage 4**: partial retinal detachment"
+        },
+        {
+          "text": "**Stage 5**: total retinal detachment"
+        }
+      ]
+    },
+    {
+      "type": "big",
+      "text": "*Plus disease*: dilated, tortuous posterior vessels",
+      "visual": {
+        "kind": "icon",
+        "name": "eye"
+      },
+      "sub": "Zones: **I** around the disc · **II** to nasal ora · **III** temporal crescent"
+    },
+    {
+      "type": "cards",
+      "title": "Treat *Type 1* ROP",
+      "cards": [
+        {
+          "title": "Indications (ETROP)",
+          "lines": [
+            "Zone I: any stage **with plus**, or **stage 3** without plus",
+            "Zone II: stage **2 or 3 with plus**"
+          ]
+        },
+        {
+          "title": "How",
+          "lines": [
+            "**Laser photocoagulation** or **anti-VEGF**, within **48–72 h**"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pearls",
+      "title": "Exam *pearls*",
+      "items": [
+        "Avoid O₂ swings: target SpO₂ about **90–95%** in preterms",
+        "**AP-ROP** (aggressive posterior ROP) needs urgent treatment",
+        "After **anti-VEGF**, follow up longer: late recurrence"
+      ]
+    },
+    {
+      "type": "cta",
+      "line": "Follow for the full *Neonatology* series",
+      "sub": "Next: Developmental milestones"
+    }
   ],
-  "caption": "👁️ ROP screening | PG Notes · Neonatology 09\n\n👶 Screen (India): birth weight < 2000 g or GA < 34 weeks; 34–36 weeks with risk factors (O₂, sepsis, shock)\n📅 First exam by day 30 of life; by day 20 if < 28 weeks or < 1200 g\n\n📊 Stages (ICROP): 1 demarcation line · 2 ridge · 3 extraretinal fibrovascular proliferation · 4 partial detachment · 5 total detachment\n➕ Plus disease: dilated, tortuous posterior vessels\n🗺️ Zones: I around the disc · II to the nasal ora · III temporal crescent\n\n💉 Treat Type 1 ROP (ETROP): zone I any stage with plus, or stage 3 without plus · zone II stage 2 or 3 with plus → laser or anti-VEGF within 48–72 h\n\n⭐ Pearls: avoid O₂ swings (target SpO₂ about 90–95% in preterms) · AP-ROP needs urgent treatment · after anti-VEGF follow up longer (late recurrence)\n\n📚 Ref: Indian ROP guidelines (RBSK/NNF), ICROP3, ETROP\n➡️ Next: Developmental milestones\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines and your unit protocol.\n\n#ROP #retinopathyofprematurity #preterm #neonatology #NICU #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #highyield #medicos"
+  "caption": "👁️ ROP screening | PG Notes · Neonatology 09\n\n👶 Screen (India): birth weight < 2000 g or GA < 34 weeks; 34–36 weeks with risk factors (O₂, sepsis, shock)\n📅 First exam by day 30 of life; by day 20 if < 28 weeks or < 1200 g\n\n📊 Stages (ICROP): 1 demarcation line · 2 ridge · 3 extraretinal fibrovascular proliferation · 4 partial detachment · 5 total detachment\n➕ Plus disease: dilated, tortuous posterior vessels\n🗺️ Zones: I around the disc · II to the nasal ora · III temporal crescent\n\n💉 Treat Type 1 ROP (ETROP): zone I any stage with plus, or stage 3 without plus · zone II stage 2 or 3 with plus → laser or anti-VEGF within 48–72 h\n\n⭐ Pearls: avoid O₂ swings (target SpO₂ about 90–95% in preterms) · AP-ROP needs urgent treatment · after anti-VEGF follow up longer (late recurrence)\n\n📚 Ref: Indian ROP guidelines (RBSK/NNF), ICROP3, ETROP\n➡️ Next: Developmental milestones\nFollow @paediatrick_or_treats & save for revision 📌\n\n⚠️ For medical education. Verify with current guidelines and your unit protocol.\n\n#ROP #retinopathyofprematurity #preterm #neonatology #NICU #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #highyield #medicos",
+  "music": "jazzhop"
 }

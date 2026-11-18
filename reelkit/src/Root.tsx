@@ -24,7 +24,7 @@ const FAMILIES: ((k: number) => any)[] = [
 ];
 
 export const ReelComp: React.FC<Script> = (sc) => {
-  const pace = sc.pace ?? 1.3;
+  const pace = sc.pace ?? 1.0;
   const seed = sc.seed ?? 0;
   const pres = FAMILIES[seed % FAMILIES.length];
   const pg = sc.audience === "pg";

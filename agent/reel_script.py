@@ -156,6 +156,8 @@ def write(aud: str) -> Path:
     data["seed"] = random.randint(0, 59)
     data["cover_s"] = 2 if aud == "parents" else 3
     data["auto"] = True
+    styles = ["lofi", "jazzhop", "arp", "studypiano"] if aud == "pg" else ["bright", "marimba", "piano", "funk"]
+    data["music"] = styles[len(list((SCRIPTS / aud).glob("*.json"))) % len(styles)]  # rotate music styles
     if aud == "pg":
         n = sum(1 for f in (SCRIPTS / "pg").glob("*.json")
                 if json.loads(f.read_text(encoding="utf-8")).get("system", "").upper() == system.upper()) + 1

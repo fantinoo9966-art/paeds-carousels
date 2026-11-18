@@ -48,8 +48,13 @@ def build(script_path: Path, out: Path, browser: str | None = None) -> None:
 
         dur = duration(raw)
         music = tmp / "music.wav"
+        # A different music style per Reel (4 per audience), chosen from the seed + topic so neighbours differ.
+        styles = ["lofi", "jazzhop", "arp", "studypiano"] if pg else ["bright", "marimba", "piano", "funk"]
+        pick = (seed + sum(map(ord, str(script.get("topic", ""))))) % len(styles)
+        style = script.get("music") or styles[pick]
         transpose = [0, 2, -1, 3, -2, 1][seed % 6]
-        run([sys.executable, KIT / "music.py", "lofi" if pg else "bright", f"{dur + 0.5:.1f}", music, seed + 3, transpose])
+        print(f"Music: {style}", flush=True)
+        run([sys.executable, KIT / "music.py", style, f"{dur + 0.5:.1f}", music, seed + 3, transpose])
 
         fade = max(0.0, dur - 2)
         filt = (f"[0:a]loudnorm=I=-17:TP=-2[s];[1:a]atrim=0:{dur:.3f},afade=t=out:st={fade:.3f}:d=2,loudnorm=I=-21:TP=-2[m];"
