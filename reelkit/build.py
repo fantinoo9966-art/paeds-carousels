@@ -34,7 +34,11 @@ def build(script_path: Path, out: Path, browser: str | None = None) -> None:
     tmp = Path(tempfile.mkdtemp(prefix="reel-"))
     try:
         props = tmp / "props.json"
-        props.write_text(json.dumps(script, ensure_ascii=False), encoding="utf-8")
+        # Invisible joiners (word joiner, zero-width space, BOM) have no glyph in Baloo/Nunito and render as boxes.
+        clean = json.dumps(script, ensure_ascii=False)
+        for ch in ("⁠", "​", "﻿", "‌", "‍"):
+            clean = clean.replace(ch, "")
+        props.write_text(clean, encoding="utf-8")
         raw = tmp / "raw.mp4"
         npx = shutil.which("npx") or shutil.which("npx.cmd") or "npx"
         cmd = [npx, "remotion", "render", "src/index.ts", "Reel", raw, f"--props={props}", "--codec", "h264", "--crf", "16", "--log=error"]
