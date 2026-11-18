@@ -5,3 +5,4 @@ data/*.json
 DRUGS_KEY*
 reelkit/node_modules
 reelkit/out/
+_site/
