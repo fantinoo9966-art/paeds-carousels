@@ -16,6 +16,9 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 OUT = ROOT / "_site"
 CFG = json.loads((HERE / "site.json").read_text(encoding="utf-8"))
+# Fingerprint of the stylesheet: pages link to style.css?v=<this>, so browsers
+# fetch the new CSS the moment it changes instead of mixing old CSS with new HTML.
+CSS_VER = __import__("hashlib").md5((HERE / "style.css").read_bytes()).hexdigest()[:10]
 HANDLE = "paediatrick_or_treats"
 IG = CFG.get("instagram") or f"https://www.instagram.com/{HANDLE}/"
 YT = CFG.get("youtube") or ""
@@ -236,7 +239,7 @@ def page(title, body, desc="", depth=0, active=""):
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧸</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{up}style.css">
+<link rel="stylesheet" href="{up}style.css?v={CSS_VER}">
 </head>
 <body>
 <header class="top">
