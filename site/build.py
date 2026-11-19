@@ -380,7 +380,8 @@ def build():
     books_teaser = ""
     if BOOKS:
         b = BOOKS[0]
-        books_teaser = f'<p>Latest: <b>{esc(b.get("title", ""))}</b></p>'
+        label = "Coming soon" if b.get("status") == "coming_soon" else "Latest"
+        books_teaser = f'<p><b>{label}:</b> {esc(b.get("title", ""))}</p>'
     yt_card = ""
     if YT:
         yt_card = f'<a class="path p-yt" href="{esc(YT)}" target="_blank" rel="noopener"><span class="pic">▶️</span><h3>YouTube</h3><p>Longer videos and explainers.</p><span class="go">Watch →</span></a>'
@@ -475,12 +476,30 @@ def build():
     if BOOKS:
         bc = []
         for b in BOOKS:
-            cover = f'<img src="{esc(b["cover"])}" alt="Cover of {esc(b.get("title", ""))}">' if b.get("cover") else '<div class="nocover">📖</div>'
-            buy = f'<a class="btn primary" href="{esc(b["link"])}" target="_blank" rel="noopener">{esc(b.get("button", "Get the book"))}</a>' if b.get("link") else ""
-            price = f'<p class="price">{esc(b["price"])}</p>' if b.get("price") else ""
-            aud = f'<span class="tag">{esc(b["audience"])}</span>' if b.get("audience") else ""
-            bc.append(f'<article class="book">{cover}<div class="bt">{aud}<h3>{esc(b.get("title", ""))}</h3>'
-                      f'<p>{esc(b.get("description", ""))}</p>{price}{buy}</div></article>')
+            soon = b.get("status") == "coming_soon"
+            if b.get("cover"):
+                cover = f'<img src="{esc(b["cover"])}" alt="Cover of {esc(b.get("title", ""))}">'
+            elif b.get("cover_text"):
+                lines = b["cover_text"]
+                cover = ('<div class="drawncover"><span class="dc-top">' + esc(b.get("series", "")) + '</span>' +
+                         "".join(f'<span class="dc-l{i}">{esc(l)}</span>' for i, l in enumerate(lines)) +
+                         '<span class="dc-curve"></span></div>')
+            else:
+                cover = '<div class="nocover">📖</div>'
+            ribbon = '<span class="ribbon">Coming soon</span>' if soon else ""
+            if b.get("link") and not soon:
+                action = f'<a class="btn primary" href="{esc(b["link"])}" target="_blank" rel="noopener">{esc(b.get("button", "Get the book"))}</a>'
+            elif soon:
+                action = f'<a class="btn ig" href="{esc(IG)}" target="_blank" rel="noopener">{IG_ICON}Follow for launch news</a>'
+            else:
+                action = ""
+            price = f'<p class="price">{esc(b["price"])}</p>' if b.get("price") and not soon else ""
+            series = f'<span class="series">{esc(b["series"])}</span>' if b.get("series") else ""
+            aud = f'<p class="aud">🎯 {esc(b["audience"])}</p>' if b.get("audience") else ""
+            hl = ("<ul class='bhl'>" + "".join(f"<li>{esc(h)}</li>" for h in b["highlights"]) + "</ul>") if b.get("highlights") else ""
+            fm = f'<p class="formats">📦 {esc(b["formats"])}</p>' if b.get("formats") else ""
+            bc.append(f'<article class="book{" upcoming" if soon else ""}"><div class="bcover">{ribbon}{cover}</div><div class="bt">{series}'
+                      f'<h3>{esc(b.get("title", ""))}</h3>{aud}<p>{esc(b.get("description", ""))}</p>{hl}{fm}{price}{action}</div></article>')
         books_html = f'<div class="books">{"".join(bc)}</div>'
     else:
         books_html = f"""<div class="soon"><span class="big">📖✨</span><h2>Books are on the way!</h2>

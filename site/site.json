@@ -1,5 +1,41 @@
 {
   "instagram": "https://www.instagram.com/paediatrick_or_treats/",
   "youtube": "https://www.youtube.com/@paediatrick_or_treats",
-  "books": []
+  "books": [
+    {
+      "title": "Biostatistics and Research Methodology for Postgraduates",
+      "series": "Numbers to Knowledge",
+      "status": "coming_soon",
+      "audience": "MD/MS/DNB · NEET SS · INI-SS · Faculty interviews · BCBR",
+      "cover": "books/biostats-research-methodology.jpg",
+      "description": "A question-and-answer textbook that takes you from research question to critical appraisal: concepts explained clearly, with exam-ready structured answers.",
+      "highlights": [
+        "Part A: Research Methodology. EBM, study designs, clinical trials, bias, sample size, ethics, scientific writing",
+        "Part B: Biostatistics. Data, distributions, hypothesis testing, statistical tests, regression, diagnostic tests, survival analysis, meta-analysis",
+        "Tables, figures and worked examples",
+        "Viva and interview questions",
+        "About 400 pages, updated to 2026"
+      ],
+      "formats": "Paperback · Kindle",
+      "price": "",
+      "link": ""
+    },
+    {
+      "title": "Biostatistics and Research Methodology: Rapid Review Handbook",
+      "series": "Numbers to Knowledge",
+      "status": "coming_soon",
+      "audience": "Last-minute revision for PG exams",
+      "cover": "",
+      "cover_text": ["RAPID REVIEW", "Biostatistics", "& Research Methodology", "HANDBOOK"],
+      "description": "The condensed companion to the main textbook: the core of each important question, for quick revision before university exams, NEET SS and INI-SS.",
+      "highlights": [
+        "45 must-know questions across all 19 sections",
+        "Same Part A / Part B structure as the textbook",
+        "Built for the last weeks before the exam"
+      ],
+      "formats": "",
+      "price": "",
+      "link": ""
+    }
+  ]
 }
