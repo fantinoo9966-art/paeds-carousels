@@ -1,7 +1,10 @@
-"""Build the Paediatrick or Treats website from posts/, reels/ and site/site.json.
+"""Build the Paediatrick or Treats website from site/content/ and site/site.json.
 
 Usage:  python site/build.py            -> writes the site to _site/
-Only content that is live on Instagram (has published.json) goes on the site.
+The website has its OWN content and does not follow Instagram:
+  site/content/notes/<slug>/  slides.json, slide*.jpg (optional), meta.json {"date", "instagram"?}
+  site/content/reels/<slug>/  caption.txt, meta.json {"date", "audience": "pg"|"parents", "instagram"?}
+Content is added here by hand (via Claude), never automatically from posts/ or reels/.
 Links (Instagram, YouTube) and books are set in site/site.json.
 Standard library only, so it runs anywhere (including GitHub Actions) for free.
 """
@@ -52,13 +55,20 @@ def nice_date(iso):
 
 
 # ---------------------------------------------------------------- content
+CONTENT = HERE / "content"
+
+
 def load_posts():
     posts = []
-    for d in sorted((ROOT / "posts").iterdir()):
-        sj, pj = d / "slides.json", d / "published.json"
-        if not (d.is_dir() and sj.exists() and pj.exists()):
+    ndir = CONTENT / "notes"
+    if not ndir.exists():
+        return posts
+    for d in sorted(ndir.iterdir()):
+        sj, mj = d / "slides.json", d / "meta.json"
+        if not (d.is_dir() and sj.exists()):
             continue
-        data, pub = load_json(sj), load_json(pj)
+        data = load_json(sj)
+        pub = load_json(mj) if mj.exists() else {}
         slides = data.get("slides", [])
         is_drug = data.get("slot") == "drug" or any(s.get("kind") == "drug" for s in slides)
         title = data.get("topic", d.name)
@@ -68,11 +78,11 @@ def load_posts():
         drug = next((s for s in slides if s.get("kind") == "drug"), None)
         summary = (cover or {}).get("subtitle") or (drug or {}).get("drug_class") or ""
         images = sorted(p.name for p in d.glob("slide*.jpg"))
-        shown, iso = nice_date(pub.get("published_at", ""))
+        shown, iso = nice_date(pub.get("date", ""))
         posts.append(dict(
             slug=d.name, dir=d, title=title, summary=plain(summary), slides=slides,
             kind="drug" if is_drug else "topic", images=images,
-            permalink=pub.get("permalink", IG), date=shown, iso=iso,
+            permalink=pub.get("instagram", ""), date=shown, iso=iso,
             references=data.get("references", []), hashtags=data.get("hashtags", []),
             emoji=(cover or drug or {}).get("emoji") or ("💊" if is_drug else "🩺"),
         ))
@@ -82,21 +92,21 @@ def load_posts():
 
 def load_reels():
     reels = []
-    rdir = ROOT / "reels"
+    rdir = CONTENT / "reels"
     if not rdir.exists():
         return reels
     for d in sorted(rdir.iterdir()):
-        cap, pj = d / "caption.txt", d / "published.json"
-        if not (d.is_dir() and cap.exists() and pj.exists()):
+        cap, mj = d / "caption.txt", d / "meta.json"
+        if not (d.is_dir() and cap.exists()):
             continue
-        pub = load_json(pj)
+        pub = load_json(mj) if mj.exists() else {}
         lines = [l.strip() for l in cap.read_text(encoding="utf-8").splitlines()]
         title = next((l for l in lines if l), d.name)
         body = [l for l in lines[1:] if l and not l.startswith("#") and l != "."]
-        shown, iso = nice_date(pub.get("published_at", ""))
-        audience = "parents" if "parents" in d.name else "pg"
+        shown, iso = nice_date(pub.get("date", ""))
+        audience = pub.get("audience") or ("parents" if "parents" in d.name else "pg")
         reels.append(dict(slug=d.name, title=title, body=body, date=shown, iso=iso,
-                          audience=audience, permalink=pub.get("permalink", IG)))
+                          audience=audience, permalink=pub.get("instagram", "")))
     reels.sort(key=lambda r: r["iso"], reverse=True)
     return reels
 
@@ -368,7 +378,7 @@ def build():
   <span class="tag {p['kind']}">{'Drug of the Day' if is_drug else 'Topic notes'}</span>
   <h1><span class="emo">{esc(p['emoji'])}</span>{esc(p['title'])}</h1>
   {f'<p class="lede">{esc(lede)}</p>' if lede else ''}
-  <p class="meta"><time datetime="{p['iso']}">{p['date']}</time> · <a href="{esc(p['permalink'])}" rel="noopener" target="_blank">See the post on Instagram ↗</a></p>
+  <p class="meta"><time datetime="{p['iso']}">{p['date']}</time>{f' · <a href="{esc(p["permalink"])}" rel="noopener" target="_blank">See the post on Instagram ↗</a>' if p['permalink'] else ''}</p>
 </header>
 {notes}
 {refs}
@@ -457,7 +467,7 @@ def build():
         who = "For parents" if r["audience"] == "parents" else "For PG / MBBS"
         return f"""<article class="reel r-{r['audience']}"><span class="tag reel">{who}</span>
 <h3>{esc(r['title'])}</h3><ul>{items}</ul>
-<p class="meta"><time>{r['date']}</time> · <a href="{esc(r['permalink'])}" rel="noopener" target="_blank">Watch on Instagram ↗</a></p></article>"""
+<p class="meta"><time>{r['date']}</time>{f' · <a href="{esc(r["permalink"])}" rel="noopener" target="_blank">Watch on Instagram ↗</a>' if r['permalink'] else ''}</p></article>"""
     rbody = f"""<section class="phead s-reels"><span class="big">🎬</span><div><h1>Reels</h1>
 <p>Short videos for students and for parents. The notes are here; the videos are on Instagram{' and YouTube' if YT else ''}.</p></div></section>
 <div class="reels">{''.join(reel_card(r) for r in reels) or '<p>Reels coming soon.</p>'}</div>{follow_box()}"""

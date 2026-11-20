@@ -1,0 +1,139 @@
+{
+  "topic": "Acute rheumatic fever: Jones criteria",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "🫀",
+      "title": "ARF: Revised Jones Criteria",
+      "subtitle": "Master the 2015 updates for NEET-PG & INI-CET",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "mnemonic",
+      "emoji": "🧠",
+      "title": "JONES",
+      "subtitle": "5 Major Criteria for Acute Rheumatic Fever",
+      "points": [
+        "J - Joint involvement (polyarthritis; monoarthritis or polyarthralgia in mod/high-risk)",
+        "O - Carditis (clinical OR subclinical echocardiographic valvulitis)",
+        "N - Nodules (subcutaneous, firm, painless over extensor surfaces)",
+        "E - Erythema marginatum (pink, serpiginous, spares face, non-pruritic)",
+        "S - Sydenham chorea (late feature; purposeless movements, hypotonia)"
+      ],
+      "highlight": "Exam pearl: Subclinical carditis on echo is now a Major criterion!"
+    },
+    {
+      "kind": "compare",
+      "emoji": "⚖️",
+      "title": "Low vs Mod/High-Risk Populations",
+      "subtitle": "Low-Risk || Mod/High-Risk (India)",
+      "points": [
+        "ARF <=2/100k or RHD <=1/1,000 || ARF >2/100k or RHD >1/1,000",
+        "Major Joint: Polyarthritis only || Polyarthritis, polyarthralgia, monoarthritis",
+        "Minor Joint: Polyarthralgia || Monoarthralgia",
+        "Fever cut-off: >=38.5°C || Fever cut-off: >=38.0°C",
+        "ESR cut-off: >=60 mm/hr || ESR cut-off: >=30 mm/hr"
+      ],
+      "highlight": "CRP >=3.0 mg/dL (or >ULN) applies to BOTH risk groups"
+    },
+    {
+      "kind": "points",
+      "emoji": "🔬",
+      "title": "Minor Criteria & GAS Proof",
+      "subtitle": "",
+      "points": [
+        "**4 Minor criteria**: Fever, arthralgia, raised ESR/CRP, prolonged PR interval",
+        "**Prolonged PR**: Counts only if carditis is NOT used as a Major criterion",
+        "**Same joint rule**: Don't count joint symptoms in both Major and Minor",
+        "**GAS evidence**: Positive throat culture, RADT, or elevated/rising ASO/anti-DNase B"
+      ],
+      "highlight": "ASO peaks at 3–6 weeks; anti-DNase B helps if ASO is negative"
+    },
+    {
+      "kind": "points",
+      "emoji": "📋",
+      "title": "Diagnostic Rules: Initial vs Recurrent",
+      "subtitle": "",
+      "points": [
+        "**Initial ARF**: 2 Major OR 1 Major + 2 Minor (+ GAS evidence)",
+        "**Recurrent ARF**: 2 Major OR 1 Major + 2 Minor OR **3 Minor** (+ GAS evidence)",
+        "**Most common** Major sign overall: Migratory polyarthritis (~75%)",
+        "**Valves affected**: Mitral valve most common, followed by aortic valve"
+      ],
+      "highlight": "Red flag: Treat strep pharyngitis within 9 days to prevent ARF"
+    },
+    {
+      "kind": "points",
+      "emoji": "⚡",
+      "title": "3 Classic Jones Exceptions",
+      "subtitle": "",
+      "points": [
+        "**Sydenham chorea**: Diagnoses ARF alone (rule out other causes); GAS may be normal",
+        "**Indolent carditis**: Alone diagnoses ARF (rule out other causes); GAS may be absent",
+        "**Recurrent ARF**: 3 Minor criteria suffice if GAS infection is proven",
+        "**Chorea timing**: Appears 1–6 months post-GAS as a late manifestation"
+      ],
+      "highlight": "Exam pearl: Chorea & indolent carditis don't require GAS proof"
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "🎯",
+      "title": "High-Yield Exam Takeaways",
+      "subtitle": "Quick revision before your test",
+      "points": [
+        "**India = Mod/High risk**: Lower cut-offs (Fever >=38°C, ESR >=30 mm/hr)",
+        "**Monoarthritis** & **polyarthralgia** are Major criteria in Mod/High risk",
+        "**Subclinical carditis** on Doppler echo counts as Major carditis"
+      ],
+      "highlight": "Exam pearl: Joint involvement in ARF shows dramatic response to aspirin"
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this for your exams 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for more",
+      "points": [
+        "Share with your PG study partner",
+        "Comment the next pediatrics topic you want!"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Still confusing Low-risk vs High-risk Jones Criteria cut-offs? Let’s fix that in 60 seconds.\n\nThe 2015 AHA revision changed how we diagnose Acute Rheumatic Fever—especially in moderate/high-risk countries like India:\n• Remember the JONES mnemonic for the 5 Major criteria\n• Spot the exact Fever, ESR, and Joint cut-offs for India\n• Revise subclinical carditis and the 3 classic exam exceptions\n\nQuick PYQ check: Which valve is most commonly involved in acute rheumatic carditis? Drop your answer below!\n\nSave 🔖 & share with a batchmate\n\nFor education only; follow local protocols.",
+  "hashtags": [
+    "#pediatrics",
+    "#neetpg",
+    "#inicet",
+    "#fmge",
+    "#mbbs",
+    "#pediatricsmadesimple",
+    "#paediatrics",
+    "#acuterheumaticfever",
+    "#jonescriteria",
+    "#rheumaticheartdisease",
+    "#pediatriccardiology",
+    "#medicalmnemonic",
+    "#neetpgpreparation",
+    "#nextexam",
+    "#medstudentindia",
+    "#mbbsrevision",
+    "#highyieldmedicine",
+    "#medicalnotes"
+  ],
+  "references": [
+    "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818.",
+    "Nelson Textbook of Pediatrics, 21st Edition (Group A Streptococcus & Acute Rheumatic Fever).",
+    "IAP Standard Treatment Guidelines: Acute Rheumatic Fever and Rheumatic Heart Disease."
+  ],
+  "doctor_check": [
+    "Slide 2: Changed 'high-risk' to 'mod/high-risk' to match the AHA 2015 moderate/high-risk population category.",
+    "Slide 4: Changed 'rising ASO/anti-DNase B' to 'elevated/rising ASO/anti-DNase B' because a single elevated titer above age-specific ULN also qualifies as GAS evidence.",
+    "Slide 6: Added '(rule out other causes)' to the Sydenham chorea and indolent carditis exception points per AHA 2015 criteria.",
+    "References: Removed the specific Nelson chapter number ('Chapter 211') to avoid edition-dependent numbering discrepancies."
+  ],
+  "slot": "morning",
+  "format": "Mnemonic-led revision (one strong mnemonic slide plus supporting facts)",
+  "theme": "mint",
+  "ist_date": "2026-11-15"
+}

@@ -1,0 +1,40 @@
+🫁 RDS & surfactant: everything in one Reel | PG Notes · Neonatology 03
+
+🧪 Why: surfactant deficiency → ↑ surface tension → alveoli collapse (Laplace P = 2T/r) → atelectasis, hyaline membranes
+• Made by type II pneumocytes · main lipid DPPC · proteins SP-B, SP-C · mature by ~34–35 wk
+
+⬆️ Risk up: prematurity · male · maternal diabetes · C-section without labour · perinatal asphyxia · 2nd twin
+⬇️ Risk down: antenatal steroids · chronic stress (PIH, IUGR) · prolonged PROM
+
+🩺 Clinical: onset < 4–6 h · tachypnoea > 60, grunting, flaring, retractions, cyanosis · worst 48–72 h · scores: Silverman-Anderson, Downes
+
+🩻 X-ray: ground-glass (reticulogranular) · air bronchograms · low lung volumes · grade IV = white-out
+
+💉 Antenatal steroids at 24–34 wk: betamethasone 12 mg IM × 2 (24 h apart) or dexamethasone 6 mg IM 12-hourly × 4
+
+🏥 Delivery room: delayed cord clamping ≥ 60 s · CPAP from birth ≥ 6 cm H₂O · start FiO₂ 0.30 (< 28 wk), 0.21–0.30 (28–31 wk)
+
+💧 Surfactant:
+• Rescue if FiO₂ > 0.30 on CPAP ≥ 6 cm H₂O and worsening
+• Poractant 200 mg/kg (repeat 100 mg/kg) · Beractant 100 mg/kg (4 ml/kg)
+• LISA/MIST preferred over INSURE in spontaneously breathing babies
+• 2nd/3rd dose if O₂ need persists
+
+🛟 Supportive: caffeine · SpO₂ target 90–94% · fluids 70–80 ml/kg/day · antibiotics until sepsis excluded (GBS pneumonia mimics RDS)
+
+🔎 Differentials: TTN · GBS pneumonia · MAS · cyanotic CHD · pneumothorax
+⚠️ Complications: air leak · BPD · IVH · PDA · ROP
+
+⭐ Exam pearls:
+• L/S ratio ≥ 2 = mature lungs
+• Phosphatidylglycerol present = mature
+• Shake (bubble) test on gastric aspirate
+
+📚 Ref: European Consensus Guidelines on the Management of RDS (2022)
+
+➡️ Next in the Neonatology series: Neonatal sepsis
+Follow @paediatrick_or_treats & save this for revision 📌
+
+⚠️ For medical education. Verify with current guidelines and your unit protocol.
+
+#RDS #surfactant #neonatology #NICU #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #medstudent #highyield #preterm #medicos

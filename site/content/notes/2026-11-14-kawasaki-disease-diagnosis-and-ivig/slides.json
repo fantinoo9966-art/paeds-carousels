@@ -1,0 +1,143 @@
+{
+  "topic": "Kawasaki disease: diagnosis and IVIG",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "🩺",
+      "title": "Kawasaki Disease: Must-Knows",
+      "subtitle": "Diagnosis, IVIG dosing & top NEET-PG traps",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "mnemonic",
+      "emoji": "🧠",
+      "title": "CRASH",
+      "subtitle": "Plus Fever ≥ 5 days + ≥ 4 of 5 criteria",
+      "points": [
+        "C - Conjunctivitis: Bilateral, non-purulent, spares limbus",
+        "R - Rash: Polymorphous, maculopapular (non-vesicular)",
+        "A - Adenopathy: Cervical, unilateral, node ≥ 1.5 cm",
+        "S - Strawberry tongue, cracked red lips & oral erythema",
+        "H - Hands & feet: Acute edema/erythema; late peeling"
+      ],
+      "highlight": "Exam pearl: Perineal erythema/peeling appears early in week 1!"
+    },
+    {
+      "kind": "points",
+      "emoji": "🔬",
+      "title": "Incomplete (Atypical) KD",
+      "subtitle": "Suspect when < 4 CRASH criteria exist",
+      "points": [
+        "Fever **≥ 5 days** + 2–3 criteria (or infant ≤ 6 mo: fever **≥ 7 days**)",
+        "Elevated inflammatory markers: **CRP ≥ 3.0 mg/dL** or **ESR ≥ 40 mm/hr**",
+        "Need **≥ 3 lab criteria** or a **positive echocardiogram** to confirm",
+        "Labs: **anemia**, **albumin ≤ 3 g/dL**, high ALT, **WBC ≥ 15k**, **sterile pyuria**",
+        "**Platelets ≥ 4.5 lakh/mm³** after **day 7** of illness"
+      ],
+      "highlight": "PYQ clue: Sterile pyuria is ≥ 10 WBC/hpf on urine microscopy!"
+    },
+    {
+      "kind": "points",
+      "emoji": "💉",
+      "title": "IVIG & Aspirin Regimen",
+      "subtitle": "Start promptly to protect coronaries",
+      "points": [
+        "**IVIG 2 g/kg** single IV infusion over **10–12 hours**",
+        "Best given within **10 days** of fever onset (give later if active inflammation)",
+        "**Aspirin 30–50 mg/kg/day** PO in 4 doses (per IAP; 80–100 per US) till afebrile 48–72h",
+        "Then low-dose **Aspirin 3–5 mg/kg/day** PO OD for **6–8 weeks**",
+        "Continue low-dose aspirin indefinitely if **coronary aneurysms** persist"
+      ],
+      "highlight": "IVIG cuts coronary aneurysm risk from ~25% down to < 4%!"
+    },
+    {
+      "kind": "points",
+      "emoji": "🔥",
+      "title": "IVIG-Resistant Kawasaki",
+      "subtitle": "Fever ≥ 36h after 1st IVIG ends (~10–20%)",
+      "points": [
+        "Repeat **IVIG 2 g/kg** single IV infusion over **10–12 hours**",
+        "OR **IV Methylprednisolone 30 mg/kg/day** (max 1 g) for **1–3 days**",
+        "OR **Infliximab 5 mg/kg** single IV infusion (anti-TNF-α)",
+        "Also consider **early steroids** in high-risk scores (e.g. Kobayashi)"
+      ],
+      "highlight": "Red flag: Persistent fever strongly predicts coronary aneurysms!"
+    },
+    {
+      "kind": "compare",
+      "emoji": "⚖️",
+      "title": "Acute vs Subacute Phase",
+      "subtitle": "Acute (Wk 1–2) || Subacute (Wk 2–4)",
+      "points": [
+        "High fever, irritability & CRASH || Fever resolves; acute signs fade",
+        "Erythema & edema of hands/feet || Periungual desquamation begins",
+        "Normal/mildly raised platelets || Thrombocytosis (often > 10 lakh/mm³)",
+        "Myocarditis & pericardial effusion || Coronary aneurysms peak"
+      ],
+      "highlight": "Echo schedule: At diagnosis, 1–2 weeks, and 4–6 weeks!"
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "🎯",
+      "title": "High-Yield Exam Traps",
+      "subtitle": "Last-minute NEET-PG / INI-CET pearls",
+      "points": [
+        "Defer live vaccines (**MMR, Varicella**) for **11 months** post-IVIG",
+        "Give **inactivated flu vaccine** on aspirin (**Reye syndrome** risk)",
+        "MC cause of death: **Myocardial infarction** from coronary thrombosis"
+      ],
+      "highlight": "Exam pearl: MC coronary artery involved is LAD > RCA > LMCA!"
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this for your exams 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for more",
+      "points": [
+        "Share with your PG & internship batch",
+        "Comment the next peds topic you want",
+        "Quiz: Which live vaccines are deferred 11 months?"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Fever ≥ 5 days + red eyes + rash? Don't miss Kawasaki Disease! 🚨\n\nHere is a crisp NEET-PG & INI-CET revision guide covering:\n• Complete (CRASH) vs Incomplete KD lab criteria\n• Exact IVIG & IAP-recommended Aspirin dosing\n• Second-line options for IVIG-resistant fever\n• Classic PYQ traps: vaccine deferral & coronary risks\n\nQuick check: Which coronary artery is most commonly affected in KD? Drop it below! 👇\n\nSave 🔖 & share with a batchmate\n\nFor education only; follow local protocols.",
+  "hashtags": [
+    "#pediatrics",
+    "#neetpg",
+    "#inicet",
+    "#mbbs",
+    "#kawasakidisease",
+    "#paediatrics",
+    "#medstudent",
+    "#medicalnotes",
+    "#neetpgpreparation",
+    "#pediatriccardiology",
+    "#ivig",
+    "#medschool",
+    "#indianmedstudent",
+    "#fmge",
+    "#nextexam",
+    "#pgprep",
+    "#medicalmnemonics",
+    "#highyield",
+    "#paediatrickortreats",
+    "#doctorslife"
+  ],
+  "references": [
+    "Nelson Textbook of Pediatrics, 21st/22nd Edition - Kawasaki Disease",
+    "AHA Scientific Statement: Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease (McCrindle et al., Circulation 2017)",
+    "Indian Academy of Pediatrics (IAP) Standard Treatment Guidelines: Kawasaki Disease",
+    "AAP Red Book & IAP Immunization Guidebook: Live Vaccine Deferral Post-IVIG"
+  ],
+  "doctor_check": [
+    "Slide 2: Clarified Complete KD subtitle to specify '>= 4 of 5 criteria' alongside fever >= 5 days, and changed 'never vesicular' to 'non-vesicular' for strict accuracy.",
+    "Slide 3: Adjusted phrasing on the first point so infant <= 6 months with fever >= 7 days is clearly distinguished from the 2-3 CRASH criteria requirement.",
+    "Slide 6: Placed irritability in the acute phase row (where it classically predominates) and added '/mm³' unit to the subacute platelet count.",
+    "Slide 7: Specified 'inactivated flu vaccine' instead of generic 'annual influenza vaccine' because live attenuated influenza vaccine is contraindicated in patients on aspirin due to Reye syndrome risk."
+  ],
+  "slot": "morning",
+  "format": "Mnemonic-led revision (one strong mnemonic slide plus supporting facts)",
+  "theme": "notebook"
+}

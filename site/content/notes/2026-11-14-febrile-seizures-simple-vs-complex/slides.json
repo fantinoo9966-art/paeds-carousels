@@ -1,0 +1,156 @@
+{
+  "topic": "Febrile seizures: simple vs complex",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "⚡",
+      "title": "Febrile Seizures: Simple vs Complex",
+      "subtitle": "High-yield NEET-PG & INI-CET revision in 9 slides",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "points",
+      "emoji": "🌡️",
+      "title": "Definition & Core Criteria",
+      "subtitle": "AAP & Nelson criteria",
+      "points": [
+        "Age: **6 to 60 months** (5 yrs), with peak at **12–18 months**",
+        "Fever **≥ 38°C (100.4°F)** by any measurement method",
+        "No **CNS infection**, metabolic cause, or prior afebrile seizure",
+        "Affects **2–5%** of all neurologically healthy children"
+      ],
+      "highlight": "Exam pearl: Fever may be noticed AFTER the seizure; still counts!"
+    },
+    {
+      "kind": "compare",
+      "emoji": "⚖️",
+      "title": "Simple vs Complex Febrile Seizure",
+      "subtitle": "Simple (80–85%) || Complex (15–20%)",
+      "points": [
+        "Duration **< 15 minutes** || Duration **≥ 15 minutes**",
+        "**Generalized** (usually GTCS) || **Focal** onset or features",
+        "**Single** episode in 24 hrs || **≥ 2 episodes** in 24 hrs",
+        "No focal deficits || **Todd's paresis** may occur"
+      ],
+      "highlight": "Red flag: Seizure ≥ 30 min = Febrile Status Epilepticus."
+    },
+    {
+      "kind": "points",
+      "emoji": "🔬",
+      "title": "Lumbar Puncture & Workup",
+      "subtitle": "AAP & IAP guidelines",
+      "points": [
+        "LP **strongly indicated** if **meningism** or CNS infection suspected",
+        "Consider LP in **6–12 mo** if unimmunized (Hib/PCV) per AAP",
+        "Consider LP if **prior antibiotics** may mask meningitis",
+        "**Routine EEG / CT / MRI** NOT indicated in simple FS",
+        "Routine **blood labs** not needed unless clinically indicated"
+      ],
+      "highlight": "PYQ: Routine neuroimaging has NO role in simple febrile seizures."
+    },
+    {
+      "kind": "points",
+      "emoji": "💉",
+      "title": "Acute Management Protocol",
+      "subtitle": "Stabilize first",
+      "points": [
+        "**ABC** & lateral position; most stop **spontaneously < 5 min**",
+        "If **> 5 min**: **Midazolam** 0.2 mg/kg IN/buccal or 0.1–0.2 mg/kg IV stat",
+        "Or **Lorazepam** 0.1 mg/kg IV / **Diazepam** 0.5 mg/kg PR stat",
+        "**Paracetamol** 15 mg/kg/dose PO q6h for **comfort only**"
+      ],
+      "highlight": "Exam pearl: Antipyretics DO NOT prevent seizure recurrence!"
+    },
+    {
+      "kind": "points",
+      "emoji": "📊",
+      "title": "Recurrence & Epilepsy Risk",
+      "subtitle": "Prognosis numbers to remember",
+      "points": [
+        "Recurrence: **~30%** overall (**50%** if age < 1 yr at 1st FS)",
+        "Predictors: **Age < 1 yr**, **family H/O** FS, **low-grade** fever",
+        "Short **fever duration (< 24 hr)** before seizure raises risk",
+        "Epilepsy risk: **1–2%** in simple vs **4–6%** in complex FS"
+      ],
+      "highlight": "Exam pearl: Simple FS does NOT cause intellectual disability."
+    },
+    {
+      "kind": "points",
+      "emoji": "💊",
+      "title": "Prophylaxis: AAP vs IAP",
+      "subtitle": "Preventive therapy rules",
+      "points": [
+        "Continuous AEDs **NOT recommended** for simple FS (AAP & IAP)",
+        "Intermittent (**IAP**): **Clobazam** 0.75–1 mg/kg/day PO BD x 2–3d",
+        "Alternative: **Diazepam** 0.33 mg/kg/dose PO q8h during fever",
+        "IAP considers it in **frequent recurrences** or **remote access**",
+        "Core step: **Parental counseling** & **recovery position** demo"
+      ],
+      "highlight": "Exam pearl: Phenytoin & carbamazepine are INEFFECTIVE in FS."
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "🎯",
+      "title": "High-Yield Exam Takeaways",
+      "subtitle": "Last-minute revision",
+      "points": [
+        "Simple = **< 15 min**, **generalized**, **1 episode** in 24h",
+        "**No routine EEG/MRI/labs** in simple febrile seizures",
+        "**Antipyretics** improve comfort, **do not prevent** recurrence",
+        "Age **< 1 year** is the strongest predictor of **recurrence**"
+      ],
+      "highlight": "Peak age: 12–18 months | Simple FS prognosis: Excellent!"
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this for your exams 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for more",
+      "points": [
+        "Share with your PG batchmates",
+        "Comment the next topic you want",
+        "Turn on notifications for daily peds pearls"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Simple vs Complex Febrile Seizures — one of the highest-yield peds PYQs! ⚡\n\nHere is everything you need to ace ward rounds & NEET-PG/INI-CET:\n• Exact age, fever & duration cut-offs\n• When to actually tap (LP) & when to skip CT/EEG\n• Acute benzodiazepine doses & IAP clobazam prophylaxis\n\nQuick PYQ check: A 10-month-old has 2 brief generalized seizures with fever in 12 hours — simple or complex? Drop your answer below! 👇\n\nSave 🔖 & share with a batchmate\n\nFor education only; follow local protocols.",
+  "hashtags": [
+    "#pediatrics",
+    "#paediatrics",
+    "#neetpg",
+    "#inicet",
+    "#fmge",
+    "#mbbs",
+    "#medstudent",
+    "#medicalstudent",
+    "#febrileseizures",
+    "#pediatricneurology",
+    "#seizures",
+    "#meded",
+    "#neetpgpreparation",
+    "#pgprep",
+    "#medicalnotes",
+    "#pediatricsmadesimple",
+    "#paediatrickortreats",
+    "#clinicalpediatrics",
+    "#indianmedicalstudent",
+    "#internlife"
+  ],
+  "references": [
+    "Nelson Textbook of Pediatrics (Chapter on Febrile Seizures)",
+    "American Academy of Pediatrics (AAP) Clinical Practice Guideline: Neurodiagnostic Evaluation of Simple Febrile Seizures (2011) & Long-term Management (2008)",
+    "Indian Academy of Pediatrics (IAP) Standard Treatment Guidelines: Febrile Seizures (2022)"
+  ],
+  "doctor_check": [
+    "Slides 2 & 8: Updated peak incidence age from 14–18 months to 12–18 months to align with current Nelson Textbook of Pediatrics.",
+    "Slide 4: Changed 'LP mandatory' to 'LP strongly indicated' so contraindications like raised ICP or cardiorespiratory instability are not overlooked.",
+    "Slide 5: Added 'stat' frequency to acute benzodiazepine rescue doses (Midazolam, Lorazepam, Diazepam); note that institutional max single-dose caps (e.g., Lorazepam max 4 mg, Midazolam max 10 mg) apply.",
+    "Slide 6: Changed 'fever-to-seizure interval (< 1 hr)' to 'fever duration (< 24 hr) before seizure' to match Nelson's major recurrence risk factor criteria.",
+    "Slide 7: Added explicit 'PO' route to oral Diazepam (0.33 mg/kg/dose PO q8h) and attributed intermittent prophylaxis indications specifically to IAP, as AAP does not recommend intermittent prophylaxis for simple febrile seizures."
+  ],
+  "slot": "morning",
+  "format": "High-yield summary of the topic",
+  "theme": "midnight"
+}

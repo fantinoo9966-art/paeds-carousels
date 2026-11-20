@@ -1,0 +1,153 @@
+{
+  "topic": "Septic shock in children: recognition and first-hour management",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "🚨",
+      "title": "Pediatric Septic Shock: First-Hour Plan",
+      "subtitle": "SSC 2020 & IAP step-by-step resuscitation algorithm for MD/DNB exams",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "points",
+      "emoji": "🩺",
+      "title": "Recognition: Don't Wait for Hypotension",
+      "subtitle": "Early clinical signs of compensated shock",
+      "points": [
+        "**Hypotension is a late sign**; recognize tachycardia, poor perfusion & altered sensorium early.",
+        "**Warm shock**: bounding pulses, flash CRT (<1 s), warm peripheries, wide pulse pressure.",
+        "**Cold shock**: feeble pulses, CRT >2 s, mottled cool skin, narrow pulse pressure.",
+        "**Phoenix Sepsis Criteria (2024)**: >=2 organ dysfunction pts; shock = sepsis + >=1 CV point."
+      ],
+      "highlight": "Exam pearl: Hypotension <5th centile (SBP <70+2x age yr, 1-10 yr) = decompensated."
+    },
+    {
+      "kind": "points",
+      "emoji": "⏱️",
+      "title": "0–5 Min: Airway, Breathing & Access",
+      "subtitle": "Immediate bedside priorities",
+      "points": [
+        "Give **high-flow O2** (non-rebreather/HFNC); prepare early intubation if refractory.",
+        "Obtain **2 large-bore IVs**; if failed in 90 sec or 2 attempts, insert **IO needle**.",
+        "Draw **blood cultures** (2 sites if feasible), VBG, lactate, CBC, RFT, LFT, glucose, Ca2+.",
+        "Check **POC glucose & ionized Ca2+** immediately; correct hypoglycemia & hypocalcemia."
+      ],
+      "highlight": "Red flag: Avoid etomidate for RSI in septic shock (adrenal suppression risk per SSC)."
+    },
+    {
+      "kind": "points",
+      "emoji": "💊",
+      "title": "Within 1 Hour: Empiric Antibiotics",
+      "subtitle": "Do not delay for LP or imaging",
+      "points": [
+        "Start **IV broad-spectrum antibiotics** within 1 hr of recognition (3 hr if no shock).",
+        "Community (1 mo+): **Ceftriaxone 50 mg/kg IV q12h** (max 2 g/dose) + Vancomycin if MRSA risk.",
+        "Neonates: **Ampicillin** + **Gentamicin** (or Cefotaxime if meningitis suspected).",
+        "Hospital-acquired/immunocompromised: **Pip-Tazo** or **Meropenem** + Vancomycin."
+      ],
+      "highlight": "Exam pearl: Every 1-hour delay in antibiotics significantly increases PICU mortality."
+    },
+    {
+      "kind": "points",
+      "emoji": "💧",
+      "title": "Fluid Boluses: PICU vs No-PICU Rule",
+      "subtitle": "SSC 2020 balanced crystalloid protocol",
+      "points": [
+        "**With PICU availability**: Give **10–20 mL/kg** balanced crystalloids (RL/Plasmalyte) IV/IO.",
+        "Reassess after **each bolus**; up to **40–60 mL/kg** in 1st hour if fluid-responsive.",
+        "**STOP fluids** immediately if hepatomegaly, basal crepitations or gallop rhythm appear.",
+        "**No PICU & no hypotension**: Avoid bolus fluids; start maintenance fluids (FEAST trial)."
+      ],
+      "highlight": "Exam pearl: Balanced crystalloids preferred over 0.9% NS (less hyperchloremic acidosis)."
+    },
+    {
+      "kind": "compare",
+      "emoji": "⚡",
+      "title": "Fluid-Refractory Shock: Vasopressors",
+      "subtitle": "Epinephrine (Cold/First-Line) || Norepinephrine (Warm Shock)",
+      "points": [
+        "Preferred in **cold shock** / low CO || Preferred in **warm shock** / low SVR",
+        "Dose: **0.05–0.3 mcg/kg/min** IV/IO inf. || Dose: **0.05–0.3 mcg/kg/min** IV/IO inf.",
+        "Beta-1 + alpha-1 agonist (inotrope) || Potent alpha-1 agonist (vasoconstrictor)",
+        "Safe via **peripheral IV/IO** initially || Safe via **peripheral IV/IO** initially"
+      ],
+      "highlight": "Red flag: Never delay vasoactives waiting for central line; dilute & run peripherally."
+    },
+    {
+      "kind": "points",
+      "emoji": "🎯",
+      "title": "Refractory Shock & 1st-Hour Targets",
+      "subtitle": "Escalation & resuscitation endpoints",
+      "points": [
+        "Refractory shock: **Hydrocortisone** 2 mg/kg IV (max 100 mg), then 1 mg/kg IV q6h (per IAP).",
+        "Target **MAP >=5th centile** for age, **CRT <= 2 sec**, warm extremities & normal sensorium.",
+        "Target **urine output >= 1 mL/kg/hr**, normal mental status & **ScvO2 >= 70%**.",
+        "Monitor **lactate clearance** (>10% drop q2h); consider **Milrinone** if cold + normotensive."
+      ],
+      "highlight": "Exam pearl: Rule out pneumothorax, tamponade & IAH in refractory shock."
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "📝",
+      "title": "PG Viva & Exam High-Yield Pearls",
+      "subtitle": "Must-know SSC 2020 & IAP updates",
+      "points": [
+        "SSC 2020 **removed** routine 60 mL/kg push in resource-limited settings without hypotension.",
+        "**Epinephrine or Norepinephrine** replaced Dopamine as first-line vasoactive in pediatrics.",
+        "Correct **hypoglycemia** (D10W 2–5 mL/kg IV) & **hypocalcemia** (Ca gluc 10% 0.5–1 mL/kg IV)."
+      ],
+      "highlight": "Remember: 1st-hour goal = O2 + IV/IO + Abx + Titrated Fluids + Early Vasoactives!"
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this for your exams 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for more",
+      "points": [
+        "Share with your PG batch before your next PICU posting",
+        "Comment 'SEPSIS' or the next emergency protocol you want"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Every minute in the first hour of pediatric septic shock decides survival—and your PICU viva score. 🚨\n\nHere is the complete first-hour resuscitation algorithm updated for MD/DNB exams:\n• Early recognition (before hypotension sets in) + Phoenix 2024 criteria\n• 0–5 min airway, IO access & point-of-care metabolic checks\n• SSC 2020 fluid rules: PICU vs resource-limited settings (FEAST trial impact)\n• First-line vasoactives, peripheral administration & refractory shock escalation\n\nWhich vasoactive do you reach for first in your PICU—Epinephrine or Norepinephrine? Drop it below! 👇\n\nSave 🔖 & share with a batchmate\n\nFor education only; follow local protocols.",
+  "hashtags": [
+    "#pediatrics",
+    "#pediatricsepsis",
+    "#septicshock",
+    "#picu",
+    "#pediatricemergency",
+    "#neetpg",
+    "#inicet",
+    "#mdpediatrics",
+    "#dnbpediatrics",
+    "#pediatricresidency",
+    "#pals",
+    "#survivingsepsis",
+    "#indianacademyofpediatrics",
+    "#medicalnotes",
+    "#meded",
+    "#criticalcare",
+    "#pediatricicu",
+    "#pgmedical"
+  ],
+  "references": [
+    "Weiss SL, Peters MJ, Alhazzani W, et al. Surviving Sepsis Campaign International Guidelines for the Management of Septic Shock and Sepsis-Associated Organ Dysfunction in Children. Pediatr Crit Care Med. 2020;21(2):e52-e106.",
+    "Sanchez-Pinto LN, Bennett TD, DeWitt PE, et al. Development and Validation of the Phoenix Criteria for Pediatric Sepsis and Septic Shock. JAMA. 2024;331(8):675-686.",
+    "IAP Textbook of Pediatrics / IAP Intensive Care Chapter Guidelines on Pediatric Septic Shock.",
+    "Nelson Textbook of Pediatrics, 21st/22nd Edition - Shock and Resuscitation.",
+    "AHA Pediatric Advanced Life Support (PALS) Provider Manual, 2020."
+  ],
+  "doctor_check": [
+    "Slide 2: Clarified Phoenix Septic Shock definition as 'sepsis + >=1 CV point' (instead of '+CV point').",
+    "Slide 4: Specified Ceftriaxone dosing as '50 mg/kg IV q12h (max 2 g/dose)' to include frequency and max single dose.",
+    "Slide 6: Specified 'IV/IO inf.' for Epinephrine and Norepinephrine to clarify continuous infusion.",
+    "Slide 7: Added max bolus dose (100 mg), IV route on maintenance, and '(per IAP)' qualifier for Hydrocortisone; changed MAP target from '(5th–50th centile)' to '>=5th centile for age' to avoid implying 50th centile is an upper limit.",
+    "Slide 8: Updated hypoglycemia bolus to 'D10W 2–5 mL/kg IV' (covering both infants and older children) and added 'IV' route for Calcium gluconate 10%."
+  ],
+  "slot": "evening",
+  "format": "Management protocol / algorithm step by step (with doses where relevant)",
+  "theme": "midnight",
+  "ist_date": "2026-11-15"
+}

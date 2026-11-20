@@ -1,0 +1,160 @@
+{
+  "topic": "Nephrotic syndrome in children",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "🩺",
+      "title": "Nephrotic Syndrome: High-Yield Tables",
+      "subtitle": "MCNS vs FSGS, Nephrotic vs Nephritic & IAP steroid protocols",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "points",
+      "emoji": "🔬",
+      "title": "Diagnostic Tetrad & Numbers",
+      "subtitle": "",
+      "points": [
+        "Nephrotic proteinuria: **3+/4+ dipstick** or Spot Up/Uc **> 2 mg/mg**",
+        "24-hour urine protein: **> 40 mg/m²/hr** (or > 1 g/m²/day)",
+        "Hypoalbuminemia: Serum albumin **< 3.0 g/dL** (IAP 2021)",
+        "Hyperlipidemia: Serum cholesterol **> 200 mg/dL** & **edema**"
+      ],
+      "highlight": "Exam pearl: MC cause in children (1–10 yrs) is Minimal Change Disease (~85%)"
+    },
+    {
+      "kind": "compare",
+      "emoji": "⚖️",
+      "title": "Nephrotic vs Nephritic Syndrome",
+      "subtitle": "Nephrotic || Nephritic",
+      "points": [
+        "Massive **proteinuria (> 40 mg/m²/hr)** || Mild-mod proteinuria + **hematuria**",
+        "**Edema** (periorbital, generalised) || **Hypertension** + oliguria + edema",
+        "**Normal** BP & renal function (usually) || **Elevated BP**, azotemia, ↑ creatinine",
+        "Urine: **Oval fat bodies**, hyaline casts || Urine: **RBC casts**, dysmorphic RBCs",
+        "Serum **C3 normal** (in MCNS) || Serum **C3 low** (in PSGN)"
+      ],
+      "highlight": "Exam pearl: Gross hematuria & low C3 point toward Nephritic (PSGN), not MCNS"
+    },
+    {
+      "kind": "compare",
+      "emoji": "🧬",
+      "title": "MCNS vs FSGS: Key Differences",
+      "subtitle": "MCNS || FSGS",
+      "points": [
+        "Age: **1–6 years** (M > F) || Age: **> 6–10 years** (adolescents)",
+        "LM: **Normal glomeruli** || LM: **Focal segmental** sclerosis",
+        "EM: **Foot process effacement** || EM: Effacement + **epithelial damage**",
+        "Proteinuria: **Selective** (albumin) || Proteinuria: **Non-selective**",
+        "Response: **Steroid-sensitive** (> 90%) || Response: Often **steroid-resistant**"
+      ],
+      "highlight": "IF microscopy is negative (no immune deposits) in MCNS"
+    },
+    {
+      "kind": "compare",
+      "emoji": "📋",
+      "title": "SSNS vs SRNS & Relapse Terms",
+      "subtitle": "Term || IAP 2021 Definition",
+      "points": [
+        "**Remission** || Urine **Nil/Trace** for **3 consecutive days**",
+        "**Relapse** || Urine **3+/4+** for **3 consecutive days**",
+        "**Frequent Relapse** (FRNS) || **≥ 2 relapses** in 1st 6m or **≥ 4** in 12m",
+        "**Steroid Dependent** (SDNS) || **2 consecutive relapses** on/within **14d** of stopping",
+        "**Steroid Resistant** (SRNS) || **No remission** after **6 weeks** daily steroids"
+      ],
+      "highlight": "IAP 2021 defines SRNS at 6 weeks of daily prednisolone (earlier 4 weeks)"
+    },
+    {
+      "kind": "points",
+      "emoji": "💊",
+      "title": "Initial Treatment (IAP 2021)",
+      "subtitle": "",
+      "points": [
+        "Prednisolone **2 mg/kg/d** (60 mg/m²) PO daily × **6 weeks** (max 60 mg)",
+        "Then **1.5 mg/kg** (40 mg/m²) PO **alternate day** × **6 weeks** (max 40 mg)",
+        "Total initial therapy = **12 weeks**; then **stop** (no routine tapering)",
+        "Relapse: **2 mg/kg/d** till remission × 3d, then **1.5 mg/kg AD** × 4w",
+        "Steroid-sparing: **Levamisole**, MMF, **Cyclophosphamide**, Tacrolimus"
+      ],
+      "highlight": "Avoid live vaccines during high-dose steroids (≥ 2 mg/kg/d for ≥ 14 days)"
+    },
+    {
+      "kind": "points",
+      "emoji": "🪡",
+      "title": "When to Do a Renal Biopsy?",
+      "subtitle": "",
+      "points": [
+        "Age at onset **< 1 year** or **> 12 years** (per IAP 2021)",
+        "**Steroid resistance** (SRNS: no remission after 6 weeks)",
+        "**Gross hematuria**, persistent **hypertension**, or renal dysfunction",
+        "**Low serum C3** or features of secondary cause (**SLE**, HSP)",
+        "**Secondary SRNS** (loss of steroid response during follow-up)"
+      ],
+      "highlight": "Exam pearl: Congenital NS (< 3m) is MC due to NPHS1 (Finnish type) gene"
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "⚡",
+      "title": "Complications & Exam Pearls",
+      "subtitle": "",
+      "points": [
+        "**Spontaneous Bacterial Peritonitis** (SBP): MC organism = **S. pneumoniae**",
+        "**Hypercoagulability**: Loss of **Antithrombin III** → Renal vein thrombosis",
+        "**Infections**: Loss of **IgG & Factor B**; give Pneumococcal + Varicella vaccines",
+        "**Hypovolemia**: Give **0.9% NS** first; **20% Albumin** only if severe/refractory"
+      ],
+      "highlight": "MC cause of death in children with NS is Infection (SBP / sepsis)"
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this for your exams 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for more",
+      "points": [
+        "Share with your PG study partner",
+        "Save for quick NEET-PG / INI-CET revision",
+        "Comment the next peds topic you want!"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Nephrotic syndrome is a guaranteed 2-3 MCQs in NEET-PG & INI-CET — don't mix up the numbers!\n\nSwipe through these side-by-side tables covering:\n- Nephrotic vs Nephritic syndrome\n- Minimal Change Disease (MCNS) vs FSGS\n- Updated IAP 2021 definitions & 12-week steroid regimen\n- Renal biopsy indications & lethal complications like SBP\n\nQuick quiz for the comments: Which immunoglobulin/complement factor loss predisposes these kids to pneumococcal SBP?\n\nSave 🔖 & share with a batchmate\n\nFor education only; follow local protocols.",
+  "hashtags": [
+    "#pediatrics",
+    "#neetpg",
+    "#inicet",
+    "#mbbs",
+    "#nephroticsyndrome",
+    "#pediatricnephrology",
+    "#medicalstudent",
+    "#fmge",
+    "#nextpg",
+    "#pediatricsmadesimple",
+    "#paediatrickortreats",
+    "#medschool",
+    "#indianmedicalstudent",
+    "#iapguidelines",
+    "#minimalchangedisease",
+    "#fsgs",
+    "#pgpreparation",
+    "#highyieldmedicine",
+    "#medicalnotes"
+  ],
+  "references": [
+    "Nelson Textbook of Pediatrics, 21st Edition (Chapter on Nephrotic Syndrome)",
+    "Indian Society of Pediatric Nephrology / IAP Revised Guidelines on Management of Steroid-Sensitive Nephrotic Syndrome (Indian Pediatrics, 2021)",
+    "IAP Guidelines for Steroid-Resistant Nephrotic Syndrome (Indian Pediatrics)",
+    "KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases"
+  ],
+  "doctor_check": [
+    "Slide 3: Changed nephrotic proteinuria cut-off from adult '> 3.5g/1.73m²' to pediatric '> 40 mg/m²/hr' for consistency.",
+    "Slide 3: Replaced the highlight because morning periorbital edema also occurs in acute glomerulonephritis; highlighted gross hematuria and low C3 instead.",
+    "Slide 4: Clarified FSGS LM finding as 'Focal segmental sclerosis' rather than 'Segmental sclerosis (< 50% glom)' since 'focal' denotes < 50% of glomeruli.",
+    "Slide 5: Specified FRNS as '≥ 2 relapses in 1st 6m' to match IAP 2021 criteria precisely.",
+    "Slide 7: Removed '(congenital)' label from '< 1 year' since 3–12 months is infantile NS, and replaced routine pre-CNI biopsy (dropped in IAP 2021 SSNS guidelines) with 'Secondary SRNS'."
+  ],
+  "slot": "morning",
+  "format": "Compare & contrast (two or three look-alike conditions in tables)",
+  "theme": "pastel",
+  "ist_date": "2026-11-16"
+}

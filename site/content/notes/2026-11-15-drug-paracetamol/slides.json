@@ -1,0 +1,54 @@
+{
+  "topic": "Drug of the Day: Paracetamol",
+  "slot": "drug",
+  "theme": "mint",
+  "ist_date": "2026-11-15",
+  "slides": [
+    {
+      "kind": "drug",
+      "emoji": "💊",
+      "title": "Paracetamol",
+      "subtitle": "Acetaminophen",
+      "points": [],
+      "highlight": "Hepatotoxicity risk; count all routes toward daily max; caution in G6PD & renal failure.",
+      "drug_class": "Analgesic, antipyretic",
+      "moa": "Inhibits central prostaglandin synthesis to relieve pain and fever without peripheral anti-inflammatory activity.",
+      "uses": [
+        "Fever (antipyretic)",
+        "Acute pain (analgesic)",
+        "Patent ductus arteriosus (PDA) closure"
+      ],
+      "doses": [
+        "Term neonate & child: 10–15 mg/kg/dose PO/PR 4–6 hrly; max 75 mg/kg/day (5 doses/day; child max 4 g/day)",
+        "Child 2–12 yr IV: 60 mg/kg/day ÷ 6 hrly or 75 mg/kg/day ÷ 4 hrly; max 75 mg/kg/day (3.75 g <50 kg; 4 g ≥50 kg)",
+        "Neonate/infant IV: 30–40 mg/kg/day (<32 wk), 50 mg/kg/day (≥32 wk, ≤28 d), 60 mg/kg/day (29 d–<2 yr) ÷ 6 hrly",
+        "PDA closure: 60 mg/kg/day IV/PO ÷ 6 hrly for 3 days (up to 7 days or repeat 3-day course)"
+      ]
+    }
+  ],
+  "caption": "The most prescribed drug in the paediatric ward—yet still easy to overdose if you forget to count every route! 💊\n\nFor NEET-PG & ward rounds, remember three key points: Paracetamol lacks anti-inflammatory activity, neonatal IV max doses depend on gestational and postnatal age, and it is used for PDA closure when NSAIDs fail or are contraindicated. Watch for hepatotoxicity with CYP2E1 inducers and never exceed 5 PO/PR doses in 24 hours.\n\nQuick quiz: Which antidote treats Paracetamol toxicity, and why is it given? Drop your answer below! 👇\n\nSave 🔖 for your ward rounds\n\nDoses for education only; always verify with your unit protocol.",
+  "hashtags": [
+    "#DrugOfTheDay",
+    "#pediatrics",
+    "#neetpg",
+    "#paracetamol",
+    "#acetaminophen",
+    "#paediatrics",
+    "#mbbs",
+    "#inicet",
+    "#medicalstudent",
+    "#paediatricpg",
+    "#wardrounds",
+    "#pharmacology",
+    "#antipyretic",
+    "#pediatrician",
+    "#meded"
+  ],
+  "references": [
+    "PedDose / paediatric drug handbook, p.840"
+  ],
+  "doctor_check": [
+    "No changes needed"
+  ],
+  "source_drug": "ACETAMINOPHEN"
+}

@@ -1,0 +1,53 @@
+{
+  "topic": "Drug of the Day: Ibuprofen",
+  "slot": "drug",
+  "theme": "lavender",
+  "ist_date": "2026-11-16",
+  "slides": [
+    {
+      "kind": "drug",
+      "emoji": "💊",
+      "title": "Ibuprofen",
+      "subtitle": "",
+      "points": [],
+      "highlight": "Avoid in GI bleed, dehydration & renal impairment; hold PDA dose if UOP <0.6 mL/kg/hr.",
+      "drug_class": "Nonsteroidal anti-inflammatory drug (NSAID)",
+      "moa": "Inhibits cyclooxygenase (COX) enzymes, decreasing prostaglandin synthesis to reduce fever, pain, and inflammation.",
+      "uses": [
+        "Fever and pain (≥3–6 mo)",
+        "Juvenile rheumatoid arthritis",
+        "PDA closure (<32 wk, 0.5–1.5 kg)"
+      ],
+      "doses": [
+        "Pain/fever (≥6 mo): 5-10 mg/kg/dose PO q6-8h; max lesser of 40 mg/kg/day or 2400 mg/day",
+        "JRA (6 mo-12 yr): 30-50 mg/kg/day PO ÷ q6h; max 800 mg/dose or 2400 mg/day",
+        "IV pain/fever (6 mo-<12 yr): 10 mg/kg/dose IV q4-6h PRN (max 400 mg/dose); max lesser of 40 mg/kg/day or 2400 mg/day",
+        "PDA (<32 wk, 0.5-1.5 kg): 10 mg/kg IV once, then 5 mg/kg IV at 24h & 48h"
+      ]
+    }
+  ],
+  "caption": "From viral fever in OPD to closing a preterm PDA in the NICU—Ibuprofen wears multiple hats! 💊\n\nNEET-PG & Ward Pearls:\n• Ensure adequate hydration before IV dosing to lower renal risk.\n• In preterm PDA (<32 wk), hold the 2nd or 3rd dose if urine output falls below 0.6 mL/kg/hr.\n• Contraindicated in active GI bleed, NEC, thrombocytopenia, or duct-dependent congenital heart disease.\n• Causes less severe renal side effects than IV indomethacin for PDA closure.\n\nQuick question: Why is ibuprofen avoided in duct-dependent congenital heart disease? Drop your answer below! 👇\n\nSave 🔖 for your ward rounds\n\nDoses for education only; always verify with your unit protocol.",
+  "hashtags": [
+    "#DrugOfTheDay",
+    "#pediatrics",
+    "#neetpg",
+    "#ibuprofen",
+    "#paediatrics",
+    "#mbbs",
+    "#inicet",
+    "#nicu",
+    "#pediatricpharmacy",
+    "#medicaleducation",
+    "#wardrounds",
+    "#pda",
+    "#nsaid",
+    "#medstudentindia"
+  ],
+  "references": [
+    "PedDose / paediatric drug handbook, p.1032"
+  ],
+  "doctor_check": [
+    "No changes needed"
+  ],
+  "source_drug": "IBUPROFEN"
+}

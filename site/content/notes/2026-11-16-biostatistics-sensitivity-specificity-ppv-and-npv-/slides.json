@@ -1,0 +1,137 @@
+{
+  "topic": "Biostatistics: Sensitivity, specificity, PPV and NPV made easy",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "📊",
+      "title": "Biostats Viva: Sens, Spec, PPV & NPV",
+      "subtitle": "High-yield formulas, worked examples & pearls for MD/DNB pediatrics",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "points",
+      "emoji": "📐",
+      "title": "Q: Set up the classic 2x2 table?",
+      "subtitle": "Always keep disease on top, test result on side",
+      "points": [
+        "**Disease Present (D+)**: True Positives (a) + False Negatives (c) = Total (a + c)",
+        "**Disease Absent (D-)**: False Positives (b) + True Negatives (d) = Total (b + d)",
+        "**Test Positive (T+)**: Sum of row 1 = a + b (used as denominator for PPV)",
+        "**Test Negative (T-)**: Sum of row 2 = c + d (used as denominator for NPV)"
+      ],
+      "highlight": "Vertical columns = Disease status (Sens/Spec); Horizontal rows = Test outcome (PPV/NPV)"
+    },
+    {
+      "kind": "mnemonic",
+      "emoji": "🎯",
+      "title": "SnNOut vs SpPIn",
+      "subtitle": "How examiners test your clinical application",
+      "points": [
+        "S - Sensitivity looks at True Positive rate [a / (a + c)]",
+        "N - Negative test result with high sensitivity",
+        "Out - Rules OUT disease reliably (used for screening tests)",
+        "S - Specificity looks at True Negative rate [d / (b + d)]",
+        "P - Positive test result with high specificity",
+        "In - Rules IN disease reliably (used for confirmatory tests)"
+      ],
+      "highlight": "High Sensitivity = Low False Negatives. High Specificity = Low False Positives."
+    },
+    {
+      "kind": "points",
+      "emoji": "🔄",
+      "title": "Q: What is the Prevalence Trap?",
+      "subtitle": "Crucial distinction between test parameters",
+      "points": [
+        "**Sensitivity & Specificity**: Stable test characteristics; do NOT change with prevalence",
+        "**Prevalence increases**: PPV rises markedly, NPV drops",
+        "**Prevalence decreases**: PPV plummets (more false positives), NPV approaches 100%",
+        "**Clinical pearl**: A positive rapid test in low-prevalence setting needs confirmation"
+      ],
+      "highlight": "PPV and NPV are NOT fixed properties; they strictly depend on disease prevalence"
+    },
+    {
+      "kind": "points",
+      "emoji": "🧮",
+      "title": "Worked Example: Rapid Strep Test",
+      "subtitle": "1,000 children with pharyngitis, 20% prevalence (200 true cases)",
+      "points": [
+        "Test has **90% sensitivity** (180 TP, 20 FN) and **90% specificity** (720 TN, 80 FP)",
+        "**Sensitivity**: 180 / 200 = 90% | **Specificity**: 720 / 800 = 90%",
+        "**PPV**: 180 / (180 + 80) = 180 / 260 = **69.2%** (~3 in 10 positives are false!)",
+        "**NPV**: 720 / (720 + 20) = 720 / 740 = **97.3%**"
+      ],
+      "highlight": "Exam trap: Despite 90% spec, ~3 in 10 positive tests here are false positives!"
+    },
+    {
+      "kind": "compare",
+      "emoji": "⚖️",
+      "title": "Intrinsic vs Extrinsic Metrics",
+      "subtitle": "Sens & Spec || PPV & NPV",
+      "points": [
+        "Column-wise calculations || Row-wise calculations",
+        "Independent of prevalence || Highly dependent on prevalence",
+        "Evaluates the test tool || Guides bedside clinical decision",
+        "Formula: a/(a+c) and d/(b+d) || Formula: a/(a+b) and d/(c+d)"
+      ],
+      "highlight": "Likelihood ratios (LR+ = Sens/(1-Spec)) combine both and remain prevalence-independent"
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "💡",
+      "title": "Viva Cheat Sheet",
+      "subtitle": "Quick recall for the biostatistics station",
+      "points": [
+        "Screening tests demand **high sensitivity** (do not miss cases, e.g., newborn TSH)",
+        "Confirmatory tests demand **high specificity** (avoid false labels, e.g., sweat chloride in CF)",
+        "**Post-test odds** = Pre-test odds × Likelihood Ratio (convert probability to odds first)"
+      ],
+      "highlight": "Exam pearl: When prevalence is low, even an accurate test yields low PPV"
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save This For Biostats Viva 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for more PG prep",
+      "points": [
+        "Share with your PG batchmates",
+        "Drop your viva questions in the comments",
+        "Next up: Demystifying ROC curves & p-values"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Biostatistics stations in MD/DNB pediatric practicals can make or break your score.\n\nExaminers love asking: 'If a test is 95% sensitive and 95% specific, does a positive result mean the child has a 95% chance of having the disease?'\n\nThe answer is a resounding NO—because PPV strictly depends on the prevalence of the disease in your clinical setting.\n\nSwipe through for the classic 2x2 setup, SnNOut/SpPIn rules, and a fully worked numerical example.\n\nWhat biostatistics topic trips you up the most: Odds Ratio or ROC curves?\n\nSave 🔖 & share with a batchmate.\n\nFor education only; follow local protocols.",
+  "hashtags": [
+    "#pediatrics",
+    "#pediatricresident",
+    "#dnbpediatrics",
+    "#mdpediatrics",
+    "#biostatistics",
+    "#neetpg",
+    "#inicet",
+    "#pediatricviva",
+    "#medicaleducation",
+    "#epidemiology",
+    "#doctorsofinstagram",
+    "#evidencebasedmedicine",
+    "#paediatrics",
+    "#medicalstudents",
+    "#pediatrician"
+  ],
+  "references": [
+    "Nelson Textbook of Pediatrics, 21st Edition",
+    "Gordis Epidemiology, 6th Edition (Chapter 5: Assessing the Validity and Reliability of Diagnostic and Screening Tests)",
+    "IAP Textbook of Pediatrics, 7th Edition"
+  ],
+  "doctor_check": [
+    "Slide 7: Corrected formula from 'Post-test probability' to 'Post-test odds = Pre-test odds × Likelihood Ratio', as probability cannot be multiplied directly by LR without converting to odds.",
+    "Slide 7: Replaced outdated 'HIV Western blot' example with 'sweat chloride in CF' (Western blot is superseded by HIV-1/2 differentiation assays and NAT/PCR in modern pediatric algorithms).",
+    "Slide 5: Harmonized the false-positive proportion wording between point 3 and the highlight box (~3 in 10, since 80/260 = 30.8%).",
+    "References: Removed unverified parenthetical chapter title from Nelson Textbook of Pediatrics."
+  ],
+  "slot": "evening",
+  "format": "Viva questions with crisp model answers",
+  "theme": "slate",
+  "ist_date": "2026-11-16"
+}

@@ -1,13 +1,14 @@
 name: Website
 
-# Rebuilds the free GitHub Pages website from posts/ and reels/.
-# Runs on every push, every 6 hours (bot commits don't trigger workflows),
-# and by hand from the Actions tab.
+# Rebuilds the free GitHub Pages website from site/ (its own content).
+# Runs ONLY when files under site/ change (i.e. when Claude updates the
+# website), or by hand from the Actions tab. Instagram posts never trigger it.
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: "15 */6 * * *"
+    paths:
+      - "site/**"
+      - ".github/workflows/website.yml"
   workflow_dispatch:
 
 permissions:
