@@ -1,0 +1,220 @@
+{
+  "topic": "Neonatal jaundice: physiological vs pathological",
+  "style": "notes",
+  "slot": "morning",
+  "ist_date": "2026-11-20",
+  "slides": [
+    {
+      "kind": "cover",
+      "kicker": "a yellow baby on the postnatal round…",
+      "title": "Most newborn jaundice is normal.",
+      "title2": "Some of it ==damages the brain==. Know which.",
+      "chips": [
+        {
+          "text": "Physiological",
+          "color": "#A8E3D8"
+        },
+        {
+          "text": "Pathological",
+          "color": "#F4ADA2"
+        },
+        {
+          "text": "Breast milk",
+          "color": "#F7DB72"
+        }
+      ],
+      "sub": "The rules that decide, plus the **one hour-of-life** that is never normal."
+    },
+    {
+      "kind": "card",
+      "pill": "1 of 3",
+      "color": "#A8E3D8",
+      "ink": "#2C7A73",
+      "title": "Physiological jaundice",
+      "tagline": "after day 1. peaks, then fades.",
+      "rows": [
+        [
+          "What",
+          "Unconjugated: high RBC turnover, immature liver"
+        ],
+        [
+          "Appears",
+          "**After 24 h** of life"
+        ],
+        [
+          "Peaks",
+          "Day 3–5 in term"
+        ],
+        [
+          "Gone by",
+          "~1 week term, 2 weeks preterm"
+        ],
+        [
+          "Baby",
+          "Well, feeding, normal stools"
+        ],
+        [
+          "Do",
+          "Feed often. Plot TSB on the **hour-specific chart**"
+        ]
+      ]
+    },
+    {
+      "kind": "card",
+      "pill": "2 of 3",
+      "color": "#F4ADA2",
+      "ink": "#C2453B",
+      "title": "Pathological jaundice",
+      "tagline": "any one of these. go looking for a cause.",
+      "rows": [
+        [
+          "Timing",
+          "~~Visible in the first 24 h~~"
+        ],
+        [
+          "Rise",
+          "**> 0.2 mg/dL per hour** (> 5 mg/dL/day)"
+        ],
+        [
+          "Level",
+          "Above the phototherapy line for age in hours"
+        ],
+        [
+          "Type",
+          "Conjugated bilirubin **> 1 mg/dL**"
+        ],
+        [
+          "Lasts",
+          "**> 2 weeks** term, **> 3 weeks** preterm"
+        ],
+        [
+          "Clues",
+          "Pale stools, dark urine, sick or lethargic baby"
+        ]
+      ]
+    },
+    {
+      "kind": "card",
+      "pill": "3 of 3",
+      "color": "#F7DB72",
+      "ink": "#1D2939",
+      "title": "Breastfeeding vs breast milk",
+      "tagline": "two different stories, same advice.",
+      "rows": [
+        [
+          "Feeding jaundice",
+          "**Week 1**. Too little milk: poor intake, weight loss, fewer wet nappies"
+        ],
+        [
+          "Fix",
+          "Feed **8–12 times a day**, check latch"
+        ],
+        [
+          "Breast milk jaundice",
+          "Starts **after week 1**, peaks weeks 2–3, baby thriving"
+        ],
+        [
+          "Fix",
+          "**Continue breastfeeding**. Rule out other causes first"
+        ]
+      ]
+    },
+    {
+      "kind": "number",
+      "kicker": "the rule to remember",
+      "big": "< 24 h",
+      "text": "==Never physiological.== Jaundice seen in the **first 24 hours** needs a serum bilirubin now, not tomorrow.",
+      "note": "Commonest cause: haemolysis (Rh or ABO incompatibility).",
+      "note_hand": "check mother's & baby's blood group + DCT",
+      "checks_title": "Before you call it physiological, check",
+      "checks": [
+        "Age in **hours**, not days",
+        "TSB/TcB plotted on the chart (AAP 2022)",
+        "Feeding, weight loss, wet nappies",
+        "Stool and urine colour"
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Screenshot this table.",
+      "cols": [
+        {
+          "text": "Physiological",
+          "color": "#A8E3D8"
+        },
+        {
+          "text": "Pathological",
+          "color": "#F4ADA2"
+        }
+      ],
+      "rows": [
+        [
+          "Appears",
+          "After 24 h",
+          "Within 24 h"
+        ],
+        [
+          "Rise",
+          "Slow",
+          "> 0.2 mg/dL/h"
+        ],
+        [
+          "Bilirubin",
+          "Unconjugated",
+          "Conjugated > 1 mg/dL is always abnormal"
+        ],
+        [
+          "Lasts",
+          "< 2 wk term",
+          "> 2 wk term, > 3 wk preterm"
+        ],
+        [
+          "Baby",
+          "Well, feeding",
+          "May be sick, pale stools"
+        ],
+        [
+          "Action",
+          "Feed, plot, watch",
+          "Find the cause; treat by chart"
+        ]
+      ],
+      "hand": "↑ the whole post on one page"
+    },
+    {
+      "kind": "mnemonic",
+      "kicker": "one line to remember it all",
+      "lines": [
+        "==Day 1== yellow: never normal.",
+        "==y:Fast rise==: think haemolysis.",
+        "==t:Week 3== yellow: check the stool."
+      ],
+      "actions": [
+        "**Save** it for your next postnatal round.",
+        "**Send** it to the intern on night duty.",
+        "**Comment** the cause you see most in your NICU."
+      ],
+      "sign": "— Pediatrics Made Simple"
+    }
+  ],
+  "caption": "Most newborn jaundice is normal. Some of it damages the brain. Here is how to tell them apart 👶💛\n\n✅ Physiological: appears after 24 h, peaks day 3–5 (term), gone by ~1 week (term) / 2 weeks (preterm), baby well\n🚩 Pathological, any one: visible in the first 24 h · rise > 0.2 mg/dL/h · above the phototherapy line · conjugated > 1 mg/dL · > 2 wk term / > 3 wk preterm · pale stools, dark urine\n🤱 Breastfeeding jaundice (week 1, low intake → feed 8–12×/day) vs breast milk jaundice (after week 1, peaks weeks 2–3 → continue breastfeeding)\n\nThe rule: jaundice in the first 24 hours is never normal. Check blood groups + DCT and send a serum bilirubin now.\n\nDay 1 yellow: never normal. Fast rise: think haemolysis. Week 3 yellow: check the stool.\n\n💾 Save for your next postnatal round\n📩 Send to the intern on nights\n💬 What cause do you see most in your NICU?\n\nFor medical education. Verify with current guidelines and your unit protocol.",
+  "hashtags": [
+    "#neonatology",
+    "#neonataljaundice",
+    "#hyperbilirubinemia",
+    "#pediatrics",
+    "#paediatrics",
+    "#NICU",
+    "#neetpg",
+    "#inicet",
+    "#mbbs",
+    "#medstudent",
+    "#pediatricresidency",
+    "#medicalstudentindia",
+    "#paediatrick_or_treats"
+  ],
+  "references": [
+    "AAP Clinical Practice Guideline: hyperbilirubinemia in newborns ≥ 35 weeks (2022)",
+    "Nelson Textbook of Pediatrics, 22nd ed."
+  ]
+}

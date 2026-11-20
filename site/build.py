@@ -33,13 +33,20 @@ esc = html.escape
 
 
 def fmt(text):
-    """Escape text and turn **bold** into <strong>."""
+    """Escape text and apply the slide markup:
+    **bold**, ==highlight==, ==y:highlight== / ==t:highlight== (colours), ~~circled~~."""
     t = esc(text or "")
-    return re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
+    t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
+    t = re.sub(r"==([a-z]):(.+?)==", r'<mark class="hl-\1">\2</mark>', t)
+    t = re.sub(r"==(.+?)==", r"<mark>\1</mark>", t)
+    t = re.sub(r"~~(.+?)~~", r'<span class="ring">\1</span>', t)
+    return t
 
 
 def plain(text):
-    return re.sub(r"\*\*(.+?)\*\*", r"\1", text or "")
+    t = re.sub(r"\*\*(.+?)\*\*", r"\1", text or "")
+    t = re.sub(r"==(?:[a-z]:)?(.+?)==", r"\1", t)
+    return re.sub(r"~~(.+?)~~", r"\1", t)
 
 
 def load_json(p):
@@ -76,15 +83,17 @@ def load_posts():
             title = title.replace("Drug of the Day:", "").strip()
         cover = next((s for s in slides if s.get("kind") == "cover"), None)
         drug = next((s for s in slides if s.get("kind") == "drug"), None)
-        summary = (cover or {}).get("subtitle") or (drug or {}).get("drug_class") or ""
+        notebook = data.get("style") == "notes"
+        summary = ((cover or {}).get("subtitle") or (cover or {}).get("sub")
+                   or (drug or {}).get("drug_class") or "")
         images = sorted(p.name for p in d.glob("slide*.jpg"))
         shown, iso = nice_date(pub.get("date", ""))
         posts.append(dict(
             slug=d.name, dir=d, title=title, summary=plain(summary), slides=slides,
-            kind="drug" if is_drug else "topic", images=images,
-            permalink=pub.get("instagram", ""), date=shown, iso=iso,
+            kind="drug" if is_drug else "topic", images=images, notebook=notebook,
+            date=shown, iso=iso,
             references=data.get("references", []), hashtags=data.get("hashtags", []),
-            emoji=(cover or drug or {}).get("emoji") or ("💊" if is_drug else "🩺"),
+            emoji=(cover or drug or {}).get("emoji") or ("💊" if is_drug else ("📒" if notebook else "🩺")),
         ))
     posts.sort(key=lambda p: p["iso"], reverse=True)
     return posts
@@ -105,10 +114,28 @@ def load_reels():
         body = [l for l in lines[1:] if l and not l.startswith("#") and l != "."]
         shown, iso = nice_date(pub.get("date", ""))
         audience = pub.get("audience") or ("parents" if "parents" in d.name else "pg")
-        reels.append(dict(slug=d.name, title=title, body=body, date=shown, iso=iso,
-                          audience=audience, permalink=pub.get("instagram", "")))
+        reels.append(dict(slug=d.name, title=title, body=body, date=shown, iso=iso, audience=audience))
     reels.sort(key=lambda r: r["iso"], reverse=True)
     return reels
+
+
+def load_videos():
+    vids = []
+    vdir = CONTENT / "videos"
+    if not vdir.exists():
+        return vids
+    for d in sorted(vdir.iterdir()):
+        mj = d / "meta.json"
+        if not (d.is_dir() and mj.exists() and (d / "video.mp4").exists()):
+            continue
+        m = load_json(mj)
+        shown, iso = nice_date(m.get("date", ""))
+        vids.append(dict(slug=d.name, title=m.get("title", d.name), intro=m.get("intro", []),
+                         chapters=m.get("chapters", []), points=m.get("points", []),
+                         audience=m.get("audience", "parents"), youtube=m.get("youtube", ""),
+                         thumb=(d / "thumb.jpg").exists(), date=shown, iso=iso))
+    vids.sort(key=lambda v: v["iso"], reverse=True)
+    return vids
 
 
 # ---------------------------------------------------------------- cartoons (inline SVG)
@@ -162,8 +189,51 @@ WAVE = '<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-
 
 
 # ---------------------------------------------------------------- rendering
-def render_slide(s):
+def render_notebook(s):
+    """Slides in the notebook ('notes') style: cover, card, number, table, mnemonic."""
     kind = s.get("kind")
+    if kind == "cover":
+        chips = "".join(f'<span class="chipnb" style="background:{esc(c.get("color", "#eee"))}">{esc(c.get("text", ""))}</span>'
+                        for c in s.get("chips", []))
+        kick = f'<p class="kicker">{fmt(s["kicker"])}</p>' if s.get("kicker") else ""
+        chipdiv = f'<div class="chipsnb">{chips}</div>' if chips else ""
+        sub = f'<p class="sub">{fmt(s["sub"])}</p>' if s.get("sub") else ""
+        return (f'<section class="block nb-cover">{kick}'
+                f'<h2>{fmt(s.get("title"))} {fmt(s.get("title2"))}</h2>{chipdiv}{sub}</section>')
+    if kind == "card":
+        color = esc(s.get("color", "#E3D9FA"))
+        rows = "".join(f"<tr><th>{fmt(k)}</th><td>{fmt(v)}</td></tr>" for k, v in s.get("rows", []))
+        pill = f'<span class="pillnb" style="background:{color}">{esc(s["pill"])}</span>' if s.get("pill") else ""
+        tag = f'<p class="sub">{fmt(s["tagline"])}</p>' if s.get("tagline") else ""
+        return (f'<section class="block nb-card" style="border-left-color:{color}">{pill}'
+                f'<h2>{fmt(s.get("title"))}</h2>{tag}<div class="tablewrap"><table class="kv"><tbody>{rows}</tbody></table></div></section>')
+    if kind == "number":
+        checks = ""
+        if s.get("checks"):
+            checks = (f'<h3>{fmt(s.get("checks_title", ""))}</h3><ul class="checks">' +
+                      "".join(f"<li>{fmt(c)}</li>" for c in s["checks"]) + "</ul>")
+        note = f'<p class="pearl"><b>Note</b>{fmt(s["note"])}' + (f' <em>({fmt(s["note_hand"])})</em>' if s.get("note_hand") else "") + "</p>" if s.get("note") else ""
+        kick = f'<p class="kicker">{fmt(s["kicker"])}</p>' if s.get("kicker") else ""
+        return (f'<section class="block nb-number">{kick}<div class="bignum">{esc(s.get("big", ""))}</div>'
+                f'<p class="lead">{fmt(s.get("text"))}</p>{note}{checks}</section>')
+    if kind == "table":
+        cols = s.get("cols", [])
+        head = "<th></th>" + "".join(f'<th style="background:{esc(c.get("color", "#CFE5FA"))}">{esc(c.get("text", ""))}</th>' for c in cols)
+        body = "".join("<tr>" + f"<th>{fmt(r[0])}</th>" + "".join(f"<td>{fmt(c)}</td>" for c in r[1:]) + "</tr>"
+                       for r in s.get("rows", []))
+        return (f'<section class="block nb-table"><h2><span class="emo">📋</span>{fmt(s.get("title"))}</h2>'
+                f'<div class="tablewrap"><table class="nbt"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div></section>')
+    if kind == "mnemonic":
+        kick = f'<p class="kicker">{fmt(s["kicker"])}</p>' if s.get("kicker") else ""
+        lines = "".join(f"<li>{fmt(l)}</li>" for l in s.get("lines", []))
+        return f'<section class="block takeaway nb-mnemonic"><h2><span class="emo">🧠</span>Remember</h2>{kick}<ul class="lines">{lines}</ul></section>'
+    return ""
+
+
+def render_slide(s, notebook=False):
+    kind = s.get("kind")
+    if notebook:
+        return render_notebook(s)
     if kind in ("cover", "cta"):
         return ""  # cover is the page header; site has its own follow box
     emoji, title = esc(s.get("emoji", "")), fmt(s.get("title", ""))
@@ -228,7 +298,7 @@ def social_buttons(cls="btn"):
 
 NAV = [("index.html", "Home", "home"), ("notes.html", "Study notes", "notes"),
        ("drugs.html", "Drug of the Day", "drugs"), ("parents.html", "Parents", "parents"),
-       ("reels.html", "Reels", "reels"), ("books.html", "Books", "books"), ("about.html", "About", "about")]
+       ("reels.html", "Videos", "reels"), ("books.html", "Books", "books"), ("about.html", "About", "about")]
 
 
 def page(title, body, desc="", depth=0, active=""):
@@ -275,8 +345,8 @@ def page(title, body, desc="", depth=0, active=""):
 
 def card(p, up=""):
     img = f'<img src="{up}posts/{p["slug"]}/{p["images"][0]}" alt="" loading="lazy">' if p["images"] else ""
-    label = "Drug of the Day" if p["kind"] == "drug" else "Topic notes"
-    hay = esc((p["title"] + " " + p["summary"] + " " + " ".join(p["hashtags"])).lower())
+    label = "Drug of the Day" if p["kind"] == "drug" else ("MBBS notes" if p["notebook"] else "Topic notes")
+    hay =esc((p["title"] + " " + p["summary"] + " " + " ".join(p["hashtags"])).lower())
     return (f'<a class="card" href="{up}posts/{p["slug"]}/index.html" data-kind="{p["kind"]}" data-hay="{hay}">'
             f'{img}<div class="cardtext"><span class="tag {p["kind"]}">{label}</span>'
             f'<h3>{esc(p["title"])}</h3><p>{esc(p["summary"])}</p><time>{p["date"]}</time></div></a>')
@@ -351,10 +421,16 @@ def build():
     if (HERE / "books").exists():
         shutil.copytree(HERE / "books", OUT / "books", dirs_exist_ok=True)
 
-    posts, reels = load_posts(), load_reels()
+    posts, reels, videos = load_posts(), load_reels(), load_videos()
     topics = [p for p in posts if p["kind"] == "topic"]
     drugs = [p for p in posts if p["kind"] == "drug"]
     parent_reels = [r for r in reels if r["audience"] == "parents"]
+    for v in videos:
+        vdir = OUT / "videos" / v["slug"]
+        vdir.mkdir(parents=True, exist_ok=True)
+        for f in ("video.mp4", "thumb.jpg"):
+            if (CONTENT / "videos" / v["slug"] / f).exists():
+                shutil.copy(CONTENT / "videos" / v["slug"] / f, vdir / f)
 
     # --- post pages
     for p in posts:
@@ -362,7 +438,7 @@ def build():
         pdir.mkdir(parents=True, exist_ok=True)
         for im in p["images"]:
             shutil.copy(p["dir"] / im, pdir / im)
-        notes = "\n".join(render_slide(s) for s in p["slides"])
+        notes = "\n".join(render_slide(s, p["notebook"]) for s in p["slides"])
         gallery = ""
         if p["images"]:
             gallery = ('<details class="gallery"><summary>🖼️ View the original slides '
@@ -375,10 +451,10 @@ def build():
         body = f"""<article class="post">
 <a class="back" href="../../{'drugs' if is_drug else 'notes'}.html">← All {'drugs' if is_drug else 'study notes'}</a>
 <header class="posthead">
-  <span class="tag {p['kind']}">{'Drug of the Day' if is_drug else 'Topic notes'}</span>
+  <span class="tag {p['kind']}">{'Drug of the Day' if is_drug else ('MBBS notes' if p['notebook'] else 'Topic notes')}</span>
   <h1><span class="emo">{esc(p['emoji'])}</span>{esc(p['title'])}</h1>
-  {f'<p class="lede">{esc(lede)}</p>' if lede else ''}
-  <p class="meta"><time datetime="{p['iso']}">{p['date']}</time>{f' · <a href="{esc(p["permalink"])}" rel="noopener" target="_blank">See the post on Instagram ↗</a>' if p['permalink'] else ''}</p>
+  {f'<p class="lede">{esc(lede)}</p>' if lede and not p['notebook'] else ''}
+  <p class="meta"><time datetime="{p['iso']}">{p['date']}</time></p>
 </header>
 {notes}
 {refs}
@@ -426,7 +502,7 @@ def build():
     <a class="path p-notes" href="notes.html"><span class="pic">📚</span><h3>Study notes</h3><p>High-yield tables, mnemonics and exam pearls for NEET-PG, INI-CET, FMGE and MBBS.</p><span class="go">{len(topics)} topics →</span></a>
     <a class="path p-drug" href="drugs.html"><span class="pic">💊</span><h3>Drug of the Day</h3><p>Paediatric doses, uses and mechanisms, one drug at a time.</p><span class="go">{len(drugs)} drugs →</span></a>
     <a class="path p-parents" href="parents.html"><span class="pic">👨‍👩‍👧</span><h3>For parents</h3><p>Simple, calm guidance on fever, feeding, vaccines and when to see a doctor.</p><span class="go">Parent corner →</span></a>
-    <a class="path p-reels" href="reels.html"><span class="pic">🎬</span><h3>Reels</h3><p>Quick videos for students and for parents.</p><span class="go">{len(reels)} reels →</span></a>
+    <a class="path p-reels" href="reels.html"><span class="pic">🎬</span><h3>Videos</h3><p>Calm video guides and quick reels for students and parents.</p><span class="go">{len(videos) + len(reels)} videos →</span></a>
     <a class="path p-books" href="books.html"><span class="pic">📖</span><h3>Books</h3><p>Our medical books and revision guides.</p>{books_teaser}<span class="go">See books →</span></a>
     {yt_card}
   </div>
@@ -449,7 +525,7 @@ def build():
   <div class="chips"><button class="chip on" data-k="all">All</button><button class="chip" data-k="topic">Topic notes</button><button class="chip" data-k="drug">Drug of the Day</button></div>
 </div>
 <div class="grid">{grid}</div>
-<p id="none" class="none" hidden>Nothing matches yet. Ask for it in the comments on Instagram!</p>
+<p id="none" class="none" hidden>Nothing matches yet. More topics are added every week!</p>
 {follow_box()}
 {SEARCH_JS}"""
     (OUT / "notes.html").write_text(page("Study notes", notes, "High-yield paediatrics notes for NEET-PG and MBBS.", active="notes"), encoding="utf-8")
@@ -461,26 +537,58 @@ def build():
 <div class="grid">{dgrid}</div>{follow_box()}"""
     (OUT / "drugs.html").write_text(page("Drug of the Day", dbody, "Paediatric drug doses, uses and mechanisms.", active="drugs"), encoding="utf-8")
 
-    # --- reels
+    # --- videos (long videos played right here) + reel notes
     def reel_card(r):
         items = "".join(f"<li>{esc(l.lstrip('•· ').strip())}</li>" for l in r["body"][:6])
         who = "For parents" if r["audience"] == "parents" else "For PG / MBBS"
         return f"""<article class="reel r-{r['audience']}"><span class="tag reel">{who}</span>
 <h3>{esc(r['title'])}</h3><ul>{items}</ul>
-<p class="meta"><time>{r['date']}</time>{f' · <a href="{esc(r["permalink"])}" rel="noopener" target="_blank">Watch on Instagram ↗</a>' if r['permalink'] else ''}</p></article>"""
-    rbody = f"""<section class="phead s-reels"><span class="big">🎬</span><div><h1>Reels</h1>
-<p>Short videos for students and for parents. The notes are here; the videos are on Instagram{' and YouTube' if YT else ''}.</p></div></section>
-<div class="reels">{''.join(reel_card(r) for r in reels) or '<p>Reels coming soon.</p>'}</div>{follow_box()}"""
-    (OUT / "reels.html").write_text(page("Reels", rbody, "Paediatrics reels with notes.", active="reels"), encoding="utf-8")
+<p class="meta"><time>{r['date']}</time></p></article>"""
+
+    def video_block(v):
+        poster = f' poster="videos/{v["slug"]}/thumb.jpg"' if v["thumb"] else ""
+        chapters = "".join(f'<li><button class="chap" data-t="{esc(t)}">{esc(t)}</button> {esc(n)}</li>' for t, n in v["chapters"])
+        pts = "".join(f"<li>{esc(x)}</li>" for x in v["points"])
+        intro = "".join(f"<p>{esc(x)}</p>" for x in v["intro"])
+        yt = f'<a class="btn yt" href="{esc(v["youtube"])}" target="_blank" rel="noopener">{YT_ICON}Watch on YouTube</a>' if v["youtube"] else ""
+        who = "For parents" if v["audience"] == "parents" else "For PG / MBBS"
+        return f"""<article class="video" id="{esc(v['slug'])}">
+<video controls preload="metadata" playsinline{poster} src="videos/{v['slug']}/video.mp4"></video>
+<div class="vtext"><span class="tag reel">{who}</span><h2>{esc(v['title'])}</h2>{intro}
+{f'<h3>Chapters</h3><ol class="chapters">{chapters}</ol>' if chapters else ''}
+{f'<h3>In this video</h3><ul>{pts}</ul>' if pts else ''}
+<p class="meta"><time>{v['date']}</time></p>{yt}</div></article>"""
+
+    CHAPTER_JS = """<script>
+document.querySelectorAll('.video').forEach(function(box){
+  var vid=box.querySelector('video');
+  box.querySelectorAll('.chap').forEach(function(b){b.addEventListener('click',function(){
+    var p=b.dataset.t.split(':'); vid.currentTime=(+p[0])*60+(+p[1]); vid.play(); vid.scrollIntoView({behavior:'smooth',block:'center'});
+  })});
+});
+</script>"""
+    vblocks = "".join(video_block(v) for v in videos)
+    rbody = f"""<section class="phead s-reels"><span class="big">🎬</span><div><h1>Videos</h1>
+<p>Calm, simple video guides you can watch right here, plus notes from our short reels.</p></div></section>
+{f'<div class="videos">{vblocks}</div>' if vblocks else ''}
+{f'<h2 class="center mt">Reel notes 📝</h2><div class="reels">{"".join(reel_card(r) for r in reels)}</div>' if reels else ''}
+{follow_box()}
+{CHAPTER_JS if vblocks else ''}"""
+    (OUT / "reels.html").write_text(page("Videos", rbody, "Paediatric video guides for parents and students.", active="reels"), encoding="utf-8")
 
     # --- parents
     tips = "".join(f'<div class="tip"><span class="big">{e}</span><h3>{t}</h3><ul>' +
                    "".join(f"<li>{esc(x)}</li>" for x in xs) + "</ul></div>" for e, t, xs in PARENT_TIPS)
     preels = "".join(reel_card(r) for r in parent_reels)
+    pvids = "".join(f'<a class="vcard" href="reels.html#{esc(v["slug"])}">'
+                    + (f'<img src="videos/{v["slug"]}/thumb.jpg" alt="" loading="lazy">' if v["thumb"] else "")
+                    + f'<span class="play">▶</span><div><span class="tag reel">Video guide</span><h3>{esc(v["title"])}</h3></div></a>'
+                    for v in videos if v["audience"] == "parents")
     pbody = f"""<section class="phead s-parents"><span class="big">👨‍👩‍👧</span><div><h1>Parent corner</h1>
 <p>Calm, simple guidance for everyday childhood worries. This is general information, so your child's own doctor always knows best.</p></div></section>
+{f'<div class="vcards">{pvids}</div>' if pvids else ''}
 <div class="tips">{tips}</div>
-{f'<h2 class="center mt">Reels for parents 🎬</h2><div class="reels">{preels}</div>' if preels else ''}
+{f'<h2 class="center mt">Reel notes for parents 🎬</h2><div class="reels">{preels}</div>' if preels else ''}
 <p class="pearl caution wide"><b>Emergency?</b>If your child is very unwell, go to the nearest hospital or call your local emergency number. Don't wait for online advice.</p>
 {follow_box()}"""
     (OUT / "parents.html").write_text(page("Parent corner", pbody, "Simple paediatric guidance for parents.", active="parents"), encoding="utf-8")
@@ -540,7 +648,7 @@ def build():
     (OUT / "about.html").write_text(page("About", abody, active="about"), encoding="utf-8")
 
     (OUT / "404.html").write_text(page("Not found", '<section class="soon"><span class="big">🧸❓</span><h2>Oops, page not found</h2><p><a href="/paeds-carousels/">Back to the home page</a></p></section>'), encoding="utf-8")
-    print(f"Built {len(topics)} topics, {len(drugs)} drugs, {len(reels)} reels, {len(BOOKS)} books -> {OUT}")
+    print(f"Built {len(topics)} topics, {len(drugs)} drugs, {len(videos)} videos, {len(reels)} reels, {len(BOOKS)} books -> {OUT}")
 
 
 if __name__ == "__main__":

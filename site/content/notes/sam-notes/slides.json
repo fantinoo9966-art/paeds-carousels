@@ -1,0 +1,125 @@
+{
+  "topic": "Severe acute malnutrition: WHO 10 steps",
+  "style": "notes",
+  "slot": "morning",
+  "ist_date": "2026-11-19",
+  "slides": [
+    {
+      "kind": "cover",
+      "kicker": "a thin child in the NRC…",
+      "title": "SAM has 10 WHO steps.",
+      "title2": "The first week ==decides survival==.",
+      "chips": [
+        {"text": "Stabilise", "color": "#F4ADA2"},
+        {"text": "Feed", "color": "#F7DB72"},
+        {"text": "Rehabilitate", "color": "#A8E3D8"}
+      ],
+      "sub": "Diagnosis, the 10 steps in order, and the **3 things you must not give**."
+    },
+    {
+      "kind": "card",
+      "pill": "diagnosis",
+      "color": "#F7DB72",
+      "title": "Is it SAM?",
+      "tagline": "6–59 months. any one is enough.",
+      "rows": [
+        ["MUAC", "**< 11.5 cm**"],
+        ["WHZ", "Weight-for-height **< −3 SD**"],
+        ["Oedema", "**Bilateral pitting** oedema"],
+        ["Admit", "Oedema, **failed appetite test** or a medical complication"],
+        ["Home", "Good appetite, no complication: **RUTF** in community"]
+      ]
+    },
+    {
+      "kind": "card",
+      "pill": "1 of 3 · week 1",
+      "color": "#F4ADA2",
+      "ink": "#C2453B",
+      "title": "Steps 1–3",
+      "tagline": "the killers of the first days.",
+      "rows": [
+        ["1 · Sugar", "Glucose **< 54 mg/dL**: **50 mL 10% glucose** oral/NG. Unconscious: **10% dextrose 5 mL/kg IV**"],
+        ["2 · Cold", "Axillary **< 35 °C**: skin-to-skin, cover head, warm room"],
+        ["3 · Fluids", "**ReSoMal 5 mL/kg every 30 min** × 2 h, then **5–10 mL/kg/h** up to 10 h"],
+        ["Feeds", "Start at once, **2-hourly, day and night**"]
+      ]
+    },
+    {
+      "kind": "card",
+      "pill": "2 of 3 · week 1",
+      "color": "#F4ADA2",
+      "ink": "#C2453B",
+      "title": "Steps 4–7",
+      "tagline": "correct quietly. feed cautiously.",
+      "rows": [
+        ["4 · Salts", "**K 3–4** and **Mg 0.4–0.6 mmol/kg/day**"],
+        ["5 · Infection", "Antibiotics for **all**: amoxicillin if well, **ampicillin + gentamicin** if complicated"],
+        ["6 · Micro", "Vitamin A, folic acid, zinc, copper from day 1"],
+        ["7 · F-75", "**130 mL/kg/day** (100 if severe oedema), 2 → 3 → 4-hourly"]
+      ]
+    },
+    {
+      "kind": "card",
+      "pill": "3 of 3 · weeks 2–6",
+      "color": "#A8E3D8",
+      "ink": "#2C7A73",
+      "title": "Steps 8–10",
+      "tagline": "appetite is back. now catch up.",
+      "rows": [
+        ["Switch", "To **F-100** when appetite returns & oedema reduces"],
+        ["8 · Growth", "F-100 / RUTF **150–220 kcal/kg/day**, protein **4–6 g/kg/day**. **Start iron**"],
+        ["9 · Care", "Play & sensory stimulation, mother involved"],
+        ["10 · Follow-up", "Home feeding, vaccines, review dates"]
+      ]
+    },
+    {
+      "kind": "number",
+      "kicker": "the number to track daily",
+      "big": "> 10 g",
+      "text": "Weight gain per kg per day in rehabilitation is ==good==. **5–10** is moderate. **< 5** is poor: look for infection or a feeding problem.",
+      "note": "Discharge: MUAC ≥ 12.5 cm or WHZ ≥ −2 SD, and no oedema for at least 2 weeks.",
+      "note_hand": "not just 'looks better'",
+      "checks_title": "The 3 'No's of week 1",
+      "checks": [
+        "**No IV fluids** unless in shock (15 mL/kg over 1 h)",
+        "**No diuretics** for the oedema",
+        "**No iron** until the child is gaining weight"
+      ]
+    },
+    {
+      "kind": "table",
+      "title": "Screenshot this table.",
+      "cols": [
+        {"text": "Stabilisation", "color": "#F4ADA2"},
+        {"text": "Rehabilitation", "color": "#A8E3D8"}
+      ],
+      "rows": [
+        ["When", "Days 1–7", "Weeks 2–6"],
+        ["Steps", "1–7", "8–10"],
+        ["Feed", "F-75, 100 kcal/kg/day", "F-100 / RUTF, 150–220 kcal/kg/day"],
+        ["Protein", "1–1.5 g/kg/day", "4–6 g/kg/day"],
+        ["Iron", "No", "Yes"],
+        ["Goal", "Keep alive, correct", "Weight gain > 10 g/kg/day"]
+      ],
+      "hand": "↑ the whole post on one page"
+    },
+    {
+      "kind": "mnemonic",
+      "kicker": "one line to remember it all",
+      "lines": [
+        "==Warm, sweet, dry==: first.",
+        "==y:Slow F-75==: week one.",
+        "==t:Iron & F-100==: when hungry."
+      ],
+      "actions": [
+        "**Save** it for your NRC / PSM posting.",
+        "**Send** it to your NEET-PG group.",
+        "**Comment** the step you always forget."
+      ],
+      "sign": "— Pediatrics Made Simple"
+    }
+  ],
+  "caption": "SAM has 10 WHO steps. The first week decides survival 🥣\n\n📏 SAM (6–59 mo), any one: MUAC < 11.5 cm · WHZ < −3 SD · bilateral pitting oedema. Admit if oedema, failed appetite test or a medical complication.\n\n🔴 Week 1 (stabilisation)\n1 Hypoglycaemia < 54 mg/dL → 50 mL 10% glucose (unconscious: 10% dextrose 5 mL/kg IV)\n2 Hypothermia < 35 °C → skin-to-skin, warm\n3 Dehydration → ReSoMal 5 mL/kg every 30 min × 2 h, then 5–10 mL/kg/h\n4 K 3–4 & Mg 0.4–0.6 mmol/kg/day\n5 Antibiotics for all\n6 Vitamin A, folate, zinc, copper\n7 F-75, 130 mL/kg/day, 2 → 3 → 4-hourly\n\n🟢 Weeks 2–6 (rehabilitation)\n8 F-100/RUTF 150–220 kcal/kg/day, protein 4–6 g/kg/day, start iron\n9 Play & care\n10 Follow-up plan\n\n📈 Target gain > 10 g/kg/day\n✅ Discharge: MUAC ≥ 12.5 cm or WHZ ≥ −2 SD, no oedema for 2 weeks\n🚫 Week 1: no IV unless shock · no diuretics · no iron\n\n💾 Save for your NRC posting\n📩 Send to your NEET-PG group\n💬 Which step do you always forget?\n\nFor medical education. Verify with current guidelines and your unit protocol.",
+  "hashtags": ["#severeacutemalnutrition", "#SAM", "#malnutrition", "#paediatrics", "#pediatrics", "#neetpg", "#inicet", "#mbbs", "#medstudent", "#psm", "#nutrition", "#NRC", "#medicalstudentindia", "#paediatrick_or_treats"],
+  "references": ["WHO 1999 & 2013 SAM guidelines", "MoHFW facility-based care of SAM, 2011"]
+}

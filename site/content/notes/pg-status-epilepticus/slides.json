@@ -1,0 +1,113 @@
+{
+  "topic": "Status epilepticus: time-based treatment algorithm",
+  "slot": "evening",
+  "theme": "midnight",
+  "ist_date": "2026-11-19",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "⏱️",
+      "title": "Status Epilepticus: The Clock Algorithm",
+      "subtitle": "0 → 5 → 20 → 40 min: what to give, how much, and when to move on",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "points",
+      "emoji": "📖",
+      "title": "Definition (ILAE 2015)",
+      "subtitle": "Two time points that drive action",
+      "points": [
+        "Convulsive SE: seizure **≥ 5 min**, or **≥ 2 seizures** without return to baseline",
+        "**t1 = 5 min**: treatment must start",
+        "**t2 = 30 min**: risk of long-term neuronal injury",
+        "Not waking **> 30 min** after convulsions stop: think **non-convulsive SE**, get EEG",
+        "Most seizures stop by 5 min: if not, they rarely stop on their own"
+      ],
+      "highlight": "Treat at 5 minutes, not 30. The old definition delayed treatment."
+    },
+    {
+      "kind": "points",
+      "emoji": "🚑",
+      "title": "0–5 min: Stabilise",
+      "subtitle": "ABC, glucose, access, history",
+      "points": [
+        "Airway, **high-flow O2**, recovery position, suction; monitor SpO2, HR, BP",
+        "Check **bedside glucose**: hypoglycaemia → **10% dextrose 2 mL/kg IV**",
+        "IV/IO access; send glucose, **Na, Ca, Mg**, blood gas, CBC, AED levels, tox screen",
+        "Note **time of onset**: every next step is timed from it",
+        "Infant with refractory seizures: consider **pyridoxine 100 mg IV**"
+      ],
+      "highlight": "Count pre-hospital benzodiazepines: maximum 2 doses in total."
+    },
+    {
+      "kind": "points",
+      "emoji": "💉",
+      "title": "5–20 min: Benzodiazepine",
+      "subtitle": "First line, may repeat once after 5 min",
+      "points": [
+        "IV **lorazepam 0.1 mg/kg** (max **4 mg**)",
+        "or IV **diazepam 0.15–0.2 mg/kg** (max **10 mg**)",
+        "No IV: IM **midazolam 0.2 mg/kg** (max **10 mg**)",
+        "or buccal/intranasal **midazolam 0.2–0.3 mg/kg** (max **10 mg**)",
+        "or rectal **diazepam 0.2–0.5 mg/kg** (max **20 mg**)"
+      ],
+      "highlight": "> 2 benzodiazepine doses = respiratory depression risk with little extra benefit."
+    },
+    {
+      "kind": "points",
+      "emoji": "🧪",
+      "title": "20–40 min: Second-line ASM",
+      "subtitle": "Pick ONE (ESETT 2019: similar efficacy)",
+      "points": [
+        "**Levetiracetam 60 mg/kg** IV (max **4500 mg**) over 10–15 min",
+        "**Fosphenytoin 20 mg PE/kg** (max **1500 mg PE**) or **phenytoin 20 mg/kg** at ≤ 1 mg/kg/min with ECG",
+        "**Valproate 40 mg/kg** IV (max **3000 mg**) over 10 min: avoid < 2 yr, liver or metabolic disease",
+        "**Phenobarbitone 20 mg/kg** IV if none available (and first choice in neonates)",
+        "Phenytoin: hypotension, arrhythmia, **purple glove**; never in dextrose"
+      ],
+      "highlight": "ESETT: levetiracetam, fosphenytoin and valproate stopped ~half of benzo-resistant SE each."
+    },
+    {
+      "kind": "points",
+      "emoji": "🏥",
+      "title": "40+ min: Refractory SE",
+      "subtitle": "PICU, intubate, continuous infusion",
+      "points": [
+        "Secure airway, **intubate**, ventilate; inotropes ready",
+        "**Midazolam infusion**: 0.2 mg/kg bolus, then **0.05–2 mg/kg/h** titrated",
+        "Alternatives: thiopentone or pentobarbitone; ketamine in some units",
+        "**Continuous EEG**: aim seizure control / burst suppression for 24–48 h",
+        "Super-refractory (≥ 24 h on anaesthetics): look for autoimmune, metabolic causes"
+      ],
+      "highlight": "Propofol infusion: caution in children (propofol infusion syndrome)."
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "⚡",
+      "title": "High-Yield Pearls",
+      "subtitle": "Questions examiners love",
+      "points": [
+        "Commonest cause in children: **febrile SE**, then CNS infection, AED non-adherence",
+        "First line in all ages beyond neonates: **benzodiazepine**",
+        "Neonatal seizures: **phenobarbitone** first",
+        "Hyponatraemia, hypocalcaemia, hypoglycaemia: **treat the cause**, not just the seizure"
+      ],
+      "highlight": "Clock: 5 min benzo · repeat at 10 · second line by 20 · PICU by 40."
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this for your next emergency shift 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for PG notes",
+      "points": [
+        "Share with your PICU / casualty team",
+        "Comment which second-line drug your unit uses"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Status epilepticus: the clock algorithm every paediatric resident should know cold ⏱️\n\n📖 Convulsive SE = seizure ≥ 5 min or ≥ 2 seizures without recovery (ILAE 2015: t1 5 min, t2 30 min)\n\n🚑 0–5 min: ABC, O2, glucose (hypo → 10% dextrose 2 mL/kg), IV/IO, labs, note onset time\n💉 5–20 min: lorazepam 0.1 mg/kg (max 4) · diazepam 0.15–0.2 mg/kg (max 10) · IM/buccal/IN midazolam · rectal diazepam. Repeat once; max 2 doses\n🧪 20–40 min, pick one: levetiracetam 60 mg/kg (max 4500) · fosphenytoin 20 mg PE/kg · valproate 40 mg/kg (max 3000; avoid < 2 yr) · phenobarbitone 20 mg/kg\n🏥 40+ min: PICU, intubate, midazolam infusion 0.05–2 mg/kg/h, continuous EEG\n\n⚡ Neonates: phenobarbitone first · not waking > 30 min → think NCSE\n\nSave 🔖 & share with your casualty team.\n\nFor medical education. Verify with current guidelines and your unit protocol.",
+  "hashtags": ["#statusepilepticus", "#seizures", "#pediatricemergency", "#PICU", "#pediatrics", "#paediatrics", "#neurology", "#pediatricneurology", "#mdpediatrics", "#dnbpediatrics", "#neetpg", "#inicet", "#pgresidents", "#medicalstudentindia", "#paediatrick_or_treats"],
+  "references": ["ILAE 2015 definition of status epilepticus", "AES guideline 2016 (Glauser et al.)", "ESETT trial, NEJM 2019", "IAP/Indian consensus on SE in children"]
+}

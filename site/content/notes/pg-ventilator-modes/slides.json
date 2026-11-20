@@ -1,0 +1,133 @@
+{
+ "topic": "Ventilation: Modes of mechanical ventilation in children (VC, PC, PRVC, SIMV, PSV)",
+ "slot": "evening",
+ "theme": "slate",
+ "ist_date": "2026-11-18",
+ "slides": [
+  {
+   "kind": "cover",
+   "emoji": "🫁",
+   "title": "Ventilator modes, finally simple",
+   "subtitle": "VC, PC, PRVC, SIMV & PSV for paeds PGs",
+   "points": [],
+   "highlight": ""
+  },
+  {
+   "kind": "points",
+   "emoji": "🧭",
+   "title": "3 questions behind every mode",
+   "subtitle": "Answer these and any mode makes sense",
+   "points": [
+    "**Trigger**: what starts the breath? Machine **time** or patient effort (**pressure/flow**)",
+    "**Target**: what does the machine control? **Volume** or **pressure**",
+    "**Cycle**: what ends inspiration? **Time**, volume or a **fall in flow**",
+    "**Sequence**: are breaths all mandatory (**A/C**), mixed (**SIMV**) or all spontaneous (**PSV**)?"
+   ],
+   "highlight": "Mode name = control variable + breath sequence (e.g. PC-A/C, VC-SIMV)"
+  },
+  {
+   "kind": "compare",
+   "emoji": "⚖️",
+   "title": "Volume vs pressure control",
+   "subtitle": "Volume control (VC) || Pressure control (PC)",
+   "points": [
+    "You set **tidal volume** and flow || You set **inspiratory pressure** and Ti",
+    "Airway pressure **varies** with compliance || Tidal volume **varies** with compliance",
+    "Constant (square) flow || **Decelerating** flow, better gas distribution",
+    "Guaranteed minute ventilation || Caps peak pressure, copes with **ETT leak**",
+    "Risk: high pressures if lungs stiffen || Risk: low Vt if compliance falls"
+   ],
+   "highlight": "Watch the variable you did NOT set: pressure in VC, tidal volume in PC"
+  },
+  {
+   "kind": "points",
+   "emoji": "🔁",
+   "title": "PRVC: the hybrid",
+   "subtitle": "Pressure-regulated volume control",
+   "points": [
+    "You set a **target tidal volume**; each breath is delivered as a **pressure-controlled** breath",
+    "Machine adjusts the pressure **breath by breath** to reach the target (within a set limit)",
+    "Gives **decelerating flow** plus a **volume guarantee**",
+    "Pitfall: if the child pulls hard, the machine **lowers support**: watch for fatigue",
+    "A large **ETT leak** makes measured Vt, and so PRVC, unreliable"
+   ],
+   "highlight": "Neonatal cousin: volume-targeted ventilation (volume guarantee, VG)"
+  },
+  {
+   "kind": "compare",
+   "emoji": "🫀",
+   "title": "A/C vs SIMV",
+   "subtitle": "Assist-control (A/C) || SIMV",
+   "points": [
+    "**Every** breath fully supported; set rate is the minimum || Only the **set number** of breaths fully supported",
+    "Extra patient breaths get the full set breath || Extra breaths are spontaneous, usually with **PS**",
+    "Risk: over-ventilation, **auto-PEEP** if tachypnoeic || Risk: more **work of breathing** if PS too low",
+    "Best for the sick, sedated child || Weaning by SIMV is **slower** than PS / SBT"
+   ],
+   "highlight": ""
+  },
+  {
+   "kind": "points",
+   "emoji": "🌬️",
+   "title": "PSV: the patient leads",
+   "subtitle": "Pressure support ventilation",
+   "points": [
+    "**Every breath patient-triggered**; machine adds a set pressure above PEEP",
+    "**Flow-cycled**: inspiration ends when flow falls to ~25% of peak (adjustable)",
+    "Child controls **rate, Ti and Vt**: the most comfortable mode",
+    "No mandatory rate, so it needs an intact **respiratory drive** + apnoea backup",
+    "Used for weaning and SBTs (CPAP + low PS, e.g. **5-10 cmH2O**)"
+   ],
+   "highlight": "Red flag: no drive = no breaths on PSV. Always check apnoea backup"
+  },
+  {
+   "kind": "takeaway",
+   "emoji": "🎯",
+   "title": "Choosing a mode at the bedside",
+   "subtitle": "",
+   "points": [
+    "Sick, sedated or paralysed: **A/C** (PC or PRVC)",
+    "Stiff lungs / PARDS: **Vt 5-8 mL/kg** ideal body weight, **Pplat ≤28 cmH2O** (PALICC-2)",
+    "Big ETT leak or air leak: favour **pressure control**",
+    "Good drive and improving: move to **PSV**, then an **SBT**"
+   ],
+   "highlight": "Exam pearl: the mode matters less than the Vt, pressures and PEEP you set"
+  },
+  {
+   "kind": "cta",
+   "emoji": "🔖",
+   "title": "Save this for your PICU posting 🔖",
+   "subtitle": "Follow @paediatrick_or_treats for more",
+   "points": [
+    "Share with your PG batch",
+    "Comment the next ventilation topic you want"
+   ],
+   "highlight": ""
+  }
+ ],
+ "caption": "Ventilator modes confusing you on PICU rounds? 🫁\n\nEvery mode is just 3 questions: what triggers the breath, what the machine controls, and what ends inspiration.\nVC vs PC, the PRVC hybrid, A/C vs SIMV and PSV, all in 8 slides.\nPlus a bedside cheat-sheet with PALICC-2 lung-protective targets.\n\nWhich mode does your PICU start with: PC, VC or PRVC? Tell us below 👇\n\nSave 🔖 & share with a batchmate\nFor education only; follow local protocols.",
+ "hashtags": [
+  "#pediatrics",
+  "#paediatrics",
+  "#picu",
+  "#mechanicalventilation",
+  "#ventilator",
+  "#ventilatormodes",
+  "#pediatricicu",
+  "#criticalcare",
+  "#pards",
+  "#mdpediatrics",
+  "#dnbpediatrics",
+  "#neetpg",
+  "#inicet",
+  "#pgresidents",
+  "#medicalstudents",
+  "#medstudentindia",
+  "#respiratorytherapy",
+  "#paediatrick_or_treats"
+ ],
+ "references": [
+  "PALICC-2 (2023) recommendations",
+  "Rogers' Textbook of Pediatric Intensive Care"
+ ]
+}

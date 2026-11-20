@@ -1,0 +1,131 @@
+{
+  "topic": "Severe acute malnutrition: WHO 10 steps",
+  "slot": "morning",
+  "theme": "pastel",
+  "ist_date": "2026-11-19",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "🥣",
+      "title": "Severe Acute Malnutrition: WHO 10 Steps",
+      "subtitle": "Diagnosis, stabilisation, rehabilitation & discharge in one swipe",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "points",
+      "emoji": "📏",
+      "title": "Diagnosing SAM (6–59 months)",
+      "subtitle": "Any ONE of these is enough",
+      "points": [
+        "**MUAC < 11.5 cm**",
+        "**Weight-for-height < −3 SD** (WHO growth standards)",
+        "**Bilateral pitting oedema** (nutritional oedema)",
+        "Admit (complicated SAM) if **oedema**, **failed appetite test** or a **medical complication**",
+        "Uncomplicated SAM with good appetite: **community care with RUTF**"
+      ],
+      "highlight": "MUAC tape colours: red < 11.5 cm · yellow 11.5–12.5 cm · green ≥ 12.5 cm."
+    },
+    {
+      "kind": "points",
+      "emoji": "🩸",
+      "title": "Steps 1 & 2: Hypoglycaemia, Hypothermia",
+      "subtitle": "Treat both in the first hours",
+      "points": [
+        "Hypoglycaemia = blood glucose **< 54 mg/dL (3 mmol/L)**",
+        "Give **50 mL of 10% glucose** or sucrose, orally or by NG tube",
+        "Unconscious: **10% dextrose 5 mL/kg IV**, then feeds by NG",
+        "Hypothermia = axillary **< 35 °C**: skin-to-skin with mother, cover head, warm room",
+        "Start feeds at once, **2-hourly, day and night**"
+      ],
+      "highlight": "Hypoglycaemia and hypothermia usually occur together and suggest serious infection."
+    },
+    {
+      "kind": "points",
+      "emoji": "💧",
+      "title": "Step 3: Dehydration",
+      "subtitle": "ReSoMal, not standard ORS",
+      "points": [
+        "ReSoMal has **less sodium (45)** and **more potassium (40 mmol/L)**",
+        "**5 mL/kg every 30 min for 2 h**, orally or by NG",
+        "Then **5–10 mL/kg/h** for up to 10 h, alternating hours with F-75",
+        "Stop if **pulse and respiratory rate rise**: sign of fluid overload",
+        "**No IV fluids** unless in shock: **15 mL/kg over 1 h**, then reassess"
+      ],
+      "highlight": "Signs of dehydration are unreliable in SAM: sunken eyes and skin pinch can mislead."
+    },
+    {
+      "kind": "points",
+      "emoji": "💊",
+      "title": "Steps 4, 5 & 6",
+      "subtitle": "Electrolytes · Infection · Micronutrients",
+      "points": [
+        "Extra **potassium 3–4 mmol/kg/day** and **magnesium 0.4–0.6 mmol/kg/day**",
+        "**No diuretics** for oedema",
+        "**Antibiotics for every child**: amoxicillin if well, **ampicillin + gentamicin** if complicated",
+        "**Vitamin A, folic acid, zinc, copper** from day 1",
+        "**No iron** in stabilisation: start only when gaining weight"
+      ],
+      "highlight": "Iron in the first week can worsen infection and oxidative damage: classic exam trap."
+    },
+    {
+      "kind": "points",
+      "emoji": "🍼",
+      "title": "Step 7: Cautious Feeding (F-75)",
+      "subtitle": "Starts on day 1",
+      "points": [
+        "F-75 = **75 kcal per 100 mL**, low protein",
+        "**130 mL/kg/day** (**100 mL/kg/day** if severe oedema)",
+        "Feeds **2-hourly → 3-hourly → 4-hourly** as the child settles",
+        "Switch to **F-100** when appetite returns and oedema is reducing (often within a week)",
+        "Transition: same volume for 2 days, then **+10 mL per feed** until some is left over"
+      ],
+      "highlight": "Too much too soon risks refeeding syndrome and heart failure."
+    },
+    {
+      "kind": "points",
+      "emoji": "📈",
+      "title": "Step 8: Catch-up Growth",
+      "subtitle": "Rehabilitation phase, weeks 2–6",
+      "points": [
+        "**F-100** (100 kcal/100 mL) or **RUTF**",
+        "**150–220 kcal/kg/day**, protein **4–6 g/kg/day**",
+        "**Start iron** now",
+        "Weigh daily: weight gain **> 10 g/kg/day = good**",
+        "**5–10 = moderate**, **< 5 = poor**: look for infection or feeding problems"
+      ],
+      "highlight": "Steps 1–7 belong to week 1 (stabilisation); steps 8–10 to weeks 2–6."
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "🏠",
+      "title": "Steps 9 & 10 + Discharge",
+      "subtitle": "Care, follow-up and when to send home",
+      "points": [
+        "Step 9: **sensory stimulation & emotional support**, mother involved in play",
+        "Step 10: teach **energy-dense home feeding**, complete vaccines, plan follow-up",
+        "Discharge: **MUAC ≥ 12.5 cm** or **WHZ ≥ −2 SD**",
+        "AND **no oedema for at least 2 weeks**"
+      ],
+      "highlight": "Mnemonic for the 'No's in SAM: no IV, no diuretics, no early iron."
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this for your exams 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for more",
+      "points": [
+        "Share this with your NEET-PG / INI-CET study group",
+        "Comment which topic you want next!"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Severe acute malnutrition: the WHO 10 steps, from admission to discharge 🥣\n\n📏 SAM (6–59 mo), any one: MUAC < 11.5 cm · WHZ < −3 SD · bilateral pitting oedema\n\n🩸 1–2: Hypoglycaemia (< 54 mg/dL → 50 mL 10% glucose; unconscious 10% dextrose 5 mL/kg IV) & hypothermia (< 35 °C → skin-to-skin, warm)\n💧 3: ReSoMal 5 mL/kg every 30 min × 2 h, then 5–10 mL/kg/h. No IV unless shock (15 mL/kg over 1 h)\n💊 4–6: K 3–4 & Mg 0.4–0.6 mmol/kg/day · antibiotics for all · vitamin A, folate, zinc, copper · no iron yet\n🍼 7: F-75, 130 mL/kg/day, 2 → 3 → 4-hourly\n📈 8: F-100/RUTF 150–220 kcal/kg/day, start iron, target gain > 10 g/kg/day\n🏠 9–10: play & care, follow-up plan\n✅ Discharge: MUAC ≥ 12.5 cm or WHZ ≥ −2 SD, no oedema for 2 weeks\n\nSave 🔖 & share with a batchmate!\n\nFor medical education. Verify with current guidelines and your unit protocol.",
+  "hashtags": ["#pediatrics", "#paediatrics", "#neetpg", "#inicet", "#mbbs", "#medstudent", "#fmge", "#severeacutemalnutrition", "#malnutrition", "#SAM", "#nutrition", "#psm", "#medicalnotes", "#neetpgpreparation", "#pgaspirants", "#medicalstudentindia", "#examrevision", "#paediatrick_or_treats"],
+  "references": [
+    "WHO. Management of severe malnutrition: a manual for physicians and other senior health workers (1999)",
+    "WHO. Guideline: Updates on the management of severe acute malnutrition in infants and children (2013)",
+    "MoHFW, Government of India. Operational guidelines on facility-based management of children with SAM (2011)"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+ "topic": "Drug of the Day: Salbutamol",
+ "slot": "drug",
+ "theme": "lavender",
+ "ist_date": "2026-11-18",
+ "slides": [
+  {
+   "kind": "drug",
+   "emoji": "💊",
+   "title": "Salbutamol",
+   "subtitle": "Albuterol",
+   "points": [],
+   "highlight": "Tachycardia, tremor; frequent doses can cause hypokalaemia: monitor K+",
+   "drug_class": "Short-acting β2 agonist (SABA)",
+   "moa": "Stimulates β2 receptors, raising cAMP to relax bronchial smooth muscle: fast bronchodilation.",
+   "uses": [
+    "Acute asthma / wheeze",
+    "Bronchospasm (PRN relief)",
+    "Exercise-induced bronchospasm"
+   ],
+   "doses": [
+    "MDI (with spacer): 2 puffs Q4-6 hrly PRN",
+    "Neb <4 yr: 0.63-2.5 mg/dose Q4-6 hrly PRN",
+    "Neb 5-11 yr: 1.25-5 mg/dose Q4-6 hrly; ≥12 yr: 2.5-5 mg/dose Q4-8 hrly",
+    "Exercise-induced: 2 puffs 15-30 min before exercise"
+   ]
+  }
+ ],
+ "caption": "The most-used reliever in every paediatric emergency 💨 Salbutamol!\n\nA short-acting β2 agonist that opens up the airways within minutes.\nMDI with a spacer works as well as a nebuliser for most children.\nIn acute attacks it may be given more often: then watch heart rate and potassium.\n\nSpacer or nebuliser: what does your ward use first? 👇\n\nSave 🔖 for your ward rounds\nDoses for education only; always verify with your unit protocol.",
+ "hashtags": [
+  "#DrugOfTheDay",
+  "#pediatrics",
+  "#paediatrics",
+  "#neetpg",
+  "#salbutamol",
+  "#albuterol",
+  "#asthma",
+  "#wheeze",
+  "#pharmacology",
+  "#pediatricpharmacology",
+  "#medicalstudents",
+  "#mbbs",
+  "#pgresidents",
+  "#paediatrick_or_treats"
+ ]
+}

@@ -1,0 +1,127 @@
+{
+  "topic": "Social paediatrics: Recognising child abuse and neglect",
+  "slot": "evening",
+  "theme": "sunny",
+  "ist_date": "2026-11-20",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "🛡️",
+      "title": "Child Abuse & Neglect: Spot It, Don't Miss It",
+      "subtitle": "History red flags, TEN-4-FACESp, fractures, head trauma, workup & POCSO duties",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "points",
+      "emoji": "📋",
+      "title": "4 Types to Know",
+      "subtitle": "Often more than one in the same child",
+      "points": [
+        "**Neglect**: failure to meet basic needs; the **commonest** form",
+        "**Physical abuse**: bruises, burns, fractures, abusive head trauma",
+        "**Sexual abuse**: report under **POCSO Act 2012**",
+        "**Emotional abuse**: rejection, terrorising, exposure to violence",
+        "Also: **fabricated or induced illness** (Munchausen by proxy)"
+      ],
+      "highlight": "Neglect is the most common form, and the easiest to overlook."
+    },
+    {
+      "kind": "points",
+      "emoji": "🚩",
+      "title": "History Red Flags",
+      "subtitle": "When the story doesn't fit the injury",
+      "points": [
+        "**Delay** in seeking care",
+        "History **changes** or differs between carers",
+        "Mechanism **doesn't match** the injury or the child's development",
+        "Injury blamed on a **sibling** or the child themselves",
+        "**Repeated** visits for injuries"
+      ],
+      "highlight": "Those who don't cruise rarely bruise: any bruise in a non-mobile infant is a red flag."
+    },
+    {
+      "kind": "points",
+      "emoji": "🔍",
+      "title": "Bruises: TEN-4-FACESp",
+      "subtitle": "Bruising rule for children under 4 years",
+      "points": [
+        "**TEN**: bruising on **T**orso, **E**ars or **N**eck",
+        "**4**: in a child **< 4 years**, or **any bruise** at **< 4 months**",
+        "**FACES**: **F**renulum, **A**ngle of jaw, **C**heeks, **E**yelids, **S**ubconjunctiva",
+        "**p**: **patterned** bruises (hand, loop, bite marks)",
+        "Rule out: Mongolian spots, bleeding disorders, cupping/coining"
+      ],
+      "highlight": "Accidental bruises sit over bony prominences: shins, knees, forehead."
+    },
+    {
+      "kind": "points",
+      "emoji": "🦴",
+      "title": "Fractures & Burns",
+      "subtitle": "High specificity for abuse",
+      "points": [
+        "**Classic metaphyseal lesions** (corner / bucket-handle)",
+        "**Posterior rib** fractures (squeezing)",
+        "Scapular, sternal, spinous process fractures",
+        "Multiple fractures of **different ages**",
+        "Burns: **immersion** (glove/stocking, sharp margins), **cigarette** burns"
+      ],
+      "highlight": "Rule out osteogenesis imperfecta: blue sclerae, wormian bones, family history."
+    },
+    {
+      "kind": "points",
+      "emoji": "🧠",
+      "title": "Abusive Head Trauma",
+      "subtitle": "Commonest cause of abuse deaths in infants",
+      "points": [
+        "Mostly **< 1 year**; often **no external injury**",
+        "Presents as vomiting, irritability, poor feeding, **seizures**, apnoea",
+        "**Subdural haemorrhage** + **retinal haemorrhages** + encephalopathy",
+        "Retinal bleeds: **multilayered**, extending to the periphery",
+        "Easily misdiagnosed as gastroenteritis or sepsis"
+      ],
+      "highlight": "Unexplained encephalopathy in an infant: think AHT, get neuroimaging and fundoscopy."
+    },
+    {
+      "kind": "points",
+      "emoji": "🧪",
+      "title": "Workup",
+      "subtitle": "Look for hidden injuries, rule out mimics",
+      "points": [
+        "**Skeletal survey** in all **< 2 years**; repeat in ~2 weeks",
+        "**Neuroimaging** (CT/MRI) in infants with suspicious injury",
+        "**Fundoscopy** by an ophthalmologist",
+        "CBC, **PT/aPTT**, LFT, lipase, urinalysis",
+        "Examine & screen **siblings**"
+      ],
+      "highlight": "Document exactly: body map, measurements, photos, the carer's own words."
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "⚖️",
+      "title": "Your Duty in India",
+      "subtitle": "Protect first, then report",
+      "points": [
+        "**POCSO**: reporting suspected sexual abuse is **mandatory** (Sec 19); failure is punishable (Sec 21)",
+        "Inform police / SJPU and the **Child Welfare Committee**",
+        "**Childline 1098** for help and rescue",
+        "**Admit** if the child is unsafe at home"
+      ],
+      "highlight": "You don't need proof to report. Reasonable suspicion is enough."
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this. It might save a child 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for PG notes",
+      "points": [
+        "Share with your casualty & ward team",
+        "Comment the red flag you have seen most often"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Child abuse and neglect: the red flags every paediatric resident must spot 🛡️\n\n📋 Types: neglect (commonest) · physical · sexual · emotional · fabricated/induced illness\n🚩 History: delay in care · changing story · mechanism doesn't fit development · blamed on sibling · repeated visits\n🔍 TEN-4-FACESp: bruising of torso, ears, neck in < 4 yr, any bruise < 4 months, frenulum, angle of jaw, cheeks, eyelids, subconjunctiva, patterned\n🦴 High-specificity fractures: metaphyseal corner, posterior rib, scapula, sternum, spinous process, multiple of different ages\n🧠 Abusive head trauma: < 1 yr, SDH + multilayered retinal haemorrhages + encephalopathy, often no external injury\n🧪 Workup: skeletal survey < 2 yr (repeat ~2 wk), neuroimaging, fundoscopy, coagulation, screen siblings\n⚖️ India: POCSO mandatory reporting (Sec 19), CWC, Childline 1098. Reasonable suspicion is enough.\n\nSave 🔖 & share with your team.\n\nFor medical education. Verify with current guidelines and your unit protocol.",
+  "hashtags": ["#childabuse", "#childprotection", "#POCSO", "#socialpediatrics", "#pediatrics", "#paediatrics", "#pediatricemergency", "#mdpediatrics", "#dnbpediatrics", "#neetpg", "#inicet", "#pgresidents", "#medicalstudentindia", "#paediatrick_or_treats"],
+  "references": ["Nelson Textbook of Pediatrics, 22nd ed.", "AAP Clinical report: evaluation of suspected child physical abuse", "Pierce et al., TEN-4-FACESp (JAMA Netw Open 2021)", "POCSO Act 2012, Government of India"]
+}

@@ -1,0 +1,153 @@
+{
+  "topic": "DKA in children: ISPAD fluid and insulin protocol",
+  "slides": [
+    {
+      "kind": "cover",
+      "emoji": "🚨",
+      "title": "Can you crack this PICU emergency?",
+      "subtitle": "Test your ISPAD 2022 DKA fluid & insulin protocol!",
+      "points": [],
+      "highlight": ""
+    },
+    {
+      "kind": "points",
+      "emoji": "🩺",
+      "title": "Case Clues: 8-yr-old in PICU",
+      "subtitle": "Spot the severity & first step",
+      "points": [
+        "25 kg child with **polyuria, vomiting** & Kussmaul breathing",
+        "Vitals: HR 142/min, BP 96/60 mmHg, **CRT 2 sec**, drowsy",
+        "VBG: **pH 7.08**, HCO3 6 mEq/L, Na 132, K 3.8 mEq/L",
+        "RBS **480 mg/dL**, urine ketones 4+, **fruity breath**"
+      ],
+      "highlight": "Pause & decide: Severity, initial fluid bolus & when to start insulin?"
+    },
+    {
+      "kind": "points",
+      "emoji": "✅",
+      "title": "Diagnosis & ISPAD 2022 Cut-offs",
+      "subtitle": "Did you catch the updated HCO3 threshold?",
+      "points": [
+        "**Severe DKA**: pH <7.1 (here 7.08) or HCO3 <5 mEq/L",
+        "ISPAD 2022 DKA cut-off: BG >200 mg/dL + **pH <7.3 or HCO3 <18**",
+        "Mild: pH <7.3 or HCO3 <18; **Moderate**: pH <7.2 or HCO3 <10",
+        "Corrected Na = 132 + 1.6 × (480−100)/100 = **138.1 mEq/L**"
+      ],
+      "highlight": "Exam pearl: ISPAD 2022 raised the DKA HCO3 cut-off from <15 to <18!"
+    },
+    {
+      "kind": "points",
+      "emoji": "💧",
+      "title": "Step 1: ISPAD Fluid Resuscitation",
+      "subtitle": "Fluids BEFORE insulin saves lives",
+      "points": [
+        "No shock here: give **10 mL/kg 0.9% NS** (250 mL) over 30–60 min",
+        "If hypotensive shock: **20 mL/kg 0.9% NS** rapid IV bolus",
+        "Deficit (~10% for severe) + maintenance over **24–48 hours**",
+        "Use **0.45% to 0.9% NS**; do NOT subtract the 10 mL/kg bolus"
+      ],
+      "highlight": "Red flag: Rapid excess fluid increases cerebral injury risk!"
+    },
+    {
+      "kind": "points",
+      "emoji": "💉",
+      "title": "Step 2: Insulin & K+ Timing",
+      "subtitle": "Never rush insulin in DKA",
+      "points": [
+        "Start regular insulin **1–2 hrs AFTER** starting IV fluids",
+        "Dose: **0.05–0.1 U/kg/hr** IV infusion; NO IV bolus",
+        "Add **40 mEq/L K+** once urine output is seen & K+ <5.5",
+        "If K+ <3.5 mEq/L: give K+ first & **delay insulin** till >3.5"
+      ],
+      "highlight": "Exam pearl: Never give an IV insulin bolus in pediatric DKA!"
+    },
+    {
+      "kind": "points",
+      "emoji": "🔄",
+      "title": "Step 3: Dextrose & Transition",
+      "subtitle": "Keep insulin running to clear ketones",
+      "points": [
+        "Add **5% dextrose** when BG hits 250–300 mg/dL (or drops >90/hr)",
+        "Keep BG **150–250 mg/dL**; step up to D10–D12.5 if dropping fast",
+        "Reduce insulin to **0.05 U/kg/hr** only if BG falls despite D10–12.5",
+        "Stop IV insulin when **pH >7.3, HCO3 >15–18** & tolerating oral"
+      ],
+      "highlight": "Give rapid-acting SC insulin 15–30 min before stopping IV"
+    },
+    {
+      "kind": "compare",
+      "emoji": "🧠",
+      "title": "DKA Traps: Cerebral Injury vs NaHCO3",
+      "subtitle": "Cerebral Injury || NaHCO3 Rule",
+      "points": [
+        "Signs: Headache, **bradycardia**, altered sensorium || Routine NaHCO3 is **contraindicated**",
+        "Rx: **Mannitol 0.5–1 g/kg** IV over 15 min || Increases cerebral injury & hypokalemia",
+        "Alt: **3% NaCl 2.5–5 mL/kg** IV over 15 min || Consider only if **pH <6.9** + cardiac failure",
+        "Elevate head 30°, reduce fluids by **one-third** || Never correct acidosis with bicarb alone"
+      ],
+      "highlight": "Red flag: Treat clinically at bedside—do NOT delay for CT scan!"
+    },
+    {
+      "kind": "takeaway",
+      "emoji": "🎯",
+      "title": "ISPAD 2022 Viva Checklist",
+      "subtitle": "4 numbers examiners always ask",
+      "points": [
+        "Diagnostic HCO3 cut-off: **<18 mEq/L** (Severe <5 mEq/L)",
+        "Initial bolus (no shock): **10 mL/kg 0.9% NS** over 30–60 min",
+        "Insulin infusion: **0.05–0.1 U/kg/hr** after 1–2 hrs of fluids",
+        "Cerebral injury: **Mannitol 0.5–1 g/kg** or 3% NaCl 2.5–5 mL/kg"
+      ],
+      "highlight": "Exam pearl: Fluids first, check K+ before insulin, dextrose <300!"
+    },
+    {
+      "kind": "cta",
+      "emoji": "🔖",
+      "title": "Save this for your exams 🔖",
+      "subtitle": "Follow @paediatrick_or_treats for more",
+      "points": [
+        "Share this quiz with your PICU & PG batchmates",
+        "Comment your score out of 4 on the case clues!",
+        "Drop the next ISPAD/PICU topic you want!"
+      ],
+      "highlight": ""
+    }
+  ],
+  "caption": "Would you start insulin immediately in this 8-year-old? Swipe to test your PICU instincts!\n\nDKA management is a guaranteed MD/DNB viva and OSCE station, and ISPAD 2022 brought critical updates you cannot miss:\n• Updated HCO3 diagnostic threshold (<18 mEq/L)\n• Exact fluid bolus & deficit replacement rules without overhydration\n• Safe insulin timing, potassium replacement & dextrose titration\n• Bedside management of cerebral injury\n\nWhat was the trickiest part of this case for you—the HCO3 cut-off, fluid rate, or K+ timing? Let us know below!\n\nSave 🔖 & share with a batchmate\n\nFor education only; follow local protocols.",
+  "hashtags": [
+    "#pediatrics",
+    "#paediatrics",
+    "#pediatrician",
+    "#neetpg",
+    "#inicet",
+    "#dnbpediatrics",
+    "#mdpediatrics",
+    "#picu",
+    "#pediatricemergency",
+    "#dka",
+    "#diabeticketoacidosis",
+    "#ispad",
+    "#pediatricendocrinology",
+    "#medicalquiz",
+    "#meded",
+    "#pgmedical",
+    "#iap",
+    "#paediatrickortreats"
+  ],
+  "references": [
+    "Glaser N, Fritsch M, Priyambada L, et al. ISPAD Clinical Practice Consensus Guidelines 2022: Diabetic ketoacidosis and hyperglycemic hyperosmolar state. Pediatr Diabetes. 2022;23(7):835-856.",
+    "Kliegman RM, St. Geme JW, Blum NJ, et al. Nelson Textbook of Pediatrics, 22nd Edition (Diabetic Ketoacidosis chapter).",
+    "Indian Academy of Pediatrics (IAP) Standard Treatment Guidelines: Diabetic Ketoacidosis."
+  ],
+  "doctor_check": [
+    "Slide 2: Replaced repeated 'weight 25 kg' in point 4 with 'fruity breath' for better clinical clues.",
+    "Slide 4: Updated severe DKA fluid deficit from '7–10%' to '~10% for severe' per ISPAD 2022 (~5% mild, ~7% moderate, ~10% severe).",
+    "Slide 6: Changed DKA resolution HCO3 target from '>18' to '>15–18' (ISPAD 2022 uses pH >7.3 and HCO3 >15 mmol/L as hyperchloremic acidosis can delay HCO3 >18) and clarified 'D10–12.5' before reducing insulin.",
+    "Slide 7: Replaced late 'Cushing triad' with 'altered sensorium' alongside headache and bradycardia for earlier cerebral injury recognition, and sharpened highlight to warn against delaying treatment for CT scan.",
+    "Slide 8 & 9: Refined exam pearl to 'check K+ before insulin' (insulin is only delayed if hypokalemic) and fixed wording repetition in CTA."
+  ],
+  "slot": "evening",
+  "format": "Clinical quiz: 'Guess the diagnosis' with clues, answer and explanation on later slides",
+  "theme": "royal",
+  "ist_date": "2026-11-17"
+}
