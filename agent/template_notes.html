@@ -1,0 +1,95 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F2E8;--grid:rgba(60,80,110,.07);--margin:#E3A3A0;--ink:#1D2939;--soft:#5B6475;--red:#C2453B;
+ --teal:#2C7A73;--tealhl:#A8E3D8;--yel:#F7DB72;--coral:#F4ADA2;--card:#FFFDF8}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px}
+body{background:var(--paper);font-family:Manrope,sans-serif;color:var(--ink);position:relative;overflow:hidden;
+ background-image:linear-gradient(var(--grid) 2px,transparent 2px),linear-gradient(90deg,var(--grid) 2px,transparent 2px);background-size:54px 54px}
+body::before,body::after{content:"";position:absolute;top:0;bottom:0;width:3px;background:var(--margin)}
+body::before{left:70px}body::after{left:80px}
+.wrap{position:absolute;left:130px;right:80px;top:100px;bottom:120px;display:flex;flex-direction:column;justify-content:center}
+.wrap.mid{justify-content:center}
+.foot{position:absolute;left:130px;right:80px;bottom:48px;display:flex;justify-content:space-between;font:700 26px Manrope;color:var(--soft)}
+.dots{display:flex;gap:10px;align-items:center}.dots i{width:12px;height:12px;border-radius:50%;background:#cfc8bb}.dots i.on{width:34px;border-radius:8px;background:var(--ink)}
+.kick{font:700 50px Caveat;color:var(--red);margin-bottom:22px}
+h1{font:800 104px/1.04 Manrope;letter-spacing:-.025em}
+h2{font:800 76px/1.08 Manrope;letter-spacing:-.02em;margin-top:30px}
+h3{font:800 82px/1.05 Manrope;letter-spacing:-.02em}
+.tag{font:700 46px Caveat;color:var(--ink);margin-top:6px}
+.sub{font:500 40px/1.4 Manrope;color:var(--soft);margin-top:44px}
+.sub b{color:var(--ink)}
+.pill{display:inline-block;align-self:flex-start;font:800 30px Manrope;padding:6px 22px;border:3px solid var(--ink);border-radius:40px;margin-bottom:18px}
+mark{background:linear-gradient(transparent 52%,var(--hl,var(--coral)) 52%,var(--hl,var(--coral)) 92%,transparent 92%);color:inherit;padding:0 4px}
+.u{text-decoration:underline wavy var(--red);text-decoration-thickness:4px;text-underline-offset:12px}
+.chips{display:flex;flex-wrap:wrap;gap:18px;margin-top:46px}
+.chip{font:800 34px Manrope;padding:12px 28px;border:3px solid var(--ink);border-radius:40px;box-shadow:4px 4px 0 var(--ink)}
+.card{position:relative;background:var(--card);border:3px solid var(--ink);border-radius:22px;box-shadow:8px 8px 0 var(--ink);margin-top:40px;padding:22px 34px}
+.tape{position:absolute;top:-22px;left:50%;width:150px;height:40px;transform:translateX(-50%) rotate(-3deg);background:var(--tapec,var(--tealhl));opacity:.85}
+.row{display:grid;grid-template-columns:210px 1fr;gap:22px;padding:22px 0;border-bottom:2px solid #e9e3d6;align-items:baseline}
+.row:last-child{border-bottom:0}
+.row .k{font:800 24px Manrope;letter-spacing:.14em;color:var(--soft);text-transform:uppercase}
+.row .v{font:600 38px/1.35 Manrope}
+.big{font:800 170px/1 Manrope;letter-spacing:-.04em;margin-bottom:24px}
+.txt{font:500 38px/1.45 Manrope;color:var(--ink)}
+.note{background:#FCE79A;padding:28px 34px;margin:36px 0 10px;transform:rotate(-.6deg);box-shadow:3px 4px 0 rgba(0,0,0,.08)}
+.note p{font:600 34px/1.4 Manrope}.note .hand{font:700 46px Caveat;color:var(--red);margin-top:4px}
+.ctit{font:800 24px Manrope;letter-spacing:.14em;color:var(--soft);text-transform:uppercase;margin:40px 0 14px}
+.chk{display:flex;gap:20px;align-items:flex-start;font:600 34px/1.35 Manrope;margin:12px 0}
+.chk i{flex:none;width:34px;height:34px;border:3px solid var(--ink);border-radius:6px;margin-top:4px}
+table{width:100%;border-collapse:collapse}
+th{font:800 36px Manrope;text-align:left;padding:14px 10px 18px}
+td{font:600 33px/1.3 Manrope;padding:20px 10px;border-top:2px solid #e9e3d6;vertical-align:top}
+td.k{font:800 22px Manrope;letter-spacing:.12em;color:var(--soft);text-transform:uppercase;width:170px;padding-top:22px}
+.lines p{font:800 78px/1.18 Manrope;letter-spacing:-.02em;margin-bottom:8px}
+.act p{font:500 34px/1.45 Manrope;margin:8px 0}.act b{color:var(--teal)}
+.sign{font:700 50px Caveat;margin-top:40px}
+.foot-hand{font:700 44px Caveat;color:var(--red);margin-top:26px}
+</style></head><body>
+<div class="wrap {{ 'mid' if s.kind in ('cover','mnemonic') else '' }}">
+{% if s.kind == 'cover' %}
+  {% if s.kicker %}<div class="kick">{{ s.kicker|safe }}</div>{% endif %}
+  <h1>{{ s.title|safe }}</h1>
+  {% if s.title2 %}<h2>{{ s.title2|safe }}</h2>{% endif %}
+  {% if s.chips %}<div class="chips">{% for c in s.chips %}<span class="chip" style="background:{{ c.color }}">{{ c.text|safe }}</span>{% endfor %}</div>{% endif %}
+  {% if s.sub %}<div class="sub">{{ s.sub|safe }}</div>{% endif %}
+{% elif s.kind == 'card' %}
+  {% if s.pill %}<span class="pill" style="background:{{ s.color }}">{{ s.pill }}</span>{% endif %}
+  <h3 style="color:{{ s.ink or 'var(--ink)' }}">{{ s.title|safe }}</h3>
+  {% if s.tagline %}<div class="tag">{{ s.tagline|safe }}</div>{% endif %}
+  <div class="card" style="--tapec:{{ s.color }}"><div class="tape"></div>
+   {% for r in s.rows %}<div class="row"><div class="k">{{ r[0] }}</div><div class="v">{{ r[1]|safe }}</div></div>{% endfor %}
+  </div>
+  {% if s.hand %}<div class="foot-hand">{{ s.hand|safe }}</div>{% endif %}
+{% elif s.kind == 'number' %}
+  {% if s.kicker %}<div class="kick">{{ s.kicker|safe }}</div>{% endif %}
+  <div class="big">{{ s.big|safe }}</div>
+  {% if s.text %}<div class="txt">{{ s.text|safe }}</div>{% endif %}
+  {% if s.note %}<div class="note"><p>{{ s.note|safe }}</p>{% if s.note_hand %}<div class="hand">{{ s.note_hand|safe }}</div>{% endif %}</div>{% endif %}
+  {% if s.checks %}<div class="ctit">{{ s.checks_title }}</div>{% for c in s.checks %}<div class="chk"><i></i><span>{{ c|safe }}</span></div>{% endfor %}{% endif %}
+{% elif s.kind == 'table' %}
+  <h3>{{ s.title|safe }}</h3>
+  <div class="card" style="--tapec:var(--yel);padding:20px 24px"><div class="tape"></div>
+   <table><tr><th></th>{% for c in s.cols %}<th><mark style="--hl:{{ c.color }}">{{ c.text }}</mark></th>{% endfor %}</tr>
+   {% for r in s.rows %}<tr><td class="k">{{ r[0] }}</td>{% for v in r[1:] %}<td>{{ v|safe }}</td>{% endfor %}</tr>{% endfor %}</table>
+  </div>
+  {% if s.hand %}<div class="foot-hand">{{ s.hand|safe }}</div>{% endif %}
+{% elif s.kind == 'mnemonic' %}
+  {% if s.kicker %}<div class="kick">{{ s.kicker|safe }}</div>{% endif %}
+  <div class="lines">{% for l in s.lines %}<p>{{ l|safe }}</p>{% endfor %}</div>
+  {% if s.actions %}<div class="card act" style="--tapec:var(--tealhl)"><div class="tape"></div>{% for a in s.actions %}<p>{{ a|safe }}</p>{% endfor %}</div>{% endif %}
+  {% if s.sign %}<div class="sign">{{ s.sign }}</div>{% endif %}
+{% elif s.kind == 'points' %}
+  {% if s.kicker %}<div class="kick">{{ s.kicker|safe }}</div>{% endif %}
+  <h3>{{ s.title|safe }}</h3>
+  {% if s.tagline %}<div class="tag">{{ s.tagline|safe }}</div>{% endif %}
+  <div class="card" style="--tapec:var(--coral)"><div class="tape"></div>
+   {% for p in s["bullets"] or s["items_"] or [] %}<div class="chk" style="margin:18px 0"><i style="border-radius:50%;width:22px;height:22px;margin-top:12px;background:var(--ink)"></i><span>{{ p|safe }}</span></div>{% endfor %}
+  </div>
+  {% if s.hand %}<div class="foot-hand">{{ s.hand|safe }}</div>{% endif %}
+{% endif %}
+</div>
+<div class="foot"><span>@paediatrick_or_treats</span><span class="dots">{% for k in range(n) %}<i class="{{ 'on' if k == i else '' }}"></i>{% endfor %}</span><span>{{ 'Swipe →' if i < n-1 else 'Save 🔖' }}</span></div>
+</body></html>

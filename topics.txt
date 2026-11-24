@@ -6,9 +6,9 @@ Kawasaki disease: diagnosis and IVIG
 Acute rheumatic fever: Jones criteria
 Nephrotic syndrome in children
 Acute glomerulonephritis (PSGN)
-Dehydration assessment and ORS (WHO plan A, B, C)
-Severe acute malnutrition: WHO 10 steps
-Neonatal jaundice: physiological vs pathological
+# done by hand: Dehydration assessment and ORS (WHO plan A, B, C)
+# done by hand: Severe acute malnutrition: WHO 10 steps
+# done by hand: Neonatal jaundice: physiological vs pathological
 Neonatal resuscitation: the golden minute
 APGAR score made easy
 Bronchiolitis vs asthma in toddlers

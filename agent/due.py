@@ -1,8 +1,8 @@
 """Decide which post (if any) is due right now. Prints reel_morning / morning / drug / reel_evening / evening,
 or nothing.
 
-Daily times (IST): 08:00 Parents Reel + MBBS carousel, 12:00 Drug of the Day, 20:00 PG Reel + PG carousel.
-A Reel slot is only due when a Reel is waiting in the queue (reels/, see agent/publish_reel.py).
+Daily (IST): 10:30 one carousel (MBBS and PG on alternate days), 18:30 one Reel (if one is waiting).
+No Drug of the Day. A Reel slot is only due when a Reel is waiting in the queue (reels/, see agent/publish_reel.py).
 
 GitHub's scheduler can start runs late or skip them, so the workflow runs every 30 minutes and
 this script picks the slot whose time it is now (India time) and that has not been posted yet.
@@ -21,28 +21,29 @@ POSTS = Path(__file__).resolve().parent.parent / "posts"
 REELS = Path(__file__).resolve().parent.parent / "reels"
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 
-# ---------------- Safety settings (added 17 Nov 2026 after Meta's "automated activity" flag) ----------------
-# QUIET_MODE = True  -> at most 3 posts a day: one in the morning (the Parents Reel, or the MBBS carousel
-#                       if no Reel is waiting), Drug of the Day at noon, one in the evening (the PG Reel,
-#                       or the PG carousel if no Reel is waiting).
-# QUIET_MODE = False -> all 5 posts, spread out so no two are less than 2 hours apart.
-QUIET_MODE = True
-MIN_GAP_MINUTES = 120   # never post within 2 hours of the last post
+# ---------------- Schedule (24 Nov 2026, user: "1 carousel and one reel per day", no Drug of the Day) ----------------
+# One carousel a day at CAROUSEL_TIME: MBBS ("morning" slot, notebook style) and PG ("evening" slot) on alternate days.
+# One Reel a day at REEL_TIME: Parents and PG Reels on alternate days (falls back to the other if none is waiting).
+CAROUSEL_TIME = (10, 30)
+REEL_TIME = (18, 30)
+MIN_GAP_MINUTES = 240    # never post within 4 hours of the last post
 LATE_LIMIT_MINUTES = 90  # a slot missed by more than this is SKIPPED, never posted late in a bunch
 NO_POST_BEFORE = (7, 0)  # nothing goes out between 11 PM and 7 AM
 NO_POST_AFTER = (23, 0)
 
-# slot: start time (IST, 24-hour). Order matters: a Reel is tried before the carousel that shares its time.
-if QUIET_MODE:
-    TIMES = {"reel_morning": (8, 0), "morning": (8, 0), "drug": (12, 0),
-             "reel_evening": (20, 0), "evening": (20, 0)}
-else:
-    TIMES = {"reel_morning": (8, 0), "morning": (10, 0), "drug": (12, 30),
-             "evening": (17, 30), "reel_evening": (20, 0)}
-# In quiet mode the Reel and carousel of the same time share one turn: only one of them is posted.
-SHARED_TURN = {"morning": "reel_morning", "evening": "reel_evening"}
 
-WINDOWS = {slot: ((h, m), divmod(h * 60 + m + LATE_LIMIT_MINUTES, 60)) for slot, (h, m) in TIMES.items()}
+def carousel_slot(day: datetime.date) -> str:
+    return "morning" if day.toordinal() % 2 == 0 else "evening"
+
+
+def reel_slots(day: datetime.date) -> list[str]:
+    first = "reel_morning" if day.toordinal() % 2 == 1 else "reel_evening"
+    return [first, "reel_evening" if first == "reel_morning" else "reel_morning"]
+
+
+def _in_window(minutes: int, hm: tuple[int, int]) -> bool:
+    start = hm[0] * 60 + hm[1]
+    return start <= minutes < start + LATE_LIMIT_MINUTES
 
 
 def _published_times() -> list[datetime.datetime]:
@@ -107,16 +108,14 @@ def due(now: datetime.datetime | None = None) -> str:
         return ""  # night time: never post
     if minutes_since_last_post(now) < MIN_GAP_MINUTES:
         return ""  # too soon after the last post
-    for slot, ((sh, sm), (eh, em)) in WINDOWS.items():
-        if not (sh * 60 + sm <= minutes < eh * 60 + em):
-            continue  # not this slot's time, or missed by too long (skipped, not posted late)
-        if QUIET_MODE and slot in SHARED_TURN and slot_done(SHARED_TURN[slot], today):
-            continue  # the Reel already used this turn
-        if slot.startswith("reel_"):
-            if reel_due(slot, today):
-                return slot
-        elif not posted_today(slot, today):
-            return slot
+    if _in_window(minutes, CAROUSEL_TIME):
+        if not (posted_today("morning", today) or posted_today("evening", today)):
+            return carousel_slot(now.date())
+    if _in_window(minutes, REEL_TIME):
+        if not (slot_done("reel_morning", today) or slot_done("reel_evening", today)):
+            for slot in reel_slots(now.date()):
+                if reel_due(slot, today):
+                    return slot
     return ""
 
 

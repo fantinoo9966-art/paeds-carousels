@@ -72,7 +72,7 @@ Variety: use at least 4 different scene types and at least 2 different list styl
 "Please don't" (notes) and red flags (flags or chat). PG Reels: 7-9 scenes, mostly cards/rows/chips/split + pearls.
 Caption: hook line with emoji, the key content as short emoji bullet sections (all facts shown in the Reel), "📌 Save this",
 "Follow {config.HANDLE}", a disclaimer line ({"For information only. Always consult your doctor." if aud == "parents" else "For medical education. Verify with current guidelines and your unit protocol."}),
-then 12-18 hashtags at the end. Max 1900 characters in total.
+then 6-8 hashtags at the end. Max 1900 characters in total.
 
 Accuracy (most important): follow Nelson, IAP, WHO, AAP, NICE and the latest named guideline. Indian context. If a fact
 varies between guidelines or is uncertain, leave it out. Never invent numbers or references."""
@@ -132,7 +132,7 @@ def validate(d: dict) -> dict:
     cap = str(d.get("caption", "")).strip()
     if len(cap.encode("utf-16-le")) // 2 > 2100 or len(cap) < 200:
         raise ValueError(f"caption length {len(cap)} not in 200..2100")
-    if cap.count("#") > 25:
+    if cap.count("#") > 10:
         raise ValueError("too many hashtags")
     return d
 

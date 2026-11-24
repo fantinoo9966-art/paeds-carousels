@@ -3,10 +3,10 @@
 # Posted top to bottom. Add, remove or reorder freely. When the list runs out, Gemini picks new PG topics itself.
 Septic shock in children: recognition and first-hour management
 Biostatistics: Sensitivity, specificity, PPV and NPV made easy
-DKA in children: ISPAD fluid and insulin protocol
-Ventilation: Modes of mechanical ventilation in children (VC, PC, PRVC, SIMV, PSV)
-Status epilepticus: time-based treatment algorithm
-Social paediatrics: Recognising child abuse and neglect
+# done by hand: DKA in children: ISPAD fluid and insulin protocol
+# done by hand: Ventilation: Modes of mechanical ventilation in children (VC, PC, PRVC, SIMV, PSV)
+# done by hand: Status epilepticus: time-based treatment algorithm
+# on hold (Meta child-safety filters): Social paediatrics: Recognising child abuse and neglect
 Acute severe asthma: PICU management
 National programme: Universal Immunization Programme and Mission Indradhanush
 Nephrotic syndrome: IAP steroid regimens and relapses
@@ -14,7 +14,7 @@ Biostatistics: Study designs - RCT vs cohort vs case-control vs cross-sectional
 Neonatal jaundice: phototherapy and exchange thresholds (AAP 2022)
 Ventilation: Initial ventilator settings in a child - a practical approach
 Hypoxic-ischaemic encephalopathy: Sarnat staging and therapeutic hypothermia
-Social paediatrics: POCSO Act 2012 - what every paediatrician must know
+# on hold (Meta child-safety filters): Social paediatrics: POCSO Act 2012 - what every paediatrician must know
 Neonatal sepsis: empirical antibiotics and duration
 National programme: Rashtriya Bal Swasthya Karyakram (RBSK) and the 4 Ds
 Approach to a cyanotic newborn

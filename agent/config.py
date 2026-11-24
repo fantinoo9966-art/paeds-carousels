@@ -63,6 +63,19 @@ THEMES = {
         head="Outfit:wght@600;700;800", head_family="Outfit", head_weight=800,
         body="Outfit:wght@400;500;700", body_family="Outfit", pattern="none", radius=32, shadow=0,
         accents=["#CFC6FF", "#B9E6FF", "#FFD6EC", "#D7F5C8"]),
+    # Bright PG themes (user, 19 Nov 2026: PG posts felt gloomy; keep them light and cheerful)
+    "sunny": dict(
+        paper="#EAF4FF", card="#FFFFFF", ink="#16233B", muted="#5A6782", border="#16233B",
+        hl_bg="#FFC94D", hl_ink="#16233B", on_accent="#16233B", strong_ink="#E2544B", mark="none",
+        head="Poppins:wght@600;700;800", head_family="Poppins", head_weight=800,
+        body="Inter:wght@400;500;700;800", body_family="Inter", pattern="grid", radius=28, shadow=10,
+        accents=["#FFC94D", "#5CC8F0", "#FF8A7A", "#7ED9A6", "#B49CFF"]),
+    "fresh": dict(
+        paper="#EAFBF3", card="#FFFFFF", ink="#13302B", muted="#557069", border="#13302B",
+        hl_bg="#FF9F6E", hl_ink="#13302B", on_accent="#13302B", strong_ink="#0E8C74", mark="none",
+        head="Poppins:wght@600;700;800", head_family="Poppins", head_weight=800,
+        body="Inter:wght@400;500;700;800", body_family="Inter", pattern="grid", radius=28, shadow=10,
+        accents=["#3FD1B0", "#FFB15C", "#6FB7FF", "#FF8FB1", "#C2E86B"]),
     "slate": dict(
         paper="#14191F", card="#1E252D", ink="#EAF1F4", muted="#9AAAB5", border="#33404B",
         hl_bg="#4FD1C5", hl_ink="#0F1418", on_accent="#0F1418", strong_ink="accent", mark="none",
@@ -82,7 +95,7 @@ THEME_ORDER = ["pastel", "midnight", "notebook", "mint", "sunset", "lavender"]
 # MBBS = bright and playful, PG = dark and premium, Drug of the Day = clean and clinical.
 SLOT_THEMES = {
     "morning": ["pastel", "notebook", "sunset"],
-    "evening": ["midnight", "slate", "royal"],
+    "evening": ["sunny", "fresh"],
     "drug": ["mint", "lavender"],
 }
 

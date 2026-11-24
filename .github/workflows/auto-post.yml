@@ -1,7 +1,7 @@
-name: Auto post (3 times daily)
+name: Auto post (1 carousel + 1 reel daily)
 
 # Fully automatic: writes, fact-checks, designs and posts with no approval step.
-# Posting times (IST): 08:00 Parents Reel + MBBS carousel, 12:00 Drug of the Day, 20:00 PG Reel + PG carousel.
+# Posting times (IST): 10:30 one carousel (MBBS / PG on alternate days), 18:30 one Reel. No Drug of the Day.
 # Reels are finished videos queued in reels/ (see agent/publish_reel.py); a Reel slot is skipped if none is waiting.
 # GitHub's scheduler can start late or skip runs, so this checks every 30 minutes and posts
 # the slot due right now, if any (see agent/due.py: missed slots are skipped, posts stay 2 h apart). Most checks finish in seconds.
@@ -119,7 +119,12 @@ jobs:
 
       - name: Render slide images
         if: steps.slot.outputs.kind == 'carousel'
-        run: python agent/render.py "posts/${{ steps.gen.outputs.slug }}"
+        run: |
+          if [ "${{ steps.slot.outputs.slot }}" = "morning" ]; then
+            python agent/render_notes.py "posts/${{ steps.gen.outputs.slug }}"   # MBBS: notebook style
+          else
+            python agent/render.py "posts/${{ steps.gen.outputs.slug }}"         # PG: bright sunny/fresh themes
+          fi
 
       - name: Save post to the repo (so Instagram can download the images)
         if: steps.slot.outputs.kind == 'carousel'

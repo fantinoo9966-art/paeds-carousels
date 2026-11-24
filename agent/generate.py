@@ -240,7 +240,7 @@ def main() -> None:
     out.mkdir(parents=True, exist_ok=True)
     (out / "slides.json").write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    tags = " ".join(h if h.startswith("#") else f"#{h}" for h in data["hashtags"][:25])
+    tags = " ".join(h if h.startswith("#") else f"#{h}" for h in data["hashtags"][:8])
     caption = f"{data['caption'].strip()}\n.\n.\n{tags}"
     (out / "caption.txt").write_text(caption[:2200], encoding="utf-8")
 
