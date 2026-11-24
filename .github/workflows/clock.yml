@@ -5,8 +5,6 @@ name: Clock (starts the posts on time)
 # then starts a fresh copy of itself. Only one clock runs at a time. The cron below restarts the
 # clock if the chain ever breaks. To start it by hand: Actions -> Clock -> Run workflow.
 on:
-  schedule:
-    - cron: "17 */3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -46,7 +44,7 @@ jobs:
         run: gh workflow run auto-post.yml --ref main -f slot=auto
 
       - name: Start the next clock
-        if: always()
+        if: false  # PAUSED 24 Nov 2026 (user: stop everything)
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}

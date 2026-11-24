@@ -100,7 +100,12 @@ def reel_due(slot: str, today: str) -> bool:
             and publish_reel.failures_today(reel, today) < 2)
 
 
+PAUSED = True  # 24 Nov 2026: user said "stop everything", will decide in 3 days. Set False to resume.
+
+
 def due(now: datetime.datetime | None = None) -> str:
+    if PAUSED:
+        return ""
     now = now or datetime.datetime.now(IST)
     today = now.date().isoformat()
     minutes = now.hour * 60 + now.minute

@@ -6,11 +6,6 @@ name: Make Reels (keeps the queue full)
 # with the same look as the hand-made Reels (reelkit/), adds original music, and queues it with its caption.
 # Also runs when new scripts are pushed. Run by hand: Actions -> this workflow -> Run workflow (dry run = build only, queue nothing).
 on:
-  schedule:
-    - cron: "45 20 * * *"
-  push:
-    branches: [main]
-    paths: ["reels/scripts/**", "reelkit/src/**"]
   workflow_dispatch:
     inputs:
       audience:

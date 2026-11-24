@@ -8,8 +8,6 @@ name: Auto post (1 carousel + 1 reel daily)
 # Main trigger: clock.yml wakes up at each posting time and starts this workflow with slot=auto.
 # To pause posting: Actions -> "Auto post (3 times daily)" -> ... -> Disable workflow.
 on:
-  schedule:
-    - cron: "7,37 * * * *"
   workflow_dispatch:
     inputs:
       slot:
