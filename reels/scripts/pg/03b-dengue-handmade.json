@@ -1,0 +1,288 @@
+{
+  "audience": "pg",
+  "topic": "Dengue in children: WHO 2009 approach and fluid management",
+  "title": "Dengue Reel - PG",
+  "system": "INFECTIOUS DISEASES",
+  "tab": "PG NOTES · INFECTIOUS DISEASES",
+  "disclaimer": "For medical education · Based on WHO 2009/2012 dengue guidance",
+  "seed": 3,
+  "cover_s": 3,
+  "scenes": [
+    {
+      "type": "hook",
+      "title": "*Dengue* in children",
+      "sub": "Phases · warning signs · WHO fluid protocol",
+      "mood": "hot",
+      "icon": "blood",
+      "hand": "Save for wards & exams"
+    },
+    {
+      "type": "cards",
+      "title": "The *basics*",
+      "cards": [
+        {
+          "title": "Agent",
+          "lines": [
+            "**Flavivirus**, 4 serotypes **DENV 1–4**"
+          ]
+        },
+        {
+          "title": "Vector",
+          "lines": [
+            "**Aedes aegypti**, day-biting",
+            "Incubation **4–10 days**"
+          ]
+        },
+        {
+          "title": "Why 2nd infection is worse",
+          "lines": [
+            "Different serotype → **antibody-dependent enhancement**",
+            "Higher risk of severe dengue"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Three *phases*",
+      "style": "steps",
+      "tone": "neutral",
+      "items": [
+        {
+          "text": "**Febrile**: 2–7 days, high fever, aches, flushing",
+          "sub": "Leukopenia is an early clue"
+        },
+        {
+          "text": "**Critical**: at defervescence, **day 3–7**",
+          "sub": "Plasma leak for **24–48 h** → shock"
+        },
+        {
+          "text": "**Recovery**: reabsorption over **48–72 h**",
+          "sub": "Bradycardia, rash, risk of **fluid overload**"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "WHO 2009 *classification*",
+      "cards": [
+        {
+          "title": "Dengue without warning signs",
+          "lines": [
+            "Fever + **2 of**: nausea/vomiting, rash, aches",
+            "+ve tourniquet test, leukopenia"
+          ]
+        },
+        {
+          "title": "Dengue with warning signs",
+          "lines": [
+            "Any warning sign → **admit & monitor**"
+          ]
+        },
+        {
+          "title": "Severe dengue",
+          "lines": [
+            "Severe **plasma leak** → shock / respiratory distress",
+            "**Severe bleeding**",
+            "Organ involvement: AST/ALT **≥ 1000**, CNS, heart"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Warning *signs*",
+      "style": "flags",
+      "tone": "alert",
+      "items": [
+        {
+          "text": "Abdominal pain or tenderness"
+        },
+        {
+          "text": "Persistent vomiting"
+        },
+        {
+          "text": "Clinical fluid accumulation: **ascites, effusion**"
+        },
+        {
+          "text": "Mucosal bleed"
+        },
+        {
+          "text": "Lethargy or restlessness"
+        },
+        {
+          "text": "Liver enlargement **> 2 cm**"
+        },
+        {
+          "text": "Lab: **rising HCT** with rapid fall in platelets"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Which *test* when?",
+      "cards": [
+        {
+          "title": "Day 1–5",
+          "lines": [
+            "**NS1 antigen** or RT-PCR"
+          ]
+        },
+        {
+          "title": "After day 5",
+          "lines": [
+            "**IgM capture ELISA**"
+          ]
+        },
+        {
+          "title": "CBC & HCT",
+          "lines": [
+            "Baseline HCT early, then serial",
+            "HCT rise **≥ 20%** = significant leak"
+          ]
+        },
+        {
+          "title": "Tourniquet test",
+          "lines": [
+            "Positive: **≥ 10 petechiae / sq inch**"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Triage: *Group A, B, C*",
+      "cards": [
+        {
+          "title": "A: home care",
+          "lines": [
+            "Drinking well, urine at least **once in 6 h**",
+            "No warning signs: **paracetamol, oral fluids**"
+          ]
+        },
+        {
+          "title": "B: admit",
+          "lines": [
+            "Warning signs, or **infant / co-morbidity**",
+            "or poor home support"
+          ]
+        },
+        {
+          "title": "C: emergency",
+          "lines": [
+            "**Severe dengue**: shock, bleeding, organ failure"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Warning signs: *IV fluids*",
+      "style": "steps",
+      "tone": "neutral",
+      "items": [
+        {
+          "text": "Baseline HCT, then isotonic crystalloid",
+          "sub": "NS or Ringer's lactate"
+        },
+        {
+          "text": "**5–7 mL/kg/h** for 1–2 h"
+        },
+        {
+          "text": "Then **3–5 mL/kg/h** for 2–4 h"
+        },
+        {
+          "text": "Then **2–3 mL/kg/h** or less, as per response"
+        },
+        {
+          "text": "HCT rising? Increase to **5–10 mL/kg/h** for 1–2 h",
+          "sub": "Usually needed only **24–48 h**"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Compensated *shock*",
+      "style": "steps",
+      "tone": "neutral",
+      "items": [
+        {
+          "text": "Crystalloid **10–20 mL/kg over 1 h**"
+        },
+        {
+          "text": "Better? **10 mL/kg/h** for 1–2 h",
+          "sub": "then 7 → 5 → 3 mL/kg/h, step down"
+        },
+        {
+          "text": "Not better & HCT high: **colloid 10–20 mL/kg**",
+          "sub": "over 1 h"
+        },
+        {
+          "text": "Not better & HCT falling: **think bleeding**",
+          "sub": "cross-match, transfuse"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Hypotensive *shock*",
+      "style": "steps",
+      "tone": "alert",
+      "items": [
+        {
+          "text": "Crystalloid or colloid **20 mL/kg over 15 min**"
+        },
+        {
+          "text": "Better? **10 mL/kg/h** for 1 h, then taper"
+        },
+        {
+          "text": "HCT still high: colloid **10–20 mL/kg** over 30–60 min"
+        },
+        {
+          "text": "HCT falling: **whole blood 10–20 mL/kg**",
+          "sub": "or PRBC **5–10 mL/kg**"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "title": "Do vs *Don't*",
+      "left": {
+        "title": "Do",
+        "icon": "shield",
+        "lines": [
+          "Hourly vitals, urine output, serial HCT",
+          "Target urine **≈ 0.5 mL/kg/h**",
+          "Ideal body weight for obese children"
+        ],
+        "verdict": "Monitor"
+      },
+      "right": {
+        "title": "Don't",
+        "icon": "warn",
+        "lines": [
+          "**NSAIDs**, aspirin, IM injections",
+          "Steroids or routine antibiotics",
+          "**Prophylactic platelets** without bleeding"
+        ],
+        "verdict": "Avoid"
+      }
+    },
+    {
+      "type": "pearls",
+      "title": "Exam *pearls*",
+      "items": [
+        "Danger comes **as fever falls**, not at its peak",
+        "Narrow pulse pressure **≤ 20 mmHg** = shock even with normal BP",
+        "Recovery: **stop IV fluids**, watch for overload & bradycardia",
+        "Convalescent rash: **'isles of white in a sea of red'**"
+      ]
+    },
+    {
+      "type": "cta",
+      "line": "Follow for more *ward-ready* notes",
+      "sub": "Save · share with your batch"
+    }
+  ],
+  "caption": "🦟 Dengue in children: one Reel for wards & exams | PG Notes · Infectious Diseases\n\n🧬 Basics: Flavivirus, DENV 1–4 · Aedes aegypti (day-biter) · incubation 4–10 days · secondary heterotypic infection → ADE → higher risk of severe dengue\n\n📅 Phases:\n• Febrile 2–7 d (leukopenia early)\n• Critical at defervescence, ~day 3–7: plasma leak 24–48 h\n• Recovery 48–72 h: reabsorption, bradycardia, rash, fluid-overload risk\n\n📋 WHO 2009: dengue ± warning signs · severe dengue (severe leak → shock/resp distress · severe bleeding · organ involvement, AST/ALT ≥ 1000)\n\n🚨 Warning signs: abdominal pain · persistent vomiting · ascites/effusion · mucosal bleed · lethargy/restlessness · liver > 2 cm · rising HCT with rapid platelet fall\n\n🧪 Tests: NS1/RT-PCR day 1–5 · IgM ELISA after day 5 · serial HCT (≥ 20% rise = leak) · tourniquet test ≥ 10 petechiae/sq inch\n\n💧 Warning signs: crystalloid 5–7 → 3–5 → 2–3 mL/kg/h; if HCT rises 5–10 mL/kg/h\n⚡ Compensated shock: 10–20 mL/kg over 1 h → 10 → 7 → 5 → 3 mL/kg/h; no response: HCT high → colloid 10–20 mL/kg; HCT falling → bleeding, transfuse\n🔴 Hypotensive shock: 20 mL/kg over 15 min; HCT falling → whole blood 10–20 mL/kg or PRBC 5–10 mL/kg\n\n✅ Monitor vitals, urine (~0.5 mL/kg/h), serial HCT · ❌ NSAIDs, IM injections, steroids, prophylactic platelets\n\n📚 Ref: WHO Dengue Guidelines 2009 & WHO Handbook 2012\nFollow @paediatrick_or_treats & save 📌\n\nFor medical education. Verify with current guidelines and your unit protocol.\n\n#dengue #denguefever #severedengue #paediatrics #pediatrics #pgnotes #neetpg #inicet #pediatricresident #medstudent #highyield #infectiousdiseases #picu #medicos #mbbs"
+}

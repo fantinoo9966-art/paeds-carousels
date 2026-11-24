@@ -1,0 +1,239 @@
+{
+  "audience": "parents",
+  "topic": "Dengue fever in children",
+  "title": "Dengue Reel - Parents",
+  "seed": 2,
+  "cover_s": 2,
+  "scenes": [
+    {
+      "type": "hook",
+      "title": "Dengue fever in your *child?*",
+      "sub": "What to watch, day by day",
+      "mood": "hot",
+      "icon": "blood",
+      "hand": "Save this, share with family"
+    },
+    {
+      "type": "big",
+      "text": "Spread by the *Aedes* mosquito, which bites in the **daytime**",
+      "visual": {
+        "kind": "clock"
+      },
+      "sub": "It breeds in **clean, still water** in and around homes"
+    },
+    {
+      "type": "list",
+      "title": "Common *signs*",
+      "style": "chips",
+      "tone": "neutral",
+      "items": [
+        {
+          "text": "Sudden **high fever**"
+        },
+        {
+          "text": "Severe headache"
+        },
+        {
+          "text": "Pain behind the eyes"
+        },
+        {
+          "text": "Body & joint pain"
+        },
+        {
+          "text": "Red rash"
+        },
+        {
+          "text": "Nausea or vomiting"
+        },
+        {
+          "text": "Tired, not eating"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Dengue has *3 phases*",
+      "style": "steps",
+      "tone": "neutral",
+      "items": [
+        {
+          "text": "**Fever phase**: high fever for **2–7 days**",
+          "sub": "Child looks unwell, body aches"
+        },
+        {
+          "text": "**Critical phase**: as the fever comes down",
+          "sub": "Usually **day 3–7**, lasts **24–48 h**"
+        },
+        {
+          "text": "**Recovery phase**: appetite comes back",
+          "sub": "Itchy rash is common, child feels better"
+        }
+      ]
+    },
+    {
+      "type": "big",
+      "text": "Fever going away does *not* mean dengue is over",
+      "visual": {
+        "kind": "calendar",
+        "from": 3,
+        "to": 7,
+        "label": "DAY"
+      },
+      "sub": "Days **3–7** need the **closest watch**: fluid can leak from blood vessels"
+    },
+    {
+      "type": "list",
+      "title": "What *helps* at home",
+      "style": "wheel",
+      "tone": "good",
+      "items": [
+        {
+          "text": "**Paracetamol** only, for fever",
+          "sub": "in the dose your doctor advises",
+          "icon": "syrup"
+        },
+        {
+          "text": "**Plenty of fluids**: ORS, water, coconut water, soups, juice",
+          "icon": "cup"
+        },
+        {
+          "text": "Lots of rest",
+          "icon": "sleep"
+        },
+        {
+          "text": "Blood tests & check-ups as advised",
+          "icon": "blood"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Is my child drinking *enough?*",
+      "style": "rows",
+      "tone": "good",
+      "items": [
+        {
+          "text": "Passing urine at least **every 4–6 hours**",
+          "icon": "urine"
+        },
+        {
+          "text": "Lips and tongue are moist",
+          "icon": "lips"
+        },
+        {
+          "text": "Keep a simple note of **drinks & urine**",
+          "icon": "clock"
+        },
+        {
+          "text": "Can't drink or keeps vomiting? **Go to hospital**",
+          "icon": "warn"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Please don't",
+      "style": "notes",
+      "tone": "bad",
+      "items": [
+        {
+          "text": "Give ibuprofen, aspirin or other painkillers",
+          "icon": "pill"
+        },
+        {
+          "text": "Ask for 'drips' or injections without need",
+          "icon": "warn"
+        },
+        {
+          "text": "Rely on home remedies instead of a doctor",
+          "icon": "cup"
+        },
+        {
+          "text": "Relax when the fever stops",
+          "icon": "calendar"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Go to hospital *now* if:",
+      "style": "flags",
+      "tone": "alert",
+      "items": [
+        {
+          "text": "Belly pain or tenderness"
+        },
+        {
+          "text": "Vomiting again and again"
+        },
+        {
+          "text": "Bleeding: gums, nose, **black stools**, blood in vomit"
+        },
+        {
+          "text": "Very sleepy, irritable or restless"
+        },
+        {
+          "text": "Cold, clammy hands and feet"
+        },
+        {
+          "text": "No urine for **4–6 hours**"
+        },
+        {
+          "text": "Fast or difficult breathing"
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "title": "About *platelets*",
+      "left": {
+        "title": "Myth",
+        "icon": "warn",
+        "lines": [
+          "Low platelets are the **main danger**",
+          "Every child needs platelets"
+        ],
+        "verdict": "Not true"
+      },
+      "right": {
+        "title": "Fact",
+        "icon": "heart",
+        "lines": [
+          "**Fluid leak (shock)** is the real danger",
+          "Most children **don't need** platelet transfusion"
+        ],
+        "verdict": "Doctor decides"
+      }
+    },
+    {
+      "type": "list",
+      "title": "Stop the *mosquito*",
+      "style": "wheel",
+      "tone": "good",
+      "items": [
+        {
+          "text": "Empty & scrub stored water, coolers, pots **every week**",
+          "icon": "water"
+        },
+        {
+          "text": "Cover water tanks and containers",
+          "icon": "shield"
+        },
+        {
+          "text": "Full-sleeve clothes in the day",
+          "icon": "shirt"
+        },
+        {
+          "text": "Mosquito nets and repellents",
+          "icon": "sleep"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "line": "Share with a parent who needs *this*",
+      "sub": "Save it for dengue season"
+    }
+  ],
+  "caption": "🦟 Dengue fever in children: what every parent should watch, day by day\n\n🌡️ Signs: sudden high fever, severe headache, pain behind the eyes, body & joint pain, rash, vomiting, tiredness\n\n📅 3 phases:\n• Fever phase: 2–7 days of high fever\n• Critical phase: as the fever comes down (usually day 3–7, lasts 24–48 h)\n• Recovery: appetite returns, itchy rash is common\n⚠️ Fever going away does NOT mean dengue is over. Days 3–7 need the closest watch.\n\n🏠 At home:\n• Paracetamol only, in the dose your doctor advises\n• Plenty of fluids: ORS, water, coconut water, soups, juice\n• Rest, and blood tests as advised\n• Child should pass urine at least every 4–6 hours\n\n🚫 Please don't: give ibuprofen, aspirin or other painkillers · ask for drips/injections without need · rely on home remedies instead of a doctor · relax when the fever stops\n\n🚨 Go to hospital NOW if: belly pain · repeated vomiting · bleeding from gums/nose, black stools, blood in vomit · very sleepy, irritable or restless · cold, clammy hands & feet · no urine for 4–6 hours · fast or difficult breathing\n\n🩸 Platelets: fluid leak (shock) is the real danger, not the platelet number alone. Most children don't need platelet transfusion. Your doctor decides.\n\n🛡️ Prevention: empty & scrub stored water every week · cover tanks · full sleeves in the day · nets & repellents\n\n📌 Save this & share with family\nFollow @paediatrick_or_treats\n\nFor information only. Always consult your doctor.\n\n#dengue #denguefever #dengueawareness #parenting #indianparents #momlife #childhealth #kidshealth #pediatrician #paediatrics #fever #monsoon #mosquito #healthtips #parentingtips #newmom"
+}
