@@ -2,7 +2,7 @@
 
   python tools/queue_reel.py "<video.mp4>" "<CAPTION.txt>" parents|pg [--cover 2.0] [--test]
 
-parents -> posted at the next free 8:00 AM, pg -> at the next free 8:00 PM (one per slot per day, oldest first).
+parents / pg -> posted at 6:30 PM on the next free Parents / PG Reel day (see agent/due.py; oldest first).
 The caption file may be the Desktop "<video> - CAPTION.txt": only the text below the "COPY EVERYTHING BELOW" line is used.
 --test puts it in reels/_test/ instead: GitHub uploads it to Instagram to check it works, but posts nothing.
 
@@ -77,8 +77,8 @@ def main() -> None:
         raise SystemExit("Caption is empty: the Reel would be posted without a caption.")
     if len(cap.encode("utf-16-le")) // 2 > 2150:  # Instagram's limit is 2200; keep a margin
         raise SystemExit(f"Caption is too long for Instagram ({len(cap)} characters, max ~2150). Shorten it first.")
-    if cap.count("#") > 30:
-        raise SystemExit("Caption has more than 30 hashtags; Instagram would reject it.")
+    if cap.count("#") > 8:
+        raise SystemExit("Caption has more than 8 hashtags (user rule after Meta flags: 6-8 max).")
 
     slug = re.sub(r"[^a-z0-9]+", "-", a.video.stem.lower()).strip("-")[:50]
     reel_id = f"{datetime.datetime.now():%Y-%m-%d-%H%M%S}-{slug}"
@@ -97,7 +97,7 @@ def main() -> None:
     git("commit", "-q", "-m", f"{'Test' if a.test else 'Queue'} reel {reel_id}")
     git("pull", "-q", "--rebase", "origin", "main")
     git("push", "-q", "origin", "main")
-    when = "test upload (posts nothing)" if a.test else ("next free 8:00 AM" if slot == "reel_morning" else "next free 8:00 PM")
+    when = "test upload (posts nothing)" if a.test else ("next free Parents Reel day, 6:30 PM" if slot == "reel_morning" else "next free PG Reel day, 6:30 PM")
     print(f"Queued {reel_id} -> {when}")
 
 

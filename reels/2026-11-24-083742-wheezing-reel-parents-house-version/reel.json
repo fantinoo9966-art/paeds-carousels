@@ -2,5 +2,7 @@
   "slot": "reel_morning",
   "thumb_ms": 2000,
   "source": "Wheezing Reel - Parents (house version).mp4",
-  "queued_at": "2026-11-24T08:38:26"
+  "queued_at": "2026-11-24T08:38:26",
+  "script": "reels/scripts/parents/09-wheezing-asthma.json",
+  "made_in": "Claude (hand-made, antialgorithm 'house' style)"
 }
