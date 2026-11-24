@@ -1,0 +1,8 @@
+{
+  "slot": "reel_evening",
+  "thumb_ms": 3000,
+  "source": "HIE Cooling Reel - PG.mp4",
+  "script": "reels/scripts/pg/05-hie-cooling.json",
+  "auto_script": false,
+  "queued_at": "2026-11-24T03:16:15"
+}
